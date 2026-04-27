@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reading/reading",
+    "pages/detail/detail",
+    "pages/history/history",
+    "pages/vip/vip",
+    "pages/profile/profile"
+  ],
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#4A6741",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab_home.png",
+        "selectedIconPath": "images/tab_home_active.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "历史",
+        "iconPath": "images/tab_history.png",
+        "selectedIconPath": "images/tab_history_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tab_profile.png",
+        "selectedIconPath": "images/tab_profile_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#4A6741",
+    "navigationBarTitleText": "书解",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#F7F5F0"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents",
+  "permission": {
+    "scope.userInfo": {
+      "desc": "获取您的头像和昵称，用于个性化展示"
+    }
+  },
+  "requiredPrivateInfos": ["chooseAddress"]
+}
