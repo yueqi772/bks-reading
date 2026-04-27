@@ -1,1 +1,346 @@
-cGFnZXtiYWNrZ3JvdW5kOiNGN0Y1RjA7Zm9udC1mYW1pbHk6LWFwcGxlLXN5c3RlbSxCbGlua01hY1N5c3RlbUZvbnQsIlBpbmdGYW5nIFNDIixzYW5zLXNlcmlmO2ZvbnQtc2l6ZToyOHJweDtjb2xvcjojMzMzfS5jb250YWluZXJ7bWluLWhlaWdodDoxMDB2aDtwYWRkaW5nOjAgMzJycHh9LnZpcC1oZXJve2Rpc3BsYXk6ZmxleDtmbGV4LWRpcmVjdGlvbjpjb2x1bW47YWxpZ24taXRlbXM6Y2VudGVyO3BhZGRpbmc6NjBycHggMCA0MHJweDtnYXA6MTJycHh9LnZpcC1oZXJvX19pY29ue2ZvbnQtc2l6ZToxMDBycHh9LnZpcC1oZXJvX190aXRsZXtmb250LXNpemU6NDBycHg7Zm9udC13ZWlnaHQ6ODAwO2NvbG9yOiMzMzN9LnZpcC1oZXJvX19zdWJ7Zm9udC1zaXplOjI2cnB4O2NvbG9yOiM5OTl9LmJlbmVmaXRze2JhY2tncm91bmQ6I2ZmZjtib3JkZXItcmFkaXVzOjIwcnB4O3BhZGRpbmc6MzJycHg7bWFyZ2luLWJvdHRvbToyNHJweH0uYmVuZWZpdHNfX3RpdGxle2ZvbnQtc2l6ZToyOHJweDtmb250LXdlaWdodDo2MDA7Y29sb3I6IzMzMzttYXJnaW4tYm90dG9tOjIwcnB4fS5iZW5lZml0LWl0ZW17ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtnYXA6MTZycHg7bWFyZ2luLWJvdHRvbToxNnJweDtmb250LXNpemU6MjhycHg7Y29sb3I6IzU1NX0uYmVuZWZpdC1pdGVtX19pY29ue2ZvbnQtc2l6ZTozMnJweH0ucGxhbnN7ZGlzcGxheTpmbGV4O2dhcDoxNnJweDttYXJnaW4tYm90dG9tOjMycnB4fS5wbGFuLWNhcmR7ZmxleDoxO2JhY2tncm91bmQ6I2ZmZjtib3JkZXItcmFkaXVzOjIwcnB4O3BhZGRpbmc6MjhycHggMTZycHg7ZGlzcGxheTpmbGV4O2ZsZXgtZGlyZWN0aW9uOmNvbHVtbjthbGlnbi1pdGVtczpjZW50ZXI7Z2FwOjhycHg7Ym9yZGVyOjJycHggc29saWQgI0U4RTREQTtwb3NpdGlvbjpyZWxhdGl2ZX0ucGxhbi1jYXJkLS1wb3B1bGFye2JvcmRlci1jb2xvcjojNEE2NzQxO2JhY2tncm91bmQ6I0Y2RjhGNH0ucGxhbi1jYXJkX190YWd7cG9zaXRpb246YWJzb2x1dGU7dG9wOi0yMHJweDtsZWZ0OjUwJTt0cmFuc2Zvcm06dHJhbnNsYXRlWCgtNTAlKTtiYWNrZ3JvdW5kOmxpbmVhci1ncmFkaWVudCgxMzVkZWcsIzRBNjc0MSwjNkI4QzYzKTtjb2xvcjojZmZmO2ZvbnQtc2l6ZToyMHJweDtmb250LXdlaWdodDo3MDA7cGFkZGluZzo2cnB4IDIwcnB4O2JvcmRlci1yYWRpdXM6MjBycHg7d2hpdGUtc3BhY2U6bm93cmFwfS5wbGFuLWNhcmRfX25hbWV7Zm9udC1zaXplOjI2cnB4O2NvbG9yOiM5OTk7bWFyZ2luLXRvcDo4cnB4fS5wbGFuLWNhcmRfX3ByaWNle2ZvbnQtc2l6ZTo0MHJweDtmb250LXdlaWdodDo4MDA7Y29sb3I6IzMzM30ucGxhbi1jYXJkX19zYXZle2ZvbnQtc2l6ZToyMHJweDtjb2xvcjojNEE2NzQxO2ZvbnQtd2VpZ2h0OjYwMH0ucGxhbi1jYXJkX19idG57YmFja2dyb3VuZDojRThFNERBO2JvcmRlci1yYWRpdXM6MjRycHg7cGFkZGluZzoxNnJweCAwO3dpZHRoOjEwMCU7dGV4dC1hbGlnbjpjZW50ZXI7Zm9udC1zaXplOjI2cnB4O2ZvbnQtd2VpZ2h0OjYwMDtjb2xvcjojNjY2O21hcmdpbi10b3A6OHJweH0ucGxhbi1jYXJkLS1wb3B1bGFyIC5wbGFuLWNhcmRfX2J0bntiYWNrZ3JvdW5kOiM0QTY3NDE7Y29sb3I6I2ZmZn0ucGF5LWd1aWRle2JhY2tncm91bmQ6I2ZmZjtib3JkZXItcmFkaXVzOjIwcnB4O3BhZGRpbmc6MzJycHg7bWFyZ2luLWJvdHRvbTo0OHJweH0ucGF5LWd1aWRlX190aXRsZXtmb250LXNpemU6MjhycHg7Zm9udC13ZWlnaHQ6NjAwO2NvbG9yOiMzMzM7bWFyZ2luLWJvdHRvbToyMHJweH0ucGF5LWd1aWRlX19zdGVwe2ZvbnQtc2l6ZToyNnJweDtjb2xvcjojNTU1O2xpbmUtaGVpZ2h0OjEuOH0ucGF5LWd1aWRlX19xcnttYXJnaW4tdG9wOjI0cnB4O2Rpc3BsYXk6ZmxleDtmbGV4LWRpcmVjdGlvbjpjb2x1bW47YWxpZ24taXRlbXM6Y2VudGVyO2dhcDoxNnJweH0ucXItcGxhY2Vob2xkZXJ7d2lkdGg6MjQwcnB4O2hlaWdodDoyNDBycHg7YmFja2dyb3VuZDojRjVGNUY1O2JvcmRlci1yYWRpdXM6MTZycHg7ZGlzcGxheTpmbGV4O2FsaWduLWl0ZW1zOmNlbnRlcjtqdXN0aWZ5LWNvbnRlbnQ6Y2VudGVyO2ZvbnQtc2l6ZToyNHJweDtjb2xvcjojQ0NDfS5xci1ub3Rle2ZvbnQtc2l6ZToyNnJweDtjb2xvcjojNjY2O2ZvbnQtd2VpZ2h0OjYwMH0=
+/* pages/vip/vip.wxss */
+
+.page-container {
+  min-height: 100vh;
+  background-color: #F7F5F0;
+}
+
+/* ===== 顶部 ===== */
+.vip-header {
+  background: linear-gradient(135deg, #C9A85C 0%, #E8C97A 100%);
+  padding: 60rpx 40rpx 70rpx;
+  text-align: center;
+}
+
+.vip-title {
+  display: block;
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 12rpx;
+  letter-spacing: 2rpx;
+}
+
+.vip-sub {
+  font-size: 26rpx;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ===== 已是会员 ===== */
+.vip-active-section {
+  margin: -24rpx 24rpx 0;
+  text-align: center;
+  padding: 50rpx 30rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.vip-active-icon {
+  display: block;
+  font-size: 72rpx;
+  margin-bottom: 20rpx;
+}
+
+.vip-active-title {
+  display: block;
+  font-size: 34rpx;
+  font-weight: 600;
+  color: #4A6741;
+  margin-bottom: 10rpx;
+}
+
+.vip-active-desc {
+  display: block;
+  font-size: 26rpx;
+  color: #666666;
+  margin-bottom: 40rpx;
+}
+
+.back-btn {
+  width: 400rpx;
+  height: 88rpx;
+  font-size: 28rpx;
+}
+
+/* ===== 权益卡片 ===== */
+.benefits-card {
+  margin: -24rpx 24rpx 16rpx;
+  padding: 40rpx 30rpx 30rpx;
+  position: relative;
+  z-index: 1;
+}
+
+.benefits-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.benefit-item {
+  padding: 16rpx 0;
+  border-bottom: 1rpx solid #F5F5F5;
+  gap: 16rpx;
+}
+
+.benefit-item:last-child {
+  border-bottom: none;
+}
+
+.benefit-icon {
+  font-size: 40rpx;
+  flex-shrink: 0;
+}
+
+.benefit-name {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 6rpx;
+}
+
+.benefit-desc {
+  font-size: 22rpx;
+  color: #999999;
+  line-height: 1.5;
+}
+
+/* ===== 价格卡片 ===== */
+.price-card {
+  margin: 0 24rpx 16rpx;
+  padding: 30rpx;
+  background: linear-gradient(135deg, #FFF8EC 0%, #FFF3DC 100%);
+  border: 2rpx solid #E8C97A;
+}
+
+.price-main {
+  align-items: center;
+  gap: 20rpx;
+}
+
+.price-num {
+  font-size: 70rpx;
+  font-weight: 700;
+  color: #C9A85C;
+}
+
+.price-unit {
+  font-size: 24rpx;
+  color: #C9A85C;
+  font-weight: 500;
+}
+
+.price-title {
+  display: block;
+  font-size: 30rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 6rpx;
+}
+
+.price-detail {
+  font-size: 22rpx;
+  color: #999999;
+}
+
+/* ===== 步骤卡片 ===== */
+.steps-card {
+  margin: 0 24rpx 16rpx;
+  padding: 30rpx;
+}
+
+.steps-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.step-row {
+  gap: 16rpx;
+  margin-bottom: 20rpx;
+  align-items: flex-start;
+}
+
+.step-num {
+  width: 40rpx;
+  height: 40rpx;
+  border-radius: 20rpx;
+  background: #4A6741;
+  color: #FFFFFF;
+  font-size: 22rpx;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-desc {
+  font-size: 26rpx;
+  color: #444444;
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* ===== 收款码 ===== */
+.qr-section {
+  margin: 0 24rpx 16rpx;
+  padding: 30rpx;
+  text-align: center;
+}
+
+.qr-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.qr-box,
+.contact-qr-box {
+  width: 280rpx;
+  height: 280rpx;
+  background: #F5F5F5;
+  border-radius: 16rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24rpx;
+  border: 2rpx dashed #DDDDDD;
+}
+
+.qr-placeholder-text {
+  font-size: 26rpx;
+  color: #AAAAAA;
+  margin-bottom: 8rpx;
+}
+
+.qr-placeholder-hint {
+  font-size: 20rpx;
+  color: #CCCCCC;
+}
+
+.pay-done-btn {
+  width: 100%;
+  height: 88rpx;
+  font-size: 28rpx;
+}
+
+/* ===== 客服联系 ===== */
+.contact-section {
+  margin: 0 24rpx 16rpx;
+  padding: 30rpx;
+  text-align: center;
+}
+
+.contact-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.contact-id {
+  display: block;
+  font-size: 26rpx;
+  color: #4A6741;
+  font-weight: 500;
+  margin-bottom: 20rpx;
+}
+
+.copy-btn {
+  width: 100%;
+  height: 80rpx;
+  font-size: 26rpx;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+  margin: 0 24rpx 16rpx;
+  padding: 30rpx;
+}
+
+.faq-title {
+  display: block;
+  font-size: 28rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 24rpx;
+}
+
+.faq-item {
+  margin-bottom: 24rpx;
+}
+
+.faq-q {
+  display: block;
+  font-size: 26rpx;
+  font-weight: 500;
+  color: #333333;
+  margin-bottom: 8rpx;
+}
+
+.faq-a {
+  display: block;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.6;
+}
+
+/* ===== 支付成功弹窗 ===== */
+.modal-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx;
+}
+
+.pay-success-modal {
+  width: 100%;
+  padding: 40rpx;
+  text-align: center;
+}
+
+.pay-success-icon {
+  display: block;
+  font-size: 80rpx;
+  margin-bottom: 20rpx;
+}
+
+.pay-success-title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 20rpx;
+}
+
+.pay-success-desc {
+  display: block;
+  font-size: 24rpx;
+  color: #666666;
+  line-height: 1.8;
+  text-align: left;
+  margin-bottom: 30rpx;
+  white-space: pre-wrap;
+}
+
+.pay-success-close {
+  width: 100%;
+  height: 88rpx;
+  font-size: 28rpx;
+}

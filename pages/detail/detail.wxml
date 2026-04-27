@@ -1,1 +1,80 @@
-PHZpZXcgY2xhc3M9ImNvbnRhaW5lciI+PHZpZXcgY2xhc3M9ImFjdGlvbi1iYXIiPjxidXR0b24gY2xhc3M9ImFjdGlvbi1idG4iIGJpbmR0YXA9Im9uU2hhcmUiPjx0ZXh0PuKGl++4jzwvdGV4dD48dGV4dD7liIbkuqs8L3RleHQ+PC9idXR0b24+PGJ1dHRvbiBjbGFzcz0iYWN0aW9uLWJ0biIgYmluZHRhcD0ib25Db3B5Ij48dGV4dD7wn5OLPC90ZXh0Pjx0ZXh0PuWkjeWItjwvdGV4dD48L2J1dHRvbj48YnV0dG9uIGNsYXNzPSJhY3Rpb24tYnRuIiBiaW5kdGFwPSJvbkNvbGxlY3QiPjx0ZXh0Pnt7aXNDb2xsZWN0ZWQ/IuKdpO+4jyI6IvCfpI0ifX08L3RleHQ+PHRleHQ+e3tpc0NvbGxlY3RlZD8i5bey5pS26JePIjoi5pS26JePIn19PC90ZXh0PjwvYnV0dG9uPjwvdmlldz48dmlldyBjbGFzcz0iY29udGVudC1ib2R5Ij48cmljaC10ZXh0IG5vZGVzPSJ7e2NvbnRlbnR9fSIgLz48L3ZpZXc+PHZpZXcgY2xhc3M9ImRpc2NsYWltZXIiPuKaoO+4jyDmnKzop6Por7vnlLEgQUkg55Sf5oiQ77yM5LuF5L6b5Y+C6ICD77yM6K+35Lul5Y6f6JGX5YaF5a655Li65YeG44CCPC92aWV3Pjx2aWV3IGNsYXNzPSJyZS1yZWFkIj48YnV0dG9uIGNsYXNzPSJyZS1yZWFkLWJ0biIgYmluZHRhcD0ib25SZXJlYWQiPumHjeaWsOino+ivu+i/meacrOS5pjwvYnV0dG9uPjwvdmlldz48L3ZpZXc+
+<!-- pages/detail/detail.wxml -->
+<view class="page-container">
+
+  <!-- 顶部信息栏 -->
+  <view class="detail-header card">
+    <view class="detail-book-row flex-row">
+      <view class="detail-book-icon">
+        <text class="detail-book-emoji">📗</text>
+      </view>
+      <view class="detail-book-info flex-1">
+        <text class="detail-book-title">《{{bookTitle}}》</text>
+        <view class="detail-meta-row flex-row">
+          <text class="detail-tag">{{modeText}}</text>
+          <text class="detail-meta-text">{{wordCount}} 字 · {{dateText}}</text>
+        </view>
+      </view>
+    </view>
+
+    <!-- 字体调节 -->
+    <view class="font-size-row flex-row">
+      <text class="font-size-label">字体大小：</text>
+      <view class="font-tabs flex-row">
+        <view
+          class="font-tab {{fontSize === 'small' ? 'active' : ''}}"
+          data-size="small"
+          bindtap="setFontSize"
+        >小</view>
+        <view
+          class="font-tab {{fontSize === 'medium' ? 'active' : ''}}"
+          data-size="medium"
+          bindtap="setFontSize"
+        >中</view>
+        <view
+          class="font-tab {{fontSize === 'large' ? 'active' : ''}}"
+          data-size="large"
+          bindtap="setFontSize"
+        >大</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 操作栏 -->
+  <view class="action-bar card">
+    <view class="action-item" bindtap="toggleFavorite">
+      <text class="action-icon">{{isFavorite ? '❤️' : '🤍'}}</text>
+      <text class="action-text">{{isFavorite ? '已收藏' : '收藏'}}</text>
+    </view>
+    <view class="action-divider"></view>
+    <view class="action-item" bindtap="onShare">
+      <text class="action-icon">📤</text>
+      <text class="action-text">分享</text>
+    </view>
+    <view class="action-divider"></view>
+    <view class="action-item" bindtap="copyContent">
+      <text class="action-icon">📋</text>
+      <text class="action-text">复制</text>
+    </view>
+    <view class="action-divider"></view>
+    <view class="action-item" bindtap="reRead">
+      <text class="action-icon">🔄</text>
+      <text class="action-text">重新解读</text>
+    </view>
+  </view>
+
+  <!-- 正文内容 -->
+  <scroll-view class="content-scroll" scroll-y>
+    <view class="content-body {{fontSize === 'small' ? 'font-small' : fontSize === 'large' ? 'font-large' : 'font-medium'}}">
+      <text class="content-text" decode="{{true}}">{{content}}</text>
+    </view>
+
+    <!-- 免责声明 -->
+    <view class="disclaimer">
+      <text class="disclaimer-text">⚠️ 本解读由 AI 生成，仅供参考，请以原著内容为准</text>
+    </view>
+
+    <!-- 底部间距 -->
+    <view style="height: 60rpx;"></view>
+  </scroll-view>
+
+</view>

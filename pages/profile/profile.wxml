@@ -1,1 +1,165 @@
-PHZpZXcgY2xhc3M9ImNvbnRhaW5lciI+PHZpZXcgY2xhc3M9InByb2ZpbGUtaGVhZGVyIj48dmlldyBjbGFzcz0icHJvZmlsZS1oZWFkZXJfX2F2YXRhciI+e3tpc1ZpcD8i8J+RkSI6IvCfmIoifX08L3ZpZXc+PHZpZXcgY2xhc3M9InByb2ZpbGUtaGVhZGVyX19uYW1lIj57e2lzVmlwPyJWSVAg5Lya5ZGYIjoi5Lmm6Kej55So5oi3In19PC92aWV3Pjx2aWV3IHd4OmlmPSJ7eyFpc1ZpcH19IiBjbGFzcz0icHJvZmlsZS1oZWFkZXJfX3ZpcC1idG4iIGJpbmR0YXA9ImdvVmlwIj7lvIDpgJrkvJrlkZgg4pqhPC92aWV3Pjwvdmlldz48dmlldyBjbGFzcz0idmlwLWNhcmQge3tpc1ZpcD8idmlwLWNhcmQtLWFjdGl2ZSI6IiJ9fSI+PHZpZXcgY2xhc3M9InZpcC1jYXJkX19pY29uIj57e2lzVmlwPyLwn5GRIjoi8J+TliJ9fTwvdmlldz48dmlldyBjbGFzcz0idmlwLWNhcmRfX2luZm8iPjx2aWV3IGNsYXNzPSJ2aXAtY2FyZF9fdGl0bGUiPnt7aXNWaXA/IuW3suW8gOmAmuS8muWRmCI6IuWFjei0ueeUqOaItyJ9fTwvdmlldz48dmlldyBjbGFzcz0idmlwLWNhcmRfX3N1YiI+e3tpc1ZpcD8i5pyJ5pWI5pyf6IezICIrdmlwRXhwaXJlRGF0ZToi5Ymp5L2ZICIrZnJlZUNvdW50KyIg5qyh5YWN6LS56Kej6K+7In19PC92aWV3Pjwvdmlldz48dmlldyB3eDppZj0ie3shaXNWaXB9fSIgY2xhc3M9InZpcC1jYXJkX19idG4iIGJpbmR0YXA9ImdvVmlwIj7lvIDpgJo8L3ZpZXc+PHZpZXcgd3g6aWY9Int7aXNWaXB9fSIgY2xhc3M9InZpcC1jYXJkX19iYWRnZSI+VklQPC92aWV3Pjwvdmlldz48dmlldyBjbGFzcz0ibWVudS1saXN0Ij48dmlldyBjbGFzcz0ibWVudS1pdGVtIiBiaW5kdGFwPSJnb0hpc3RvcnkiPjx0ZXh0IGNsYXNzPSJtZW51LWl0ZW1fX2ljb24iPvCfk5w8L3RleHQ+PHRleHQgY2xhc3M9Im1lbnUtaXRlbV9fdGV4dCI+6Kej6K+75Y6G5Y+yPC90ZXh0Pjx0ZXh0IGNsYXNzPSJtZW51LWl0ZW1fX2Fycm93Ij7igLo8L3RleHQ+PC92aWV3Pjx2aWV3IGNsYXNzPSJtZW51LWl0ZW0iIGJpbmR0YXA9Im9uQ29sbGVjdCI+PHRleHQgY2xhc3M9Im1lbnUtaXRlbV9faWNvbiI+4p2k77iPPC90ZXh0Pjx0ZXh0IGNsYXNzPSJtZW51LWl0ZW1fX3RleHQiPuaIkeeahOaUtuiXjzwvdGV4dD48dGV4dCBjbGFzcz0ibWVudS1pdGVtX19hcnJvdyI+4oC6PC90ZXh0Pjwvdmlldz48dmlldyBjbGFzcz0ibWVudS1pdGVtIiBiaW5kdGFwPSJvbkFib3V0Ij48dGV4dCBjbGFzcz0ibWVudS1pdGVtX19pY29uIj7ihLnvuI88L3RleHQ+PHRleHQgY2xhc3M9Im1lbnUtaXRlbV9fdGV4dCI+5YWz5LqO5Lmm6KejPC90ZXh0Pjx0ZXh0IGNsYXNzPSJtZW51LWl0ZW1fX2Fycm93Ij7igLo8L3RleHQ+PC92aWV3Pjwvdmlldz48dmlldyBjbGFzcz0idmVyc2lvbiI+5Lmm6KejIHYxLjAuMDwvdmlldz48L3ZpZXc+
+<!-- pages/profile/profile.wxml -->
+<view class="page-container">
+
+  <!-- 用户信息区 -->
+  <view class="user-section">
+    <view wx:if="{{userInfo}}" class="user-info-card">
+      <image class="user-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
+      <view class="user-details">
+        <text class="user-name">{{userInfo.nickName}}</text>
+        <view wx:if="{{isVip}}" class="user-vip-row flex-row">
+          <text class="tag-vip">VIP 会员</text>
+          <text class="vip-expire">{{vipExpireText}}</text>
+        </view>
+        <view wx:else class="user-free-row">
+          <text class="user-free-text">剩余免费次数：{{freeCount}} 次</text>
+        </view>
+      </view>
+    </view>
+    <view wx:else class="user-login-card" bindtap="getUserInfo">
+      <view class="user-avatar-placeholder">
+        <text class="avatar-icon">👤</text>
+      </view>
+      <view class="user-details">
+        <text class="user-name">点击授权</text>
+        <text class="user-sub">登录后解锁更多功能</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 会员卡片 -->
+  <view wx:if="{{!isVip}}" class="vip-card" bindtap="goVip">
+    <view class="vip-card-left">
+      <text class="vip-card-title">✨ 开通包月会员</text>
+      <text class="vip-card-desc">无限次解读 · 历史永久保存</text>
+    </view>
+    <view class="vip-card-right">
+      <text class="vip-price">¥30</text>
+      <text class="vip-price-sub">/月</text>
+    </view>
+  </view>
+  <view wx:else class="vip-active-card">
+    <text class="vip-active-icon">👑</text>
+    <view class="vip-active-info">
+      <text class="vip-active-title">VIP 会员有效中</text>
+      <text class="vip-active-desc">{{vipExpireText}} · 无限次深度解读</text>
+    </view>
+  </view>
+
+  <!-- 数据统计 -->
+  <view class="stats-card card">
+    <view class="stats-row flex-row">
+      <view class="stats-item" bindtap="goHistory">
+        <text class="stats-num">{{totalRead}}</text>
+        <text class="stats-label">解读本数</text>
+      </view>
+      <view class="stats-divider"></view>
+      <view class="stats-item">
+        <text class="stats-num">{{totalWords}}</text>
+        <text class="stats-label">累计字数</text>
+      </view>
+      <view class="stats-divider"></view>
+      <view class="stats-item" bindtap="goFavorites">
+        <text class="stats-num">{{favoriteCount}}</text>
+        <text class="stats-label">我的收藏</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 功能菜单 -->
+  <view class="menu-section card">
+    <view class="menu-item flex-between" bindtap="goHistory">
+      <view class="menu-left flex-row">
+        <text class="menu-icon">📚</text>
+        <text class="menu-text">解读历史</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+    <view class="menu-divider"></view>
+    <view class="menu-item flex-between" bindtap="goFavorites">
+      <view class="menu-left flex-row">
+        <text class="menu-icon">❤️</text>
+        <text class="menu-text">我的收藏</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+    <view class="menu-divider"></view>
+    <view class="menu-item flex-between" bindtap="setFontSize">
+      <view class="menu-left flex-row">
+        <text class="menu-icon">🔤</text>
+        <text class="menu-text">字体设置</text>
+      </view>
+      <view class="flex-row">
+        <text class="menu-value">{{fontSizeText}}</text>
+        <text class="menu-arrow">›</text>
+      </view>
+    </view>
+    <view class="menu-divider"></view>
+    <view class="menu-item flex-between" bindtap="contactService">
+      <view class="menu-left flex-row">
+        <text class="menu-icon">💬</text>
+        <text class="menu-text">联系客服</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+    <view class="menu-divider"></view>
+    <view class="menu-item flex-between" bindtap="goAbout">
+      <view class="menu-left flex-row">
+        <text class="menu-icon">ℹ️</text>
+        <text class="menu-text">关于书解</text>
+      </view>
+      <text class="menu-arrow">›</text>
+    </view>
+  </view>
+
+  <!-- 底部间距 -->
+  <view style="height: 60rpx;"></view>
+
+</view>
+
+<!-- 联系客服弹窗 -->
+<view wx:if="{{showContactQr}}" class="modal-mask mask" bindtap="closeContactQr">
+  <view class="modal-box card" catchtap="">
+    <text class="modal-title">联系客服</text>
+    <text class="modal-desc">微信扫描下方二维码\n添加客服，发送「开通会员」</text>
+    <view class="qr-placeholder">
+      <text class="qr-icon">📱</text>
+      <text class="qr-tip">客服二维码</text>
+    </view>
+    <button class="modal-close btn-secondary" bindtap="closeContactQr">关闭</button>
+  </view>
+</view>
+
+<!-- 字体大小弹窗 -->
+<view wx:if="{{showFontModal}}" class="modal-mask mask" bindtap="closeFontModal">
+  <view class="font-modal card" catchtap="">
+    <text class="modal-title">字体大小</text>
+    <view class="font-options">
+      <view
+        class="font-option {{fontSize === 'small' ? 'active' : ''}}"
+        data-size="small"
+        bindtap="selectFont"
+      >
+        <text class="font-option-size font-small-demo">小号字体</text>
+        <text class="font-option-check">{{fontSize === 'small' ? '✅' : ''}}</text>
+      </view>
+      <view
+        class="font-option {{fontSize === 'medium' ? 'active' : ''}}"
+        data-size="medium"
+        bindtap="selectFont"
+      >
+        <text class="font-option-size font-medium-demo">中号字体</text>
+        <text class="font-option-check">{{fontSize === 'medium' ? '✅' : ''}}</text>
+      </view>
+      <view
+        class="font-option {{fontSize === 'large' ? 'active' : ''}}"
+        data-size="large"
+        bindtap="selectFont"
+      >
+        <text class="font-option-size font-large-demo">大号字体</text>
+        <text class="font-option-check">{{fontSize === 'large' ? '✅' : ''}}</text>
+      </view>
+    </view>
+    <button class="modal-close btn-secondary" bindtap="closeFontModal">确定</button>
+  </view>
+</view>

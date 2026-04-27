@@ -1,1 +1,130 @@
-Lm1hc2sgewogIHBvc2l0aW9uOiBmaXhlZDsgdG9wOiAwOyBsZWZ0OiAwOyByaWdodDogMDsgYm90dG9tOiAwOwogIGJhY2tncm91bmQ6IHJnYmEoMCwwLDAsMC41KTsgei1pbmRleDogMTAwMDsKICBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogZmxleC1lbmQ7IGp1c3RpZnktY29udGVudDogY2VudGVyOwp9Ci5kaWFsb2cgewogIGJhY2tncm91bmQ6ICNmZmY7IGJvcmRlci1yYWRpdXM6IDMycnB4IDMycnB4IDAgMDsKICBwYWRkaW5nOiA0OHJweCA0MHJweCBjYWxjKDQ4cnB4ICsgZW52KHNhZmUtYXJlYS1pbnNldC1ib3R0b20pKTsKICB3aWR0aDogMTAwJTsgbWF4LXdpZHRoOiA3NTBycHg7CiAgZGlzcGxheTogZmxleDsgZmxleC1kaXJlY3Rpb246IGNvbHVtbjsgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBhbmltYXRpb246IHNsaWRlVXAgMC4zcyBlYXNlOyBwb3NpdGlvbjogcmVsYXRpdmU7Cn0KQGtleWZyYW1lcyBzbGlkZVVwIHsKICBmcm9tIHsgdHJhbnNmb3JtOiB0cmFuc2xhdGVZKDEwMCUpOyB9CiAgdG8geyB0cmFuc2Zvcm06IHRyYW5zbGF0ZVkoMCk7IH0KfQouZGlhbG9nX19jbG9zZSB7CiAgcG9zaXRpb246IGFic29sdXRlOyB0b3A6IDI0cnB4OyByaWdodDogMzJycHg7CiAgZm9udC1zaXplOiAzMnJweDsgY29sb3I6ICNDQ0M7IHdpZHRoOiA2NHJweDsgaGVpZ2h0OiA2NHJweDsKICBkaXNwbGF5OiBmbGV4OyBhbGlnbi1pdGVtczogY2VudGVyOyBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjsKfQouZGlhbG9nX19pY29uIHsgZm9udC1zaXplOiA4MHJweDsgbWFyZ2luLWJvdHRvbTogMTZycHg7IH0KLmRpYWxvZ19fdGl0bGUgeyBmb250LXNpemU6IDM2cnB4OyBmb250LXdlaWdodDogODAwOyBjb2xvcjogIzMzMzsgbWFyZ2luLWJvdHRvbTogOHJweDsgdGV4dC1hbGlnbjogY2VudGVyOyB9Ci5kaWFsb2dfX3N1YiB7IGZvbnQtc2l6ZTogMjZycHg7IGNvbG9yOiAjOTk5OyBtYXJnaW4tYm90dG9tOiAyNHJweDsgfQouZGlhbG9nX19wcmljZSB7IGZvbnQtc2l6ZTogNTZycHg7IGZvbnQtd2VpZ2h0OiA4MDA7IGNvbG9yOiAjNEE2NzQxOyBtYXJnaW4tYm90dG9tOiAyNHJweDsgfQouZGlhbG9nX19wcmljZSBzcGFuIHsgZm9udC1zaXplOiAyNnJweDsgZm9udC13ZWlnaHQ6IDQwMDsgY29sb3I6ICM5OTk7IH0KLmRpYWxvZ19fYmVuZWZpdHMgeyB3aWR0aDogMTAwJTsgbWFyZ2luLWJvdHRvbTogMzJycHg7IH0KLmRpYWxvZ19fYmVuZWZpdCB7IGZvbnQtc2l6ZTogMjZycHg7IGNvbG9yOiAjNTU1OyBtYXJnaW4tYm90dG9tOiAxMnJweDsgcGFkZGluZy1sZWZ0OiA4cnB4OyB9Ci5kaWFsb2dfX2J0biB7CiAgd2lkdGg6IDEwMCU7IGJhY2tncm91bmQ6ICM0QTY3NDE7IGNvbG9yOiAjZmZmOyBib3JkZXI6IG5vbmU7IGJvcmRlci1yYWRpdXM6IDQ4cnB4OwogIHBhZGRpbmc6IDI4cnB4OyBmb250LXNpemU6IDMycnB4OyBmb250LXdlaWdodDogNzAwOyBtYXJnaW4tYm90dG9tOiAxNnJweDsKfQouZGlhbG9nX19sYXRlciB7IGZvbnQtc2l6ZTogMjZycHg7IGNvbG9yOiAjOTk5OyBwYWRkaW5nOiA4cnB4OyB9Cg==
+/* components/paywall/paywall.wxss */
+
+.paywall-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 200;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.paywall-box {
+  background: #FFFFFF;
+  border-radius: 32rpx 32rpx 0 0;
+  padding: 50rpx 40rpx 60rpx;
+  width: 100%;
+  position: relative;
+}
+
+.paywall-close {
+  position: absolute;
+  top: 24rpx;
+  right: 30rpx;
+  font-size: 34rpx;
+  color: #AAAAAA;
+  padding: 10rpx;
+}
+
+.paywall-icon {
+  font-size: 80rpx;
+  text-align: center;
+  display: block;
+  margin-bottom: 20rpx;
+}
+
+.paywall-title {
+  display: block;
+  font-size: 36rpx;
+  font-weight: 700;
+  color: #333333;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+
+.paywall-sub {
+  display: block;
+  font-size: 24rpx;
+  color: #888888;
+  text-align: center;
+  margin-bottom: 30rpx;
+}
+
+.paywall-price-row {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 30rpx;
+}
+
+.paywall-price {
+  font-size: 72rpx;
+  font-weight: 700;
+  color: #C9A85C;
+  line-height: 1;
+}
+
+.paywall-price-unit {
+  font-size: 26rpx;
+  color: #C9A85C;
+  margin-bottom: 12rpx;
+  margin-left: 6rpx;
+}
+
+.paywall-benefits {
+  background: #FFF8EC;
+  border-radius: 16rpx;
+  padding: 24rpx 28rpx;
+  margin-bottom: 36rpx;
+}
+
+.paywall-benefit-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16rpx;
+}
+
+.paywall-benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+.paywall-benefit-check {
+  font-size: 28rpx;
+  margin-right: 14rpx;
+  flex-shrink: 0;
+}
+
+.paywall-benefit-text {
+  font-size: 26rpx;
+  color: #555555;
+}
+
+.paywall-btn-vip {
+  width: 100%;
+  height: 96rpx;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+  letter-spacing: 2rpx;
+}
+
+.paywall-btn-cancel {
+  width: 100%;
+  height: 80rpx;
+  font-size: 26rpx;
+  color: #AAAAAA;
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.paywall-btn-cancel::after {
+  border: none;
+}

@@ -1,1 +1,111 @@
-PHZpZXcgY2xhc3M9ImNvbnRhaW5lciI+PHZpZXcgd3g6aWY9Int7aGlzdG9yeUxpc3QubGVuZ3RoPT09MH19IiBjbGFzcz0iZW1wdHktc3RhdGUiPjx2aWV3IGNsYXNzPSJlbXB0eS1pY29uIj7wn5OaPC92aWV3Pjx2aWV3IGNsYXNzPSJlbXB0eS10aXRsZSI+5pqC5peg6Kej6K+76K6w5b2VPC92aWV3Pjx2aWV3IGNsYXNzPSJlbXB0eS1zdWIiPuWOu+mmlumhteW8gOWni+S9oOeahOesrOS4gOasoea3seW6puino+ivu+WQpzwvdmlldz48YnV0dG9uIGNsYXNzPSJlbXB0eS1idG4iIGJpbmR0YXA9ImdvSW5kZXgiPuW8gOWni+ino+ivuzwvYnV0dG9uPjwvdmlldz48dmlldyB3eDplbHNlPjx2aWV3IHd4OmZvcj0ie3toaXN0b3J5TGlzdH19IiB3eDprZXk9ImlkIiBjbGFzcz0iaGlzdG9yeS1pdGVtIiBiaW5kdGFwPSJvbkl0ZW1UYXAiIGRhdGEtaWQ9Int7aXRlbS5pZH19IiBkYXRhLXRpdGxlPSJ7e2l0ZW0udGl0bGV9fSI+PHZpZXcgY2xhc3M9Imhpc3RvcnktaXRlbV9fY292ZXIiPnt7aXRlbS5lbW9qaX19PC92aWV3Pjx2aWV3IGNsYXNzPSJoaXN0b3J5LWl0ZW1fX2luZm8iPjx2aWV3IGNsYXNzPSJoaXN0b3J5LWl0ZW1fX3RpdGxlIj57e2l0ZW0udGl0bGV9fTwvdmlldz48dmlldyBjbGFzcz0iaGlzdG9yeS1pdGVtX19tZXRhIj57e2l0ZW0ud29yZENvdW50fX3lrZcgwrcge3tpdGVtLmRhdGVTdHJ9fTwvdmlldz48L3ZpZXc+PHRleHQgY2xhc3M9Imhpc3RvcnktaXRlbV9fYXJyb3ciPuKAujwvdGV4dD48L3ZpZXc+PHZpZXcgd3g6aWY9Int7aGFzTW9yZX19IiBjbGFzcz0ibG9hZC1tb3JlIiBiaW5kdGFwPSJsb2FkTW9yZSI+5Yqg6L295pu05aSaPC92aWV3Pjwvdmlldz48L3ZpZXc+
+<!-- pages/history/history.wxml -->
+<view class="page-container">
+
+  <!-- 统计栏 -->
+  <view class="stats-bar flex-row">
+    <view class="stat-item">
+      <text class="stat-num">{{totalCount}}</text>
+      <text class="stat-label">解读记录</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-num">{{totalWords}}</text>
+      <text class="stat-label">累计字数</text>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <text class="stat-num">{{storageLimit}}</text>
+      <text class="stat-label">存储额度</text>
+    </view>
+  </view>
+
+  <!-- 搜索框 -->
+  <view class="search-wrap flex-row">
+    <text class="search-icon">🔍</text>
+    <input
+      class="search-input flex-1"
+      value="{{searchKeyword}}"
+      placeholder="搜索书名..."
+      placeholder-class="search-placeholder"
+      bindinput="onSearchInput"
+    />
+    <view wx:if="{{searchKeyword}}" class="search-clear" bindtap="clearSearch">
+      <text>✕</text>
+    </view>
+  </view>
+
+  <!-- 历史列表 -->
+  <view wx:if="{{filteredHistory.length > 0}}" class="history-list">
+    <view
+      wx:for="{{filteredHistory}}"
+      wx:key="id"
+      class="history-card card"
+      data-id="{{item.id}}"
+      bindtap="onItemTap"
+      data-item="{{item}}"
+      bindlongpress="onItemLongPress"
+    >
+      <view class="history-card-top flex-between">
+        <view class="history-book-icon">
+          <text>📗</text>
+        </view>
+        <view class="history-main flex-1">
+          <text class="history-book-title text-ellipsis">《{{item.bookTitle}}》</text>
+          <text class="history-preview text-ellipsis-2">{{item.preview}}</text>
+        </view>
+        <text class="history-arrow">›</text>
+      </view>
+      <view class="history-card-bottom flex-between">
+        <view class="flex-row" style="gap: 12rpx;">
+          <text class="history-mode-tag">{{item.modeText}}</text>
+          <text class="history-words">{{item.wordCount || 0}} 字</text>
+        </view>
+        <text class="history-date">{{item.createdAtText || ''}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 空状态 -->
+  <view wx:if="{{filteredHistory.length === 0 && historyList.length === 0}}" class="empty-state">
+    <text class="empty-icon">📚</text>
+    <text class="empty-text">暂无解读记录</text>
+    <button class="go-home-btn btn-primary" bindtap="goHome">
+      <text>去解读第一本书</text>
+    </button>
+  </view>
+
+  <view wx:if="{{filteredHistory.length === 0 && historyList.length > 0}}" class="empty-state">
+    <text class="empty-icon">🔍</text>
+    <text class="empty-text">没有找到相关记录</text>
+  </view>
+
+  <!-- 底部提示（免费版限制） -->
+  <view wx:if="{{historyList.length > 0}}" class="bottom-tip">
+    <text class="bottom-tip-text">长按条目可删除或重新解读</text>
+  </view>
+
+  <!-- 底部间距 -->
+  <view style="height: 40rpx;"></view>
+
+</view>
+
+<!-- 操作弹窗 -->
+<view wx:if="{{showActionSheet}}" class="mask" bindtap="closeActionSheet">
+  <view class="action-sheet" catchtap="">
+    <view class="action-sheet-title">
+      <text>《{{selectedItem.bookTitle}}》</text>
+    </view>
+    <view class="action-sheet-item" bindtap="onActionView">
+      <text>👁️ 查看解读</text>
+    </view>
+    <view class="action-sheet-item" bindtap="onActionReRead">
+      <text>🔄 重新解读</text>
+    </view>
+    <view class="action-sheet-item action-delete" bindtap="onActionDelete">
+      <text>🗑️ 删除记录</text>
+    </view>
+    <view class="action-sheet-cancel" bindtap="closeActionSheet">
+      <text>取消</text>
+    </view>
+  </view>
+</view>

@@ -1,1 +1,108 @@
-PHZpZXcgY2xhc3M9ImNvbnRhaW5lciI+PHZpZXcgY2xhc3M9ImJvb2staW5mbyI+PHZpZXcgY2xhc3M9ImJvb2staW5mb19fZW1vamkiPvCfk5Y8L3ZpZXc+PHZpZXcgY2xhc3M9ImJvb2staW5mb19fdGl0bGUiPuOAint7Ym9va05hbWV9feOAizwvdmlldz48dmlldyBjbGFzcz0iYm9vay1pbmZvX19zdGF0dXMiPnt7c3RhdHVzVGV4dH19PC92aWV3Pjwvdmlldz48dmlldyBjbGFzcz0icHJvZ3Jlc3MtYmFyIj48dmlldyBjbGFzcz0icHJvZ3Jlc3MtYmFyX19maWxsIiBzdHlsZT0id2lkdGg6IHt7cHJvZ3Jlc3N9fSUiPjwvdmlldz48L3ZpZXc+PHZpZXcgY2xhc3M9InByb2dyZXNzLXRleHQiPnt7cHJvZ3Jlc3N9fSU8L3ZpZXc+PHZpZXcgd3g6aWY9Int7aXNMb2FkaW5nfX0iIGNsYXNzPSJsb2FkaW5nLWFyZWEiPjx2aWV3IGNsYXNzPSJsb2FkaW5nLWRvdHMiPjx2aWV3IGNsYXNzPSJkb3QgZG90MSI+PC92aWV3Pjx2aWV3IGNsYXNzPSJkb3QgZG90MiI+PC92aWV3Pjx2aWV3IGNsYXNzPSJkb3QgZG90MyI+PC92aWV3Pjwvdmlldz48dmlldyBjbGFzcz0ibG9hZGluZy10aXAiPnt7bG9hZGluZ1RpcH19PC92aWV3Pjwvdmlldz48dmlldyB3eDppZj0ie3tlcnJvcn19IiBjbGFzcz0iZXJyb3ItYXJlYSI+PHZpZXcgY2xhc3M9ImVycm9yLWljb24iPuKaoO+4jzwvdmlldz48dmlldyBjbGFzcz0iZXJyb3ItbXNnIj57e2Vycm9yfX08L3ZpZXc+PGJ1dHRvbiBjbGFzcz0icmV0cnktYnRuIiBiaW5kdGFwPSJvblJldHJ5Ij7ph43mlrDop6Por7s8L2J1dHRvbj48L3ZpZXc+PC92aWV3Pg==
+<!-- pages/reading/reading.wxml -->
+<view class="page-container">
+
+  <!-- 加载阶段 -->
+  <view wx:if="{{stage === 'loading'}}" class="loading-stage">
+    <view class="loading-book-cover">
+      <text class="loading-book-emoji">📖</text>
+    </view>
+    <view class="loading-title">
+      <text class="loading-book-name">《{{bookTitle}}》</text>
+      <text class="loading-sub">深度解读中...</text>
+    </view>
+
+    <!-- 进度条 -->
+    <view class="progress-wrap">
+      <view class="progress-bar-bg">
+        <view class="progress-bar-fill" style="width: {{progress}}%"></view>
+      </view>
+      <text class="progress-num">{{progress}}%</text>
+    </view>
+
+    <!-- 步骤提示 -->
+    <view class="step-list">
+      <view class="step-item {{step >= 1 ? 'done' : ''}}">
+        <text class="step-icon">{{step >= 1 ? '✅' : '⏳'}}</text>
+        <text class="step-text">分析书籍结构</text>
+      </view>
+      <view class="step-item {{step >= 2 ? 'done' : ''}}">
+        <text class="step-icon">{{step >= 2 ? '✅' : '⏳'}}</text>
+        <text class="step-text">提炼核心观点</text>
+      </view>
+      <view class="step-item {{step >= 3 ? 'done' : ''}}">
+        <text class="step-icon">{{step >= 3 ? '✅' : '⏳'}}</text>
+        <text class="step-text">深度展开论点</text>
+      </view>
+      <view class="step-item {{step >= 4 ? 'done' : ''}}">
+        <text class="step-icon">{{step >= 4 ? '✅' : '⏳'}}</text>
+        <text class="step-text">生成解读报告</text>
+      </view>
+    </view>
+
+    <text class="loading-tip">{{loadingTip}}</text>
+    <text class="loading-hint">深度解读约需 15-60 秒，请耐心等待</text>
+  </view>
+
+  <!-- 流式输出阶段 -->
+  <view wx:if="{{stage === 'streaming'}}" class="streaming-stage">
+    <view class="stream-header">
+      <text class="stream-book-name">《{{bookTitle}}》解读</text>
+      <view class="stream-status flex-row">
+        <view class="loading-dots">
+          <view class="dot"></view>
+          <view class="dot"></view>
+          <view class="dot"></view>
+        </view>
+        <text class="stream-words">已生成 {{wordCount}} 字</text>
+      </view>
+    </view>
+    <scroll-view class="stream-scroll" scroll-y scroll-top="{{scrollTop}}" enhanced>
+      <view class="stream-content">
+        <text class="stream-text" decode="{{true}}">{{streamContent}}</text>
+        <view class="cursor-blink"></view>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 完成阶段 -->
+  <view wx:if="{{stage === 'done'}}" class="done-stage">
+    <view class="done-header card">
+      <view class="done-info flex-row">
+        <text class="done-emoji">📗</text>
+        <view class="flex-1">
+          <text class="done-title">《{{bookTitle}}》</text>
+          <text class="done-meta">解读完成 · {{wordCount}} 字</text>
+        </view>
+      </view>
+      <view class="done-actions flex-row">
+        <button class="done-btn-primary btn-primary flex-1" bindtap="goDetail">
+          <text>查看完整解读 →</text>
+        </button>
+      </view>
+    </view>
+
+    <!-- 预览内容 -->
+    <scroll-view class="done-scroll" scroll-y>
+      <view class="done-preview">
+        <text class="done-preview-text">{{streamContent}}</text>
+      </view>
+    </scroll-view>
+  </view>
+
+  <!-- 错误阶段 -->
+  <view wx:if="{{stage === 'error'}}" class="error-stage">
+    <view class="error-icon">😢</view>
+    <text class="error-title">解读失败</text>
+    <text class="error-msg">{{errorMsg}}</text>
+    <text class="error-hint">本次不消耗解读次数</text>
+    <view class="error-actions">
+      <button class="btn-primary error-retry-btn" bindtap="retry">
+        <text>重新尝试</text>
+      </button>
+      <button class="btn-secondary error-back-btn" bindtap="goBack">
+        <text>返回首页</text>
+      </button>
+    </view>
+  </view>
+
+</view>
