@@ -1,15 +1,1 @@
-// components/paywall/paywall.js
-Component({
-  properties: {
-    show: { type: Boolean, value: false },
-    freeCount: { type: Number, value: 0 },
-  },
-  methods: {
-    onClose() {
-      this.triggerEvent('close');
-    },
-    onGoVip() {
-      this.triggerEvent('goVip');
-    },
-  }
-});
+Ly8gY29tcG9uZW50cy9wYXl3YWxsL3BheXdhbGwuanMKQ29tcG9uZW50KHsKICBwcm9wZXJ0aWVzOiB7fSwKICBkYXRhOiB7CiAgICBiZW5lZml0czogWyfml6DpmZDmrKHmt7Hluqbop6Por7snLCAn5omA5pyJ5Lmm57GN5peg6ZmQ5Yi2JywgJ+WOhuWPsuiusOW9leawuOS5heS/neWtmCddLAogIH0sCiAgbWV0aG9kczogewogICAgb25DbG9zZSgpIHsKICAgICAgdGhpcy50cmlnZ2VyRXZlbnQoJ2Nsb3NlJyk7CiAgICB9LAogICAgb25VcGdyYWRlKCkgewogICAgICB3eC5uYXZpZ2F0ZVRvKHsgdXJsOiAnL3BhZ2VzL3ZpcC92aXAnIH0pOwogICAgfSwKICB9Cn0pOwo=
