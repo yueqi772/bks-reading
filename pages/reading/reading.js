@@ -3,10 +3,6 @@ var historyUtil = require('../../utils/history');
 var markdownUtil = require('../../utils/markdown');
 var storageUtil = require('../../utils/storage');
 var cloudUtil = require('../../utils/cloud');
-var apiUtil = require('../../utils/api');
-
-// 设为 false 使用真实 DeepSeek API（客户端流式），true 使用 Mock
-var USE_MOCK = false;
 
 var LOADING_TIPS = [
   '正在分析书籍结构...',
@@ -34,7 +30,7 @@ Page({
   },
 
   _timers: [],
-  _requestTask: null,  // 当前 wx.request 任务，用于页面退出时 abort
+  _typeTimer: null,  // 打字机 interval，页面退出时清除
 
   onLoad: function(options) {
     var title = decodeURIComponent(options.title || '');
@@ -47,20 +43,16 @@ Page({
   },
 
   onUnload: function() {
-    this._clearTimers();
-    // 离开页面时中断请求，避免浪费 token
-    if (this._requestTask && this._requestTask.abort) {
-      this._requestTask.abort();
-      this._requestTask = null;
-    }
+    this._clearAll();
   },
 
-  _clearTimers: function() {
+  _clearAll: function() {
     this._timers.forEach(function(t) { clearTimeout(t); clearInterval(t); });
     this._timers = [];
+    if (this._typeTimer) { clearInterval(this._typeTimer); this._typeTimer = null; }
   },
 
-  // ── 核心：客户端流式调用 DeepSeek ─────────────────────────────
+  // ── 核心：调用云函数，收到完整内容后打字机流式展示 ─────────────
   _startReading: function(bookTitle, mode) {
     var self = this;
     var app = getApp();
@@ -68,10 +60,10 @@ Page({
     // 先扣除免费次数（出错时退还）
     if (!app.globalData.isVip) { app.consumeFreeCount(); }
 
-    // 启动进度条动画（第一个 chunk 到来时自动停止）
+    // 启动进度条动画（云函数返回内容前展示）
     self._simulateProgress();
 
-    // 节流刷新：每 120ms setData 一次，避免高频渲染卡顿
+    // 节流刷新：避免打字机高频 setData 卡顿
     var pendingText = '';
     var flushTimer = null;
     function flushContent() {
@@ -84,26 +76,28 @@ Page({
     }
     function scheduleFlush() {
       if (!flushTimer) {
-        flushTimer = setTimeout(flushContent, 120);
-        self._timers.push(flushTimer);
+        flushTimer = setTimeout(flushContent, 80);
       }
     }
 
-    var callbacks = {
-      // 每收到新 chunk，切换到 streaming 阶段并刷新内容
-      onChunk: function(chunk, fullSoFar) {
+    cloudUtil.callAiRead(
+      bookTitle,
+      mode,
+      // onChunk：打字机每推一批字符时触发
+      function(chunk, fullSoFar) {
         if (self.data.stage === 'loading') {
-          self._clearTimers();
+          // 第一个字符到来，立刻切到流式输出界面
+          self._clearAll();
           flushTimer = null;
           self.setData({ stage: 'streaming', progress: 100, step: 5, isStreaming: true });
         }
         pendingText = fullSoFar;
         scheduleFlush();
       },
-      // 全部完成
-      onComplete: function(fullContent) {
+      // onDone：打字机播完
+      function(fullContent) {
         if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
-        self._requestTask = null;
+        self._typeTimer = null;
         self.setData({
           streamContent: fullContent,
           wordCount: markdownUtil.countWords(fullContent),
@@ -112,11 +106,10 @@ Page({
         });
         self._onReadComplete(fullContent, bookTitle, mode);
       },
-      // 出错，退还次数
-      onError: function(err) {
+      // onError：出错退还次数
+      function(errMsg) {
         if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
-        self._clearTimers();
-        self._requestTask = null;
+        self._clearAll();
         if (!app.globalData.isVip) {
           app.globalData.freeCount++;
           storageUtil.storage.set('freeCount', app.globalData.freeCount);
@@ -124,16 +117,10 @@ Page({
         self.setData({
           stage: 'error',
           isStreaming: false,
-          errorMsg: (err && err.message) || err || 'AI 解读失败，请重试',
+          errorMsg: errMsg || 'AI 解读失败，请重试',
         });
-      },
-    };
-
-    if (USE_MOCK) {
-      self._requestTask = apiUtil.mockReadBook(bookTitle, mode, callbacks);
-    } else {
-      self._requestTask = apiUtil.readBook(bookTitle, mode, callbacks);
-    }
+      }
+    );
   },
 
   // ── 解读完成：保存历史 ──────────────────────────────────────────
@@ -157,17 +144,17 @@ Page({
     });
   },
 
-  // ── 进度条动画（等待 AI 首字返回前展示） ────────────────────────
+  // ── 进度条动画（等待云函数响应期间展示） ────────────────────────
   _simulateProgress: function() {
     var self = this;
     var progress = 0;
 
     var tick = function() {
       if (self.data.stage !== 'loading') return;
-      // 前 70% 快速推进，之后极慢等待 AI 首字
-      var step = progress < 70
+      // 前 75% 快速推进，后面极慢等待云函数
+      var step = progress < 75
         ? (Math.random() * 6 + 4)
-        : (Math.random() * 1 + 0.3);
+        : (Math.random() * 0.8 + 0.2);
       progress = Math.min(progress + step, 95);
 
       var newStep = Math.min(Math.floor(progress / 20), LOADING_TIPS.length - 1);
@@ -178,7 +165,7 @@ Page({
       });
 
       if (progress < 95) {
-        var t = setTimeout(tick, progress < 70 ? 500 : 1200);
+        var t = setTimeout(tick, progress < 75 ? 500 : 1500);
         self._timers.push(t);
       }
     };
@@ -194,11 +181,7 @@ Page({
   },
 
   retry: function() {
-    if (this._requestTask && this._requestTask.abort) {
-      this._requestTask.abort();
-      this._requestTask = null;
-    }
-    this._clearTimers();
+    this._clearAll();
     this.setData({
       stage: 'loading', step: 0, progress: 0,
       streamContent: '', wordCount: 0, errorMsg: '',

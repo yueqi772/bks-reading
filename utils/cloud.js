@@ -143,9 +143,11 @@ function callAiRead(bookTitle, mode, onChunk, onDone, onError) {
         if (onError) onError('AI 未返回内容，请重试');
         return;
       }
-      // 模拟流式打字：每 40ms 推送一批字符，模拟逐字出现的效果
+      // 模拟流式打字：收到完整内容后逐字推送，模拟 AI 实时输出感
+      // 总时长约 20-30s（4000字 / 每次20字 * 120ms ≈ 24s）
       var index = 0;
-      var chunkSize = 12; // 每次推送字符数（可调整，越小越流畅但刷新越频繁）
+      var chunkSize = 20;
+      var interval = 120;
       var timer = setInterval(function() {
         var end = Math.min(index + chunkSize, fullContent.length);
         var fullSoFar = fullContent.substring(0, end);
@@ -155,7 +157,7 @@ function callAiRead(bookTitle, mode, onChunk, onDone, onError) {
           clearInterval(timer);
           if (onDone) onDone(fullContent);
         }
-      }, 40);
+      }, interval);
     },
     fail: function(err) {
       var msg = (err && err.errMsg) || '网络错误';
