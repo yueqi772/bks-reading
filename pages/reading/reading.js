@@ -1,1 +1,210 @@
-Ly8gcGFnZXMvcmVhZGluZy9yZWFkaW5nLmpzCmNvbnN0IGFwcCA9IGdldEFwcCgpOwpjb25zdCB7IG1vY2tSZWFkQm9vaywgcmVhZEJvb2sgfSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL2FwaScpOwpjb25zdCB7IHNhdmVIaXN0b3J5IH0gPSByZXF1aXJlKCcuLi8uLi91dGlscy9oaXN0b3J5Jyk7CmNvbnN0IHsgY291bnRXb3JkcyB9ID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvbWFya2Rvd24nKTsKCi8vIOaYr+WQpuS9v+eUqCBNb2NrIOaooeW8j++8iOayoeaciSBBUEkgS2V5IOaXtuiuvuS4uiB0cnVl77yJCmNvbnN0IFVTRV9NT0NLID0gdHJ1ZTsKCmNvbnN0IExPQURJTkdfVElQUyA9IFsKICAn5q2j5Zyo5YiG5p6Q5Lmm57GN57uT5p6ELi4uJywKICAn5o+Q54K85qC45b+D6KeC54K55LitLi4uJywKICAn5rex5bqm5bGV5byA5q+P5Liq6K6654K5Li4uJywKICAn5pW055CG5a6e6Le15qGI5L6LLi4uJywKICAn55Sf5oiQ55+l6K+G5Zyw5Zu+Li4uJywKICAn5Y2z5bCG5a6M5oiQ6Kej6K+7Li4uJywKXTsKClBhZ2UoewogIGRhdGE6IHsKICAgIGJvb2tUaXRsZTogJycsCiAgICByZWFkTW9kZTogJ2RlZXAnLAogICAgc3RhZ2U6ICdsb2FkaW5nJywgICAvLyBsb2FkaW5nIHwgc3RyZWFtaW5nIHwgZG9uZSB8IGVycm9yCiAgICBzdGVwOiAwLAogICAgcHJvZ3Jlc3M6IDAsCiAgICBsb2FkaW5nVGlwOiAn5q2j5Zyo5YiG5p6Q5Lmm57GN57uT5p6ELi4uJywKICAgIHN0cmVhbUNvbnRlbnQ6ICcnLAogICAgd29yZENvdW50OiAwLAogICAgaXNTdHJlYW1pbmc6IGZhbHNlLAogICAgc2Nyb2xsVG9wOiAwLAogICAgZXJyb3JNc2c6ICcnLAogICAgc2F2ZWRJZDogJycsCiAgfSwKCiAgX3RpbWVyczogW10sCgogIG9uTG9hZChvcHRpb25zKSB7CiAgICBjb25zdCB0aXRsZSA9IGRlY29kZVVSSUNvbXBvbmVudChvcHRpb25zLnRpdGxlIHx8ICcnKTsKICAgIGNvbnN0IG1vZGUgPSBvcHRpb25zLm1vZGUgfHwgJ2RlZXAnOwogICAgdGhpcy5zZXREYXRhKHsgYm9va1RpdGxlOiB0aXRsZSwgcmVhZE1vZGU6IG1vZGUgfSk7CiAgICB3eC5zZXROYXZpZ2F0aW9uQmFyVGl0bGUoeyB0aXRsZTogYOino+ivu+OAiiR7dGl0bGUuc3Vic3RyaW5nKDAsIDgpfS4uLuOAi2AgfSk7CiAgICB0aGlzLl9zdGFydFJlYWRpbmcodGl0bGUsIG1vZGUpOwogIH0sCgogIG9uVW5sb2FkKCkgewogICAgLy8g5riF6Zmk5omA5pyJ5a6a5pe25ZmoCiAgICB0aGlzLl90aW1lcnMuZm9yRWFjaCh0ID0+IGNsZWFyVGltZW91dCh0KSk7CiAgICB0aGlzLl90aW1lcnMgPSBbXTsKICB9LAoKICBfc3RhcnRSZWFkaW5nKGJvb2tUaXRsZSwgbW9kZSkgewogICAgLy8g5YWI5raI6ICX5YWN6LS55qyh5pWw77yI5Y+q5pyJ6Z2e5Lya5ZGY5omN5raI6ICX77yJCiAgICBjb25zdCBhcHAgPSBnZXRBcHAoKTsKICAgIGlmICghYXBwLmdsb2JhbERhdGEuaXNWaXApIHsKICAgICAgYXBwLmNvbnN1bWVGcmVlQ291bnQoKTsKICAgIH0KCiAgICAvLyDmqKHmi5/ov5vluqbmnaEKICAgIHRoaXMuX3NpbXVsYXRlUHJvZ3Jlc3MoKTsKCiAgICBjb25zdCBjYWxsYmFja3MgPSB7CiAgICAgIG9uU3RhcnQ6ICgpID0+IHsKICAgICAgICB0aGlzLnNldERhdGEoeyBzdGFnZTogJ2xvYWRpbmcnLCBpc1N0cmVhbWluZzogdHJ1ZSB9KTsKICAgICAgfSwKICAgICAgb25DaHVuazogKGNvbnRlbnQpID0+IHsKICAgICAgICAvLyDliIfmjaLliLDmtYHlvI/ovpPlh7rpmLbmrrUKICAgICAgICBpZiAodGhpcy5kYXRhLnN0YWdlID09PSAnbG9hZGluZycpIHsKICAgICAgICAgIHRoaXMuc2V0RGF0YSh7IHN0YWdlOiAnc3RyZWFtaW5nJywgcHJvZ3Jlc3M6IDEwMCwgc3RlcDogNCB9KTsKICAgICAgICB9CiAgICAgICAgY29uc3Qgd2MgPSBjb3VudFdvcmRzKGNvbnRlbnQpOwogICAgICAgIHRoaXMuc2V0RGF0YSh7CiAgICAgICAgICBzdHJlYW1Db250ZW50OiBjb250ZW50LAogICAgICAgICAgd29yZENvdW50OiB3YywKICAgICAgICAgIHNjcm9sbFRvcDogOTk5OTksIC8vIOiHquWKqOa7muWIsOW6lemDqAogICAgICAgIH0pOwogICAgICB9LAogICAgICBvbkNvbXBsZXRlOiAoZnVsbENvbnRlbnQpID0+IHsKICAgICAgICBjb25zdCB3YyA9IGNvdW50V29yZHMoZnVsbENvbnRlbnQpOwogICAgICAgIC8vIOS/neWtmOWOhuWPsgogICAgICAgIGNvbnN0IHJlY29yZCA9IHNhdmVIaXN0b3J5KGJvb2tUaXRsZSwgZnVsbENvbnRlbnQsIG1vZGUpOwogICAgICAgIHRoaXMuc2V0RGF0YSh7CiAgICAgICAgICBzdGFnZTogJ2RvbmUnLAogICAgICAgICAgc3RyZWFtQ29udGVudDogZnVsbENvbnRlbnQsCiAgICAgICAgICB3b3JkQ291bnQ6IHdjLAogICAgICAgICAgaXNTdHJlYW1pbmc6IGZhbHNlLAogICAgICAgICAgc2F2ZWRJZDogcmVjb3JkLmlkLAogICAgICAgIH0pOwogICAgICB9LAogICAgICBvbkVycm9yOiAoZXJyKSA9PiB7CiAgICAgICAgLy8g6Kej6K+75aSx6LSl77yM6YCA6L+Y5YWN6LS55qyh5pWwCiAgICAgICAgaWYgKCFhcHAuZ2xvYmFsRGF0YS5pc1ZpcCkgewogICAgICAgICAgYXBwLmdsb2JhbERhdGEuZnJlZUNvdW50Kys7CiAgICAgICAgICBjb25zdCB7IHN0b3JhZ2UgfSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL3N0b3JhZ2UnKTsKICAgICAgICAgIHN0b3JhZ2Uuc2V0KCdmcmVlQ291bnQnLCBhcHAuZ2xvYmFsRGF0YS5mcmVlQ291bnQpOwogICAgICAgIH0KICAgICAgICB0aGlzLnNldERhdGEoewogICAgICAgICAgc3RhZ2U6ICdlcnJvcicsCiAgICAgICAgICBpc1N0cmVhbWluZzogZmFsc2UsCiAgICAgICAgICBlcnJvck1zZzogZXJyLm1lc3NhZ2UgfHwgJ+e9kee7nOW8guW4uO+8jOivt+eojeWQjumHjeivlScsCiAgICAgICAgfSk7CiAgICAgIH0KICAgIH07CgogICAgaWYgKFVTRV9NT0NLKSB7CiAgICAgIC8vIOW7tui/nyAyIOenkuaooeaLn+WKoOi9veaEnwogICAgICBjb25zdCB0ID0gc2V0VGltZW91dCgoKSA9PiB7CiAgICAgICAgbW9ja1JlYWRCb29rKGJvb2tUaXRsZSwgbW9kZSwgY2FsbGJhY2tzKTsKICAgICAgfSwgMjAwMCk7CiAgICAgIHRoaXMuX3RpbWVycy5wdXNoKHQpOwogICAgfSBlbHNlIHsKICAgICAgcmVhZEJvb2soYm9va1RpdGxlLCBtb2RlLCBjYWxsYmFja3MpOwogICAgfQogIH0sCgogIF9zaW11bGF0ZVByb2dyZXNzKCkgewogICAgbGV0IHN0ZXAgPSAwOwogICAgbGV0IHByb2dyZXNzID0gMDsKICAgIGNvbnN0IHRvdGFsU3RlcHMgPSA0OwogICAgY29uc3QgdGlwSW5kZXggPSBbMCwgMSwgMiwgM107CgogICAgY29uc3QgdGljayA9ICgpID0+IHsKICAgICAgaWYgKHRoaXMuZGF0YS5zdGFnZSAhPT0gJ2xvYWRpbmcnKSByZXR1cm47CgogICAgICBwcm9ncmVzcyA9IE1hdGgubWluKHByb2dyZXNzICsgTWF0aC5yYW5kb20oKSAqIDggKyA0LCA5NSk7CiAgICAgIGNvbnN0IG5ld1N0ZXAgPSBNYXRoLm1pbihNYXRoLmZsb29yKHByb2dyZXNzIC8gMjUpLCB0b3RhbFN0ZXBzKTsKICAgICAgCiAgICAgIHRoaXMuc2V0RGF0YSh7CiAgICAgICAgcHJvZ3Jlc3M6IE1hdGguZmxvb3IocHJvZ3Jlc3MpLAogICAgICAgIHN0ZXA6IG5ld1N0ZXAsCiAgICAgICAgbG9hZGluZ1RpcDogTE9BRElOR19USVBTW01hdGgubWluKG5ld1N0ZXAsIExPQURJTkdfVElQUy5sZW5ndGggLSAxKV0sCiAgICAgIH0pOwoKICAgICAgaWYgKHByb2dyZXNzIDwgOTUpIHsKICAgICAgICBjb25zdCB0ID0gc2V0VGltZW91dCh0aWNrLCA2MDAgKyBNYXRoLnJhbmRvbSgpICogNDAwKTsKICAgICAgICB0aGlzLl90aW1lcnMucHVzaCh0KTsKICAgICAgfQogICAgfTsKCiAgICBjb25zdCB0ID0gc2V0VGltZW91dCh0aWNrLCA1MDApOwogICAgdGhpcy5fdGltZXJzLnB1c2godCk7CiAgfSwKCiAgZ29EZXRhaWwoKSB7CiAgICBpZiAodGhpcy5kYXRhLnNhdmVkSWQpIHsKICAgICAgd3gucmVkaXJlY3RUbyh7CiAgICAgICAgdXJsOiBgL3BhZ2VzL2RldGFpbC9kZXRhaWw/aWQ9JHt0aGlzLmRhdGEuc2F2ZWRJZH1gCiAgICAgIH0pOwogICAgfQogIH0sCgogIHJldHJ5KCkgewogICAgdGhpcy5zZXREYXRhKHsKICAgICAgc3RhZ2U6ICdsb2FkaW5nJywKICAgICAgc3RlcDogMCwKICAgICAgcHJvZ3Jlc3M6IDAsCiAgICAgIHN0cmVhbUNvbnRlbnQ6ICcnLAogICAgICB3b3JkQ291bnQ6IDAsCiAgICAgIGVycm9yTXNnOiAnJywKICAgIH0pOwogICAgdGhpcy5fc3RhcnRSZWFkaW5nKHRoaXMuZGF0YS5ib29rVGl0bGUsIHRoaXMuZGF0YS5yZWFkTW9kZSk7CiAgfSwKCiAgZ29CYWNrKCkgewogICAgd3guc3dpdGNoVGFiKHsgdXJsOiAnL3BhZ2VzL2luZGV4L2luZGV4JyB9KTsKICB9LAp9KTsK
+// pages/reading/reading.js
+var historyUtil = require('../../utils/history');
+var markdownUtil = require('../../utils/markdown');
+var storageUtil = require('../../utils/storage');
+var cloudUtil = require('../../utils/cloud');
+var apiUtil = require('../../utils/api');
+
+// 设为 false 使用真实 DeepSeek API（客户端流式），true 使用 Mock
+var USE_MOCK = false;
+
+var LOADING_TIPS = [
+  '正在分析书籍结构...',
+  '提炼核心观点中...',
+  '深度展开每个论点...',
+  '整理实践案例...',
+  '生成知识地图...',
+  '即将完成解读...',
+];
+
+Page({
+  data: {
+    bookTitle: '',
+    readMode: 'deep',
+    stage: 'loading',   // loading | streaming | done | error
+    step: 0,
+    progress: 0,
+    loadingTip: '正在分析书籍结构...',
+    streamContent: '',
+    wordCount: 0,
+    isStreaming: false,
+    scrollTop: 0,
+    errorMsg: '',
+    savedId: '',
+  },
+
+  _timers: [],
+  _requestTask: null,  // 当前 wx.request 任务，用于页面退出时 abort
+
+  onLoad: function(options) {
+    var title = decodeURIComponent(options.title || '');
+    var mode = options.mode || 'deep';
+    this.setData({ bookTitle: title, readMode: mode });
+    wx.setNavigationBarTitle({
+      title: '解读《' + title.substring(0, 8) + (title.length > 8 ? '...' : '') + '》'
+    });
+    this._startReading(title, mode);
+  },
+
+  onUnload: function() {
+    this._clearTimers();
+    // 离开页面时中断请求，避免浪费 token
+    if (this._requestTask && this._requestTask.abort) {
+      this._requestTask.abort();
+      this._requestTask = null;
+    }
+  },
+
+  _clearTimers: function() {
+    this._timers.forEach(function(t) { clearTimeout(t); clearInterval(t); });
+    this._timers = [];
+  },
+
+  // ── 核心：客户端流式调用 DeepSeek ─────────────────────────────
+  _startReading: function(bookTitle, mode) {
+    var self = this;
+    var app = getApp();
+
+    // 先扣除免费次数（出错时退还）
+    if (!app.globalData.isVip) { app.consumeFreeCount(); }
+
+    // 启动进度条动画（第一个 chunk 到来时自动停止）
+    self._simulateProgress();
+
+    // 节流刷新：每 120ms setData 一次，避免高频渲染卡顿
+    var pendingText = '';
+    var flushTimer = null;
+    function flushContent() {
+      flushTimer = null;
+      self.setData({
+        streamContent: pendingText,
+        wordCount: markdownUtil.countWords(pendingText),
+        scrollTop: 99999,
+      });
+    }
+    function scheduleFlush() {
+      if (!flushTimer) {
+        flushTimer = setTimeout(flushContent, 120);
+        self._timers.push(flushTimer);
+      }
+    }
+
+    var callbacks = {
+      // 每收到新 chunk，切换到 streaming 阶段并刷新内容
+      onChunk: function(chunk, fullSoFar) {
+        if (self.data.stage === 'loading') {
+          self._clearTimers();
+          flushTimer = null;
+          self.setData({ stage: 'streaming', progress: 100, step: 5, isStreaming: true });
+        }
+        pendingText = fullSoFar;
+        scheduleFlush();
+      },
+      // 全部完成
+      onComplete: function(fullContent) {
+        if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
+        self._requestTask = null;
+        self.setData({
+          streamContent: fullContent,
+          wordCount: markdownUtil.countWords(fullContent),
+          isStreaming: false,
+          scrollTop: 99999,
+        });
+        self._onReadComplete(fullContent, bookTitle, mode);
+      },
+      // 出错，退还次数
+      onError: function(err) {
+        if (flushTimer) { clearTimeout(flushTimer); flushTimer = null; }
+        self._clearTimers();
+        self._requestTask = null;
+        if (!app.globalData.isVip) {
+          app.globalData.freeCount++;
+          storageUtil.storage.set('freeCount', app.globalData.freeCount);
+        }
+        self.setData({
+          stage: 'error',
+          isStreaming: false,
+          errorMsg: (err && err.message) || err || 'AI 解读失败，请重试',
+        });
+      },
+    };
+
+    if (USE_MOCK) {
+      self._requestTask = apiUtil.mockReadBook(bookTitle, mode, callbacks);
+    } else {
+      self._requestTask = apiUtil.readBook(bookTitle, mode, callbacks);
+    }
+  },
+
+  // ── 解读完成：保存历史 ──────────────────────────────────────────
+  _onReadComplete: function(fullContent, bookTitle, mode) {
+    var self = this;
+
+    // 1. 本地立即保存
+    var localRecord = historyUtil.saveHistory(bookTitle, fullContent, mode);
+    self.setData({
+      stage: 'done',
+      wordCount: markdownUtil.countWords(fullContent),
+      isStreaming: false,
+      savedId: localRecord.id,
+    });
+
+    // 2. 后台同步到云端（不阻塞 UI）
+    cloudUtil.saveReadHistory(bookTitle, fullContent, mode, function(res) {
+      if (res && res.code === 0 && res.recordId) {
+        self.setData({ savedId: res.recordId });
+      }
+    });
+  },
+
+  // ── 进度条动画（等待 AI 首字返回前展示） ────────────────────────
+  _simulateProgress: function() {
+    var self = this;
+    var progress = 0;
+
+    var tick = function() {
+      if (self.data.stage !== 'loading') return;
+      // 前 70% 快速推进，之后极慢等待 AI 首字
+      var step = progress < 70
+        ? (Math.random() * 6 + 4)
+        : (Math.random() * 1 + 0.3);
+      progress = Math.min(progress + step, 95);
+
+      var newStep = Math.min(Math.floor(progress / 20), LOADING_TIPS.length - 1);
+      self.setData({
+        progress: Math.floor(progress),
+        step: newStep,
+        loadingTip: LOADING_TIPS[newStep],
+      });
+
+      if (progress < 95) {
+        var t = setTimeout(tick, progress < 70 ? 500 : 1200);
+        self._timers.push(t);
+      }
+    };
+
+    var t = setTimeout(tick, 400);
+    this._timers.push(t);
+  },
+
+  goDetail: function() {
+    if (this.data.savedId) {
+      wx.redirectTo({ url: '/pages/detail/detail?id=' + this.data.savedId });
+    }
+  },
+
+  retry: function() {
+    if (this._requestTask && this._requestTask.abort) {
+      this._requestTask.abort();
+      this._requestTask = null;
+    }
+    this._clearTimers();
+    this.setData({
+      stage: 'loading', step: 0, progress: 0,
+      streamContent: '', wordCount: 0, errorMsg: '',
+    });
+    this._startReading(this.data.bookTitle, this.data.readMode);
+  },
+
+  goBack: function() { wx.switchTab({ url: '/pages/index/index' }); },
+});

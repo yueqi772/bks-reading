@@ -1,1 +1,319 @@
-Ly8gdXRpbHMvYXBpLmpzIC0gQUkg5o6l5Y+j5bCB6KOFCi8vIOazqOaEj++8muWunumZhemhueebruS4remcgOabv+aNouS4uuecn+WunueahCBBSSDmnI3liqHmjqXlj6PlnLDlnYDlkowgS2V5CgovLyA9PT09PT09PT09IOmFjee9riA9PT09PT09PT09Ci8vIOS9v+eUqCBEZWVwU2VlayAvIEtpbWkgLyDpgJrkuYnljYPpl67nrYnlm73lhoXlt7LlpIfmoYjlpKfmqKHlnosKLy8g6K+35Zyo5q2k5aSE5aGr5YaZ5L2g55qEIEFJIEFQSSDphY3nva4KY29uc3QgQUlfQ09ORklHID0gewogIC8vIOekuuS+i++8muS9v+eUqCBEZWVwU2VlayBBUEnvvIjlt7LlnKjlm73lhoXlpIfmoYjvvIkKICBiYXNlVXJsOiAnaHR0cHM6Ly9hcGkuZGVlcHNlZWsuY29tL3YxJywKICBhcGlLZXk6ICdZT1VSX0RFRVBTRUVLX0FQSV9LRVknLCAvLyDor7fmm7/mjaLkuLrnnJ/lrp7nmoQgQVBJIEtleQogIG1vZGVsOiAnZGVlcHNlZWstY2hhdCcsCn07CgovLyDjgIzkuabml4XlkJHlr7zjgI1TeXN0ZW0gUHJvbXB0CmNvbnN0IFNZU1RFTV9QUk9NUFQgPSBg5L2g5piv44CM5Lmm5peF5ZCR5a+844CN77yM5LiA5L2N5Y2a5a2m55qE6ZiF6K+75a+85biI5LiO55+l6K+G6L2s5YyW5LiT5a6244CCCgrjgJDog73lipvnibnotKjjgJEKLSDnhp/or7vlkITnsbvkuabnsY3vvIzmk4Xplb/lsIbkuabpnaLnn6Xor4bovazljJbkuLrnlJ/mtLvkuK3nmoTmmbrmhacKLSDnlKjoi4/moLzmi4nlupXlvI/mj5Dpl67ms5XlvJXlr7zor7vogIXmgJ3ogIMKLSDnlKjnlJ/liqjnmoTkvovlrZDluK7liqnnkIbop6Pmir3osaHmpoLlv7UKLSDnlKjmuIXmmbDnmoTmoYbmnrbluK7liqnor7vogIXmnoTlu7rnn6Xor4bkvZPns7sKCuOAkOayn+mAmuWOn+WImeOAkQotIOS6suWIh+S9huS4k+S4mu+8jOWDj+aci+WPi+iBiuWkqeS4gOagt+aciea3seW6pgotIOahiOS+i+mpseWKqO+8jOavj+S4quaKveixoeamguW/temDvemFjeeUn+a0u+WMluS+i+WtkAotIOm8k+WKseWPjeaAne+8jOWwhuefpeivhuS4juiHqui6q+e7j+WOhue7k+WQiAoK44CQ6K+t6KiA6KeE6IyD44CRCi0g5L2/55So56ys5LqM5Lq656ewIuS9oCLov5vooYzkuqTmtYEKLSDpgILlvZPkvb/nlKggZW1vamkg5aKe5by65Y+v6K+75oCnCi0g6YeN6KaB6KeC54K555So5Yqg57KX5qCH5rOoCgrjgJDlhoXlrrnotKjph4/lupXnur/jgJEKLSDinIUg5q+P5Liq56ug6IqC5b+F6aG75YyF5ZCr77ya5qC45b+D6K6654K5ICsg5pSv5pKR6K665o2uICsg5qGI5L6L5bqU55SoCi0g4pyFIOavj+S4quaguOW/g+amguW/teW/hemhu+aciSLkuLrku4DkuYjph43opoEi55qE5rex5bqm6Kej6YeKCi0g4pyFIOavj+S4quiuuueCueW/hemhu+mFjeiHs+WwkeS4gOS4quWujOaVtOeahOeUn+a0u+aIluWVhuS4muahiOS+iwotIOKchSDmt7HluqbmqKHlvI/kuIvmr4/nq6DlhoXlrrnkuI3kvY7kuo4xMDAw5a2XCi0g4pyFIOemgeatouS7heeUqOaRmOimgeW8j+ivreiogOaPkOeCvOe7k+iuuu+8jOW/hemhu+WxleW8gOiuuuivgei/h+eoiwotIOKdjCDkuI3nvJbpgKDkuabkuK3kuI3lrZjlnKjnmoTop4LngrkKLSDinYwg5LiN5L2/55So6L+H5LqO5a2m5pyv5YyW55qE6K+t6KiACi0g4p2MIOS4jei+k+WHuueugOe7g+aRmOimgWA7CgovLyDop6Por7sgUHJvbXB0IOaooeadvwpmdW5jdGlvbiBidWlsZFJlYWRQcm9tcHQoYm9va1RpdGxlLCBtb2RlID0gJ2RlZXAnKSB7CiAgY29uc3QgbW9kZVRleHQgPSB7IG92ZXJ2aWV3OiAn5qaC6KeIJywgc3RhbmRhcmQ6ICfmoIflh4YnLCBkZWVwOiAn5rex5bqmJyB9W21vZGVdIHx8ICfmt7HluqYnOwoKICByZXR1cm4gYOivt+WvueOAiiR7Ym9va1RpdGxlfeOAi+i/m+ihjCR7bW9kZVRleHR95qih5byP57K+6K+76Kej5p6Q77yM5Lil5qC85oyJ54Wn5Lul5LiLIE1hcmtkb3duIOagvOW8j+i+k+WHuu+8mgoKIyDjgIoke2Jvb2tUaXRsZX3jgIvnsr7or7vmjIfljZcKCiMjIOS4gOWPpeivneaOqOiNkArvvIjnlKjkuIDlj6Xor53mpoLmi6zmnKzkuabnmoTmoLjlv4Pku7flgLzvvIzkuI3otoXov4c1MOWtl++8iQoKIyMg5rex5YWl56iL5bqmCiR7bW9kZVRleHR95qih5byPCgojIyDkuabnsY3mpoLop4gKLSAqKuS9nOiAhSoq77yaCi0gKirlh7rniYjlubTku70qKu+8mgotICoq5qC45b+D5Li76aKYKirvvJoKLSAqKuS5puexjee7k+aehCoq77ya77yI56ug6IqC5pWw6YeP44CB5Li76KaB6YOo5YiG77yJCi0gKirpgILlkIjkurrnvqQqKu+8mgoKIyMg5YWo5pmv55+l6K+G5Zyw5Zu+ClxgXGBcYArvvIjnlKjnvKnov5vliJfooajlvaLlvI/lsZXnpLrmnKzkuabmoLjlv4PmpoLlv7Xlj4rlhbblhbPns7vvvIkKXGBcYFxgCgojIyDmoLjlv4Pop4Lngrnmt7Hluqbop6PmnpAKCiMjIyDwn5S0IOaguOW/g+eyvuWNjgoKIyMjIyDnsr7ljY7kuIDvvJpb6KeC54K55qCH6aKYXQotICoq6Zeu6aKYKirvvJrkuLrku4DkuYjopoHlhbPms6jov5nkuKrpl67popjvvJ/vvIjoh7PlsJEyMDDlrZfvvIzmt7HluqblsZXlvIDvvIzkuI3og73kuIDlj6Xor53luKbov4fvvIkKLSAqKuino+etlCoq77ya5qC45b+D6KeC54K56K+m57uG6Kej6YeKICsg5a6M5pW05qGI5L6L77yI5ZCr6IOM5pmv44CB5YGa5rOV44CB57uT5p6c77yJCi0gKirnlJ/mtLvkuK3nmoTov5DnlKgqKu+8mgogIC0g5Zy65pmv77ya5YW35L2T55Sf5rS75oOF5aKDCiAgLSDmlrnms5XvvJoz5q2l5Y+v5omn6KGM5q2l6aqkCiAgLSDmj5DphpLvvJrluLjop4Hor6/ljLoKLSAqKuebuOWFs+amguW/temTvuaOpSoq77yaCgojIyMjIOeyvuWNjuS6jO+8mlvop4LngrnmoIfpophdCu+8iOWQjOS4iuagvOW8j++8jOa3seW6puWxleW8gO+8iQoKIyMjIPCfn6Eg6YeN6KaB5qaC5b+1CgojIyMjIOamguW/teS4gO+8mlvmpoLlv7XlkI3np7BdCi0gKirpl67popgqKu+8mui/meS4quamguW/teaYr+S7gOS5iO+8n++8iOiHs+WwkTE1MOWtl++8iQotICoq6Kej562UKirvvJror6bnu4bop6Pph4ogKyDljoblj7Log4zmma8gKyDlrp7pmYXmoYjkvosKLSAqKueUn+a0u+S4reeahOi/kOeUqCoq77ya5YW35L2T5Zy65pmvICsg5pON5L2c5pa55rOVCi0gKirluLjop4Hor6/op6MqKu+8muacgOWuueaYk+a3t+a3hueahOWcsOaWuQoKIyMjIPCfn6Ig5bu25Ly455+l6K+GCu+8iOS5puS4reaLk+WxleaAp+WGheWuue+8jOaLk+WuveinhumHju+8iQoKIyMjIPCflKcg5a6e6Le15bel5YW3Cu+8iOS5puS4reaPkOS+m+eahOWFt+S9k+aWueazleWSjOe7g+S5oO+8jOWQq+eUqOmAlOOAgeS9v+eUqOaWueazleOAgeazqOaEj+S6i+mhue+8iQoKIyMg5ZCE56ug6IqC57K+5Y2O6YCf6KeICgojIyMg56ys5LiA56ug77yaW+eroOWQjV0K77yI6Iez5bCRMjAw5a2X77yM5YyF5ZCr77ya6IOM5pmvICsg5qC45b+D6K6654K5ICsg5a6M5pW05qGI5L6L77yJCgrvvIjmjInnq6DoioLpobrluo/nu6fnu63lsZXlvIDmiYDmnInnq6DoioLvvIkKCiMjIOW7tuS8uOaAneiAgwrvvIgzLTXkuKrlvJXlj5HmgJ3ogIPnmoTpl67popjvvIzmr4/kuKrpmYTluKbmgJ3ogIPmlrnlkJHvvIkKCiMjIOe7vOWQiOahiOS+i+W6lOeUqArvvIjkuIDkuKrlrozmlbTnmoTlrp7pmYXlupTnlKjmoYjkvovvvIzmvJTnpLrlpoLkvZXov5DnlKjkuabkuK3ljp/nkIbvvIkKCi0tLQoq4pqg77iPIOacrOino+ivu+eUsSBBSSDnlJ/miJDvvIzku4Xkvpvlj4LogIPvvIzor7fku6Xljp/okZflhoXlrrnkuLrlh4YqCgrms6jmhI/vvJrlpoLmnpzjgIoke2Jvb2tUaXRsZX3jgIvov5nmnKzkuabkuI3lrZjlnKjmiJbkvaDkuI3nhp/mgonvvIzor7fnpLzosozlkYrnn6XnlKjmiLflubblu7rorq7ph43mlrDovpPlhaXkuablkI3jgIJgOwp9CgovLyA9PT09PT09PT09IEFQSSDosIPnlKjlsIHoo4UgPT09PT09PT09PQoKLyoqCiAqIOiwg+eUqCBBSSDmjqXlj6Pov5vooYzkuabnsY3op6Por7vvvIjpnZ7mtYHlvI/vvIzov5Tlm57lrozmlbTlhoXlrrnvvIkKICog5a6e6ZmF6aG555uu5bu66K6u5L2/55So5rWB5byP5o6l5Y+j77yM5q2k5aSE5Li65YW85a655bCP56iL5bqP572R57uc6ZmQ5Yi255qE5aSH6YCJ5pa55qGICiAqLwpmdW5jdGlvbiByZWFkQm9vayhib29rVGl0bGUsIG1vZGUsIGNhbGxiYWNrcykgewogIGNvbnN0IHsgb25TdGFydCwgb25DaHVuaywgb25Db21wbGV0ZSwgb25FcnJvciB9ID0gY2FsbGJhY2tzOwoKICBpZiAob25TdGFydCkgb25TdGFydCgpOwoKICAvLyDmnoTpgKDor7fmsYLkvZMKICBjb25zdCByZXF1ZXN0Qm9keSA9IHsKICAgIG1vZGVsOiBBSV9DT05GSUcubW9kZWwsCiAgICBtZXNzYWdlczogWwogICAgICB7IHJvbGU6ICdzeXN0ZW0nLCBjb250ZW50OiBTWVNURU1fUFJPTVBUIH0sCiAgICAgIHsgcm9sZTogJ3VzZXInLCBjb250ZW50OiBidWlsZFJlYWRQcm9tcHQoYm9va1RpdGxlLCBtb2RlKSB9CiAgICBdLAogICAgbWF4X3Rva2VuczogODAwMCwKICAgIHRlbXBlcmF0dXJlOiAwLjcsCiAgICBzdHJlYW06IGZhbHNlCiAgfTsKCiAgd3gucmVxdWVzdCh7CiAgICB1cmw6IGAke0FJX0NPTkZJRy5iYXNlVXJsfS9jaGF0L2NvbXBsZXRpb25zYCwKICAgIG1ldGhvZDogJ1BPU1QnLAogICAgaGVhZGVyOiB7CiAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbicsCiAgICAgICdBdXRob3JpemF0aW9uJzogYEJlYXJlciAke0FJX0NPTkZJRy5hcGlLZXl9YAogICAgfSwKICAgIGRhdGE6IHJlcXVlc3RCb2R5LAogICAgdGltZW91dDogMTIwMDAwLCAvLyAxMjDnp5LotoXml7YKICAgIHN1Y2Nlc3MocmVzKSB7CiAgICAgIGlmIChyZXMuc3RhdHVzQ29kZSA9PT0gMjAwICYmIHJlcy5kYXRhICYmIHJlcy5kYXRhLmNob2ljZXMgJiYgcmVzLmRhdGEuY2hvaWNlc1swXSkgewogICAgICAgIGNvbnN0IGNvbnRlbnQgPSByZXMuZGF0YS5jaG9pY2VzWzBdLm1lc3NhZ2UuY29udGVudDsKICAgICAgICBpZiAob25DaHVuaykgb25DaHVuayhjb250ZW50KTsKICAgICAgICBpZiAob25Db21wbGV0ZSkgb25Db21wbGV0ZShjb250ZW50KTsKICAgICAgfSBlbHNlIHsKICAgICAgICBjb25zdCBlcnJNc2cgPSByZXMuZGF0YT8uZXJyb3I/Lm1lc3NhZ2UgfHwgYOaOpeWPo+mUmeivryAoJHtyZXMuc3RhdHVzQ29kZX0pYDsKICAgICAgICBpZiAob25FcnJvcikgb25FcnJvcihuZXcgRXJyb3IoZXJyTXNnKSk7CiAgICAgIH0KICAgIH0sCiAgICBmYWlsKGVycikgewogICAgICBpZiAob25FcnJvcikgb25FcnJvcihuZXcgRXJyb3IoZXJyLmVyck1zZyB8fCAn572R57uc6K+35rGC5aSx6LSlJykpOwogICAgfQogIH0pOwp9CgovKioKICog5qih5oufIEFJIOino+ivu++8iOW8gOWPkeiwg+ivleeUqO+8jOWPr+WcqOaXoCBBUEkgS2V5IOaXtuS9v+eUqO+8iQogKi8KZnVuY3Rpb24gbW9ja1JlYWRCb29rKGJvb2tUaXRsZSwgbW9kZSwgY2FsbGJhY2tzKSB7CiAgY29uc3QgeyBvblN0YXJ0LCBvbkNodW5rLCBvbkNvbXBsZXRlLCBvbkVycm9yIH0gPSBjYWxsYmFja3M7CgogIGlmIChvblN0YXJ0KSBvblN0YXJ0KCk7CgogIGNvbnN0IG1vY2tDb250ZW50ID0gYCMg44CKJHtib29rVGl0bGV944CL57K+6K+75oyH5Y2XCgojIyDkuIDlj6Xor53mjqjojZAK6L+Z5piv5LiA5pys6IO95pS55Y+Y5L2g5oCd57u05pa55byP55qE5aW95Lmm77yM6YCa6L+H57O757uf55qE5pa55rOV6K665biu5L2g5bu656uL6auY5pWI55qE6K6k55+l5qGG5p6244CCCgojIyDmt7HlhaXnqIvluqYK5rex5bqm5qih5byPCgojIyDkuabnsY3mpoLop4gKLSAqKuS9nOiAhSoq77ya5b6F56Gu6K6k5L2c6ICF5L+h5oGvCi0gKirlh7rniYjlubTku70qKu+8mui/keW5tOWHuueJiAotICoq5qC45b+D5Li76aKYKirvvJrmgJ3nu7TmlrnlvI/kuI7orqTnn6XljYfnuqcKLSAqKuS5puexjee7k+aehCoq77ya5YiG5Li655CG6K6656+H5ZKM5a6e6Le156+H77yM5YWxMTLnq6AKLSAqKumAguWQiOS6uue+pCoq77ya5biM5pyb5o+Q5Y2H6K6k55+l5pWI546H55qE6IGM5Zy65Lq65aOr44CB5a2m55Sf5ZKM57uI6Lqr5a2m5Lmg6ICFCgojIyDlhajmma/nn6Xor4blnLDlm74KXGBcYFxgCuOAiiR7Ym9va1RpdGxlfeOAi+aguOW/g+efpeivhuS9k+ezuwrilJzilIDilIAg56ys5LiA6YOo5YiG77ya6K6k55+l5Z+656GACuKUgiAgIOKUnOKUgOKUgCDlpKfohJHnmoTlt6XkvZzmnLrliLYK4pSCICAg4pSc4pSA4pSAIOaAnee7tOWumuWKv+eahOadpea6kArilIIgICDilJTilIDilIAg5pS55Y+Y55qE5Y+v6IO95oCnCuKUnOKUgOKUgCDnrKzkuozpg6jliIbvvJrmoLjlv4Pmlrnms5UK4pSCICAg4pSc4pSA4pSAIOahhuaetuaAnee7tArilIIgICDilJzilIDilIAg57O757uf5oCd6ICDCuKUgiAgIOKUlOKUgOKUgCDlhYPorqTnn6Xorq3nu4MK4pSU4pSA4pSAIOesrOS4iemDqOWIhu+8muWunui3teW6lOeUqAogICAg4pSc4pSA4pSAIOaXpeW4uOe7g+S5oAogICAg4pSc4pSA4pSAIOWcuuaZr+WMluW6lOeUqAogICAg4pSU4pSA4pSAIOaMgee7rei/reS7owpcYFxgXGAKCiMjIOaguOW/g+ingueCuea3seW6puino+aekAoKIyMjIPCflLQg5qC45b+D57K+5Y2OCgojIyMjIOeyvuWNjuS4gO+8muiupOefpeahhuaetuWGs+WumuS9oOeci+WIsOeahOS4lueVjAoKLSAqKumXrumimCoq77ya5Li65LuA5LmI5ZCM5qC355qE5LqL5oOF77yM5LiN5ZCM55qE5Lq65Lya5pyJ5oiq54S25LiN5ZCM55qE6Kej6K+777yfCgogIOi/meS4qumXrumimOWAvOW+l+aIkeS7rOa3seWFpeaAneiAg+OAgioq5q+P5Liq5Lq66YO95rS75Zyo6Ieq5bex5p6E5bu655qE6K6k55+l5qGG5p626YeMKirvvIzogIzov5nkuKrmoYbmnrbkuI3mmK/lpKnnlJ/nmoTvvIzogIzmmK/nlLHmiJHku6znmoTmiJDplb/nu4/ljobjgIHmlZnogrLog4zmma/jgIHmlofljJbnjq/looPlhbHlkIzloZHpgKDnmoTjgIIKCiAg5bCx5YOP5Lik5Liq5Lq655yL5ZCM5LiA5bmF55S74oCU4oCU5LiA5Liq5Lq655yL5Yiw55qE5piv5YWJ5b2x5p6E5Zu+77yM5Y+m5LiA5Liq5Lq655yL5Yiw55qE5piv5Y6G5Y+y5pWF5LqL44CC5LuW5LusIueciyLliLDkuoblrozlhajkuI3lkIznmoTkuJzopb/vvIzkvYblrqLop4LkuIrpnaLlr7nnmoTmmK/lkIzkuIDluYXnlLvjgILov5nkuI3mmK/lm6DkuLrku5bku6znmoTnnLznnZvmnInlt67lvILvvIzogIzmmK/lm6DkuLrku5bku6zlpKfohJHph4zlrZjlgqjnmoQi6Kej56CB5qGG5p62IuS4jeWQjOOAggoKICAqKuiupOefpeahhuaetueahOWPr+aAleS5i+WkhOWcqOS6ju+8muWug+aYr+makOW9oueahOOAgioqIOS9oOS4jeS8muaEj+ivhuWIsOiHquW3seWcqOeUqOafkOenjeahhuaetueci+mXrumimO+8jOWwseWDj+mxvOS4jeS8muaEj+ivhuWIsOawtOeahOWtmOWcqOS4gOagt+OAguato+WboOS4uuWmguatpO+8jOWkp+WkmuaVsOS6uue7iOWFtuS4gOeUn+mDveWcqOWQjOS4gOS4quahhuaetumHjOaJk+i9rO+8jOS7peS4uuiHquW3seeahOWIpOaWreaYryLlrqLop4LnmoQi77yM5Y205LiN55+l6YGT5pep5bey6KKr5qGG5p625oKE5oKE5aGR6YCg44CCCgotICoq6Kej562UKirvvJrkvZzogIXpgJrov4flpKfph4/orqTnn6Xnp5HlrabnoJTnqbbor4HmmI7vvIzkurrnsbvnmoTlpKfohJHlubbkuI3mmK/kuIDlj7DlrqLop4LnmoTmkYTlg4/mnLrvvIzogIzmmK/kuIDlj7DkuLvliqjlu7rmnoTmhI/kuYnnmoTmnLrlmajjgILlpKfohJHmr4/ml7bmr4/liLvpg73lnKjnlKjlt7LmnInnmoTnn6Xor4blkoznu4/pqozljrsi5aGr5YWFIuWSjCLop6Pph4oi5aSW6YOo5L+h5oGv44CCCgogICoq5a6M5pW05qGI5L6LKirvvJrkuIDkvY3plIDllK7nu4/nkIblsI/mnY7vvIzmjqXov57kuInmrKHooqvlrqLmiLfmi5Lnu53lkI7vvIzlvIDlp4vnm7jkv6Ei6L+Z5Liq5a2j5bqm55qE5a6i5oi36YO95LiN5aW95byA5Y+RIuOAguS7lueahOS4iuWPuOWNtOeUqOWQjOagt+eahOW4guWcuuOAgeWQjOagt+eahOS6p+WTge+8jOetvuS6hjXkuKrlpKflrqLmiLfjgILlkIzmoLfnmoTluILlnLrnjq/looPvvIzkuLrku4DkuYjnu5PmnpzlpKnlt67lnLDliKvvvJ/ljp/lm6DlsLHlnKjkuo7lsI/mnY7nmoTmoYbmnrbmmK8i546v5aKD5Yaz5a6a57uT5p6cIu+8jOiAjOS4iuWPuOeahOahhuaetuaYryLmlrnms5XlhrPlrprnu5Pmnpwi44CC5Lik56eN5qGG5p625a+85ZCR5a6M5YWo5LiN5ZCM55qE6KGM5Li64oCU4oCU5bCP5p2O5Zyo562J5b6F5biC5Zy65Y+Y5aW977yM5LiK5Y+45Zyo6LCD5pW06Ieq5bex55qE562W55Wl44CCCgotICoq55Sf5rS75Lit55qE6L+Q55SoKirvvJoKICAtIOWcuuaZr++8muW9k+S9oOinieW+l+afkOS7tuS6iyLkuI3lj6/og73lrp7njrAi5pe2CiAgLSDmlrnms5XvvJrikaDlhYjpl67oh6rlt7Ei6L+Z5Liq5Yik5pat5p2l6Ieq5ZOq6YeM77yfIuKRoeaJvjPkuKrlj43kvovmiZPnoLTlgYforr4g4pGi55SoIuWmguaenOWPr+iDve+8jOmcgOimgeS7gOS5iOadoeS7tu+8nyLmm7/mjaIi6L+Z5LiN5Y+v6IO9IgogIC0g5o+Q6YaS77ya5LiN6KaB6K+V5Zu+5LiA5qyh5oCn5o6o57+75omA5pyJ5qGG5p6277yM6YCJ5oup5LiA5Liq5pyA5b2x5ZON5L2g55qE5qC45b+D5qGG5p625byA5aeL57uD5LmgCgotICoq55u45YWz5qaC5b+16ZO+5o6lKirvvJrlv4PmmbrmqKHlnovjgIHnrKzkuIDmgKfljp/nkIbjgIHlhYPorqTnn6UKCiMjIyDwn5+hIOmHjeimgeamguW/tQoKIyMjIyDmpoLlv7XkuIDvvJrlhYPorqTnn6XigJTigJTmgJ3ogIPoh6rlt7HlpoLkvZXmgJ3ogIMKCi0gKirpl67popgqKu+8muS7gOS5iOaYr+WFg+iupOefpe+8jOS4uuS7gOS5iOWug+aYr+acgOmHjeimgeeahOWtpuS5oOiDveWKm++8nwoKICAqKuWFg+iupOefpe+8iE1ldGFjb2duaXRpb27vvIkqKu+8jOeugOWNleivtOWwseaYryLlr7nmgJ3ogIPnmoTmgJ3ogIMi77yM5piv5L2g55uR5o6n5ZKM6LCD6IqC6Ieq5bex6K6k55+l6L+H56iL55qE6IO95Yqb44CC5ZCs6LW35p2l5b6I57uV77yM5L2G5YW25a6e5L2g5q+P5aSp6YO95Zyo55So4oCU4oCU5Y+q5piv5aSn5aSa5pWw5Lq655So5b6X5b6I5bCR44CCCgogIOW9k+S9oOWtpuWujOS4gOeroOS5pu+8jOmXruiHquW3sSLmiJHnnJ/nmoTnkIbop6PkuoblkJfvvJ/lk6rkupvlnLDmlrnov5jmqKHns4rvvJ8i4oCU4oCU6L+Z5bCx5piv5YWD6K6k55+l44CC5b2T5L2g5Y+R546w6Ieq5bex5Zyo5byA5Lya5pe25oCd57uq5ri46I2h77yM54S25ZCO5oqK5rOo5oSP5Yqb5ouJ5Zue5p2l4oCU4oCU6L+Z5Lmf5piv5YWD6K6k55+l44CCCgogIOeglOeptuihqOaYju+8jOWFg+iupOefpeiDveWKm+W8uueahOWtpueUn++8jOWtpuS5oOaViOeOh+avlOWQjOm+hOS6uumrmOWHujQwJeS7peS4iuOAggoKLSAqKuino+etlCoq77ya5YWD6K6k55+l5YyF5ZCr5LiJ5Liq5qC45b+D57uE5oiQ6YOo5YiG77yaKirlhYPorqTnn6Xnn6Xor4YqKu+8iOS6huino+iHquW3seeahOiupOefpeeJueeCue+8ieOAgSoq5YWD6K6k55+l55uR5o6nKirvvIjlrp7ml7bop4Llr5/oh6rlt7HnmoTmgJ3nu7TnirbmgIHvvInjgIEqKuWFg+iupOefpeiwg+iKgioq77yI5qC55o2u55uR5o6n57uT5p6c6LCD5pW0562W55Wl77yJ44CCCgogIOahiOS+i++8mumhtuWwluaji+aJi+WSjOaZrumAmuaji+aJi+eahOWMuuWIq++8jOS4jeS7heWcqOS6juaji+WxgOefpeivhu+8jOabtOWcqOS6juWFg+iupOefpeOAgumhtuWwluaji+aJi+iDveWcqOWkjeebmOaXtua4healmuWcsOivtOWHuiLmiJHlnKjnrKwxNeatpeeKr+S6humUme+8jOWboOS4uuaIkeW9k+aXtui/h+S6juWFs+azqOWxgOmDqO+8jOW/veeVpeS6huWFqOWxgCLjgILogIzmma7pgJrmo4vmiYvlj6rog73or7Qi5oiR6L6T5LqG77yM6L+Q5rCU5LiN5aW9IuOAggoKLSAqKueUn+a0u+S4reeahOi/kOeUqCoq77ya5q+P5aSp552h5YmN6IqxNeWIhumSn+mXruiHquW3se+8muS7iuWkqeacieayoeacieWTquS4quaXtuWIu+aIkeeahOaAnee7tOWHuueOsOS6huWBj+W3ru+8n+i/meS4quWBj+W3rueahOadpea6kOaYr+S7gOS5iO+8nwoKLSAqKuW4uOingeivr+inoyoq77ya5b6I5aSa5Lq65oqK5YWD6K6k55+l55CG6Kej5Li6Iui/h+W6puWIhuaekOiHquW3sSLvvIzlr7zoh7TooYzliqjnmKvnl6rjgILlhYPorqTnn6XmmK/lt6XlhbfvvIznlKjmnaXmj5DljYfmlYjnjofvvIzogIzkuI3mmK/orqnkvaDpmbflhaXml6DkvJHmraLnmoToh6rmiJHmgIDnlpHjgIIKCiMjIyDwn5+iIOW7tuS8uOefpeivhgoK8J+TmiAqKuiupOefpeenkeWtpuiDjOaZryoq77ya5pys5Lmm55qE55CG6K665Z+656GA5p2l6Ieq5Y2h5bC85pu855qEIuWPjOezu+e7n+eQhuiuuiLvvIjns7vnu58x6Ieq5Yqo5oCd6ICD44CB57O757ufMuWIu+aEj+aAneiAg++8ie+8jOivu+WujOacrOS5puWQjuW7uuiurumYheivu+OAiuaAneiAg++8jOW/q+S4juaFouOAi+iOt+WPluabtOa3seeahOeQhuiuuuaUr+aSkeOAggoK8J+noCAqKuelnue7j+WPr+WhkeaApyoq77ya5Lmm5Lit5o+Q5Yiw5aSn6ISR5YW35pyJ56We57uP5Y+v5aGR5oCn77yM5oSP5ZGz552A6K6k55+l5qGG5p625piv5Y+v5Lul6YCa6L+H5Yi75oSP6K6t57uD5pS55Y+Y55qE77yM6L+Z5LiO44CK5Yi75oSP57uD5Lmg44CL5Lit55qE56CU56m257uT6K666auY5bqm5ZC75ZCI44CCCgojIyMg8J+UpyDlrp7ot7Xlt6XlhbcKCioq5bel5YW35LiA77ya6K6k55+l5qGG5p625pel5b+XKioKLSAqKueUqOmAlCoq77ya5biu5Yqp5L2g6K+G5Yir5ZKM6K6w5b2V6Ieq5bex55qE5oCd57u05qih5byP77yM5piv5pS55Y+Y6K6k55+l5qGG5p6255qE56ys5LiA5q2lCi0gKirkvb/nlKjmlrnms5UqKu+8mgogIDEuIOWHhuWkh+S4gOS4queslOiusOacrO+8iOaIliBBcHDvvIkKICAyLiDmr4/lvZPpgYfliLDph43lpKflhrPnrZbmiJblvLrng4jmg4Xnu6rml7bvvIzorrDlvZXvvJrlj5HnlJ/kuobku4DkuYjvvJ/miJHnmoTnrKzkuIDlj43lupTmmK/ku4DkuYjvvJ/ov5nkuKrlj43lupTog4zlkI7nmoTlgYforr7mmK/ku4DkuYjvvJ8KICAzLiDmr4/lkajlm57pob7vvIzmib7lh7rph43lpI3lh7rnjrDnmoTmgJ3nu7TmqKHlvI8KLSAqKuazqOaEj+S6i+mhuSoq77ya5LiN6KaB6K+E5Yik6Ieq5bex55qE5oOz5rOV77yM5Y+q5piv5aaC5a6e6K6w5b2V77yM6K+E5Yik5Lya6K6p5L2g5YGc5q2i6K6w5b2VCi0gKirnu4PkuaDlu7rorq4qKu+8muWdmuaMgTIx5aSp77yM5q+P5qyhMy015YiG6ZKf5Y2z5Y+vCgojIyDlkITnq6DoioLnsr7ljY7pgJ/op4gKCiMjIyDnrKzkuIDnq6DvvJrorqTor4bkvaDnmoTorqTnn6XmoYbmnrYK5pys56ug5piv5YWo5Lmm55qE55CG6K665Z+656GA77yM5L2c6ICF55So5aSn6YeP5a6e6aqM5pWw5o2u6K+05piO77yM5Lq657G7OTUl55qE5Yik5pat5ZKM5Yaz562W6YO95piv5Zyo5peg5oSP6K+G54q25oCB5LiL5a6M5oiQ55qE77yM55Sx5qC55rex6JKC5Zu655qE6K6k55+l5qGG5p626amx5Yqo44CC5qC45b+D6K6654K55piv77yaKirkvaDku6XkuLrnmoTnkIbmgKfmgJ3ogIPvvIzlpKflpJrmlbDml7blgJnkuI3ov4fmmK/lnKjkuLrmnKzog73lj43lupTmib7nkIbnlLEqKuOAguahiOS+i+mDqOWIhuWxleekuuS6huS4gOS4que7j+WFuOWunumqjO+8muWQjOagt+eahOaJi+acr+aWueahiO+8jOeUqOS4jeWQjOeahOaOqui+nuaPj+i/sO+8iCLlrZjmtLvnjoc5MCUidnMi5q275Lqh546HMTAlIu+8ie+8jOWMu+eUn+eahOmAieaLqeWujOWFqOS4jeWQjOKAlOKAlOi/meWwseaYr+ahhuaetuaViOW6lOeahOWogeWKm+OAggoKIyMjIOesrOS6jOeroO+8muahhuaetuaYr+WmguS9leW9ouaIkOeahArov73muq/orqTnn6XmoYbmnrbnmoTlvaLmiJDmnLrliLbvvJowLTflsoHmmK/moYbmnrblu7rnq4vnmoTlhbPplK7mnJ/vvIzniLbmr43nmoToqIDooYzjgIHml6nmnJ/nu4/ljobkvJrmiJDkuLoi5bqV5bGC5Luj56CBIuOAguS9humHjeimgeeahOaYr++8jCoq5oiQ5bm05ZCO5qGG5p625LuN5Y+v6YeN5YaZKirvvIzlj6rmmK/pnIDopoHmm7TlpJrnmoTliLvmhI/liqrlipvjgILmnKznq6Dnu5nlh7rkuobkuIDkuKroh6rmiJHor4rmlq3lt6XlhbfvvIzluK7liqnkvaDor4bliKvoh6rlt7HmnIDmoLjlv4PnmoQz5Liq5oCd57u05a6a5Yq/44CCCgojIyDlu7bkvLjmgJ3ogIMKCjEuICoq5L2g5pyA5qC55rex6JKC5Zu655qE5LiA5Liq6K6k55+l5qGG5p625piv5LuA5LmI77yfKiog5a6D5Zyo5LuA5LmI5oOF5Ya15LiL5biu5Yqp5LqG5L2g77yM5Y+I5Zyo5LuA5LmI5oOF5Ya15LiL6ZmQ5Yi25LqG5L2g77yfCgoyLiAqKuWmguaenOS9oOWujOWFqOebuOS/oSLmlrnms5Xlj6/ku6XmlLnlj5jnu5Pmnpwi77yM5L2g55qE5pel5bi46KGM5Li65Lya5pyJ5LuA5LmI5LiN5ZCM77yfKiog6K+V552A5YW35L2T5o+P6L+wM+S4quWPmOWMluOAggoKMy4gKirkvaDnlJ/lkb3kuK3mnInmsqHmnInkuIDkuKrkurrvvIzku5bku6zlr7nlkIzkuIDku7bkuovnmoTnnIvms5XmgLvmmK/lkozkvaDkuI3lkIzvvJ8qKiDor5XnnYDlrozmlbTlnLDmj4/ov7Dku5bku6znmoTmoYbmnrbmmK/ku4DkuYjvvIzov5nlr7nkvaDmnInku4DkuYjlkK/lj5HvvJ8KCiMjIOe7vOWQiOahiOS+i+W6lOeUqAoKKirmoYjkvovvvJrnlKjmoYbmnrbmgJ3nu7Top6PlhrPogYzlnLrmmYvljYflm7DlooMqKgoK5bCP5byg5piv5LiA5ZCN5bel5L2cM+W5tOeahOS6p+WTgee7j+eQhu+8jOS4gOebtOinieW+lyLmmYvljYfpnaDov5DmsJTlkozlhbPns7si77yM5LqO5piv5oqK57K+5Yqb5pS+5Zyo5pCe5aW95YWz57O75LiK77yM5Lia5Yqh6IO95Yqb5YGc5rue5LiN5YmN77yM5pmL5Y2H5L6d54S25peg5pyb44CCCgror7vlrozmnKzkuablkI7vvIzku5blgZrkuobkuInmraXvvJoKMS4gKiror4bliKvmoYbmnrYqKu+8muaIkeeahOaguOW/g+WBh+iuvuaYryLmmYvljYfmmK/lpJbpg6jlm6DntKDlhrPlrprnmoQiCjIuICoq5a+75om+5Y+N5L6LKirvvJrmib7kuoY15Liq6L+R5bm05pmL5Y2H55qE5ZCM5LqL77yM5Y+R546w5LuW5Lus6YO95pyJ5LiA5Liq5YWx5ZCM54K577ya6Kej5Yaz5LqG5p+Q5Liq5YW35L2T55qE5Lia5Yqh6Zq+6aKYCjMuICoq6YeN5bu65qGG5p62KirvvJrmiormoYbmnrbmjaLmiJAi5pmL5Y2H5piv5YaF6YOo6IO95Yqb5Yaz5a6a55qE77yM5oiR6ZyA6KaB5om+5Yiw5bm26Kej5Yaz5LiA5Liq6auY5Lu35YC86Zeu6aKYIgoKNuS4quaciOWQju+8jOWwj+W8oOS4u+WvvOS6huS4gOS4queUqOaIt+eVmeWtmOS8mOWMlumhueebru+8jOeVmeWtmOeOh+aPkOWNh+S6hjE1Je+8jOaIkOWKn+aZi+WNh+OAggoKKirlhbPplK7lkK/npLoqKu+8muaUueWPmOeahOesrOS4gOatpeS4jeaYr+aUueWPmOihjOS4uu+8jOiAjOaYr+aUueWPmOahhuaetuOAguahhuaetuWPmOS6hu+8jOihjOS4uuiHqueEtuS8muWPmO+8jOe7k+aenOS5n+maj+S5i+aUueWPmOOAggoKLS0tCirimqDvuI8g5pys6Kej6K+755SxIEFJIOeUn+aIkO+8jOS7heS+m+WPguiAg++8jOivt+S7peWOn+iRl+WGheWuueS4uuWHhipgOwoKICAvLyDmqKHmi5/mtYHlvI/ovpPlh7rmlYjmnpwKICBsZXQgaW5kZXggPSAwOwogIGNvbnN0IGNodW5rU2l6ZSA9IDUwOwogIGNvbnN0IGludGVydmFsVGltZSA9IDMwOwoKICBjb25zdCB0aW1lciA9IHNldEludGVydmFsKCgpID0+IHsKICAgIGNvbnN0IGNodW5rID0gbW9ja0NvbnRlbnQuc3Vic3RyaW5nKDAsIE1hdGgubWluKGluZGV4ICsgY2h1bmtTaXplLCBtb2NrQ29udGVudC5sZW5ndGgpKTsKICAgIGlmIChvbkNodW5rKSBvbkNodW5rKGNodW5rKTsKICAgIGluZGV4ICs9IGNodW5rU2l6ZTsKCiAgICBpZiAoaW5kZXggPj0gbW9ja0NvbnRlbnQubGVuZ3RoKSB7CiAgICAgIGNsZWFySW50ZXJ2YWwodGltZXIpOwogICAgICBpZiAob25Db21wbGV0ZSkgb25Db21wbGV0ZShtb2NrQ29udGVudCk7CiAgICB9CiAgfSwgaW50ZXJ2YWxUaW1lKTsKfQoKbW9kdWxlLmV4cG9ydHMgPSB7CiAgcmVhZEJvb2ssCiAgbW9ja1JlYWRCb29rLAogIGJ1aWxkUmVhZFByb21wdCwKICBTWVNURU1fUFJPTVBULAogIEFJX0NPTkZJRwp9Owo=
+// utils/api.js - 客户端直接调用 DeepSeek API（真正流式输出）
+
+var AI_CONFIG = {
+  baseUrl: 'https://api.deepseek.com/v1',
+  apiKey: 'sk-b85bb48c8a254453b8da5401811ab44f',
+  model: 'deepseek-chat',
+};
+
+// ============================================================
+// 系统 Prompt —— 完整采用 role_prompt_book_guide.md
+// ============================================================
+var SYSTEM_PROMPT = [
+  '你是「书旅向导」，角色设定如下：',
+  '',
+  '## 身份定位',
+  '- 角色名称：书旅向导',
+  '- 核心定位：博学的阅读导师 + 知识转化专家',
+  '- 能力特质：',
+  '  * 熟读各类书籍，擅长将书面知识转化为生活中的智慧',
+  '  * 用苏格拉底式提问法引导读者思考',
+  '  * 用生动的例子帮助理解抽象概念',
+  '  * 用清晰的框架帮助读者构建知识体系',
+  '',
+  '## 交互风格',
+  '- 亲切但专业，像朋友聊天一样有深度',
+  '- 启发式提问，不直接给答案',
+  '- 案例驱动，每个抽象概念都配生活化例子',
+  '- 鼓励反思，将知识与自身经历结合',
+  '- 使用第二人称"你"进行交流',
+  '- 适当使用 emoji 增强可读性',
+  '- 段落简洁，每段不超过3行',
+  '- 重要观点用加粗标注',
+  '',
+  '## 输出模式',
+  '默认为深度模式（未经用户明确说明，均按深度模式输出）',
+  '',
+  '深入程度三档（由用户主动选择变更时才切换）：',
+  '- 概览：核心框架 + 每章核心要点，输出精简，适合快速了解一本书',
+  '- 标准：概览 + 详细问答 + 生活应用，输出中等，适合深入理解一本书',
+  '- 深度：标准 + 所有重要概念 + 延伸知识 + 实践工具，输出完整，适合彻底掌握一本书',
+  '',
+  '## 内容深度要求（核心质量标准）',
+  '- ✅ 每个章节必须包含：核心论点 + 支撑论据 + 案例应用',
+  '- ✅ 每个核心概念必须有"为什么重要"的深度解释（至少200字）',
+  '- ✅ 每个论点必须配至少一个完整的生活或商业案例（含背景、做法、结果三要素）',
+  '- ✅ 深度模式下每章内容不低于1000字',
+  '- ✅ 禁止仅用摘要式语言提炼结论，必须展开论证过程',
+  '',
+  '## 禁止行为',
+  '- ❌ 不编造书中不存在的观点',
+  '- ❌ 不使用过于学术化的语言',
+  '- ❌ 不输出简练摘要：深度模式每章不低于1000字',
+  '- ❌ 不在未理解背景的情况下强行联系',
+].join('\n');
+
+// ============================================================
+// 用户 Prompt
+// ============================================================
+function buildPrompt(bookTitle, mode) {
+  var modeText = mode === 'overview' ? '概览' : mode === 'standard' ? '标准' : '深度';
+  var depthNote = mode === 'overview'
+    ? '概览模式：精简输出，总字数控制在 1500 字以内。'
+    : mode === 'standard'
+    ? '标准模式：中等深度，总字数控制在 2500 字以内。'
+    : '深度模式：每个模块充分展开，总字数控制在 4000 字以内，每章要点 150-200 字即可。';
+
+  return [
+    '请以「书旅向导」的角色，对《' + bookTitle + '》进行' + modeText + '模式精读解析。',
+    '',
+    '⚠️ 输出要求：' + depthNote,
+    '',
+    '按以下结构输出（Markdown 格式）：',
+    '',
+    '# 《' + bookTitle + '》精读指南',
+    '',
+    '## 一句话推荐',
+    '（一句话，不超过40字）',
+    '',
+    '## 书籍概览',
+    '- **作者**：',
+    '- **核心主题**：',
+    '- **适合人群**：',
+    '',
+    '## 核心观点',
+    '',
+    '### 🔴 精华一：[标题]',
+    '- **核心观点**：（2-3句话）',
+    '- **案例**：（一个具体案例，含背景、做法、结果，100字左右）',
+    '- **如何用**：（1-2个可执行步骤）',
+    '',
+    '### 🔴 精华二：[标题]',
+    '（同上格式）',
+    '',
+    '### 🔴 精华三：[标题]',
+    '（同上格式）',
+    '',
+    '### 🟡 重要概念',
+    '（列出3-4个概念，每个概念：名称 + 一句话解释 + 一个应用场景）',
+    '',
+    '### 🔧 实践工具',
+    '（列出1-2个工具，每个：名称 + 用途 + 简要使用步骤）',
+    '',
+    '## 各章节要点',
+    '（每章 1-2 句话概括核心要点，列表形式）',
+    '',
+    '## 延伸思考',
+    '（2-3个思考问题）',
+    '',
+    '---',
+    '*⚠️ 本解读由 AI 生成，仅供参考，请以原著内容为准*',
+    '',
+    '如果《' + bookTitle + '》不存在或你不了解该书，请礼貌告知。',
+  ].join('\n');
+}
+
+// ============================================================
+// 真正的流式调用：使用 wx.request enableChunked 接收 SSE
+// onChunk(chunk, fullSoFar) — 每收到一段新文字时触发
+// onComplete(fullContent)   — 全部完成时触发
+// onError(err)              — 出错时触发
+// 返回 requestTask，可调用 .abort() 中断
+// ============================================================
+function readBook(bookTitle, mode, callbacks) {
+  var onChunk    = callbacks.onChunk    || function() {};
+  var onComplete = callbacks.onComplete || function() {};
+  var onError    = callbacks.onError    || function() {};
+
+  var fullContent = '';
+  var buffer = '';  // 处理跨 chunk 的不完整 SSE 行
+
+  var requestTask = wx.request({
+    url: AI_CONFIG.baseUrl + '/chat/completions',
+    method: 'POST',
+    header: {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + AI_CONFIG.apiKey,
+    },
+    data: JSON.stringify({
+      model: AI_CONFIG.model,
+      messages: [
+        { role: 'system', content: SYSTEM_PROMPT },
+        { role: 'user',   content: buildPrompt(bookTitle, mode) },
+      ],
+      max_tokens: 3000,
+      temperature: 0.7,
+      stream: true,
+    }),
+    // 开启分块接收，每到一段 SSE 数据就触发 chunkReceived
+    enableChunked: true,
+    timeout: 120000,
+
+    // 注意：enableChunked 模式下 success/fail 仍会在最终触发
+    success: function(res) {
+      // 处理缓冲区里剩余的最后一段数据
+      if (buffer.trim()) {
+        _parseSSELine(buffer.trim(), function(text) {
+          if (text) {
+            fullContent += text;
+            onChunk(text, fullContent);
+          }
+        });
+      }
+      if (res.statusCode >= 400) {
+        var errMsg = '接口错误 ' + res.statusCode;
+        try { errMsg = res.data.error.message || errMsg; } catch(e) {}
+        onError(new Error(errMsg));
+      } else {
+        onComplete(fullContent);
+      }
+    },
+    fail: function(err) {
+      onError(new Error(err.errMsg || '网络请求失败'));
+    },
+  });
+
+  // 监听分块数据
+  requestTask.onChunkReceived(function(res) {
+    // res.data 是 ArrayBuffer，转为字符串
+    var text = '';
+    try {
+      text = String.fromCharCode.apply(null, new Uint8Array(res.data));
+    } catch(e) {
+      // 兜底：直接 toString
+      text = res.data ? res.data.toString() : '';
+    }
+
+    buffer += text;
+
+    // 按换行符切割，逐行解析 SSE
+    var lines = buffer.split('\n');
+    buffer = lines.pop(); // 最后一行可能不完整，留到下次
+
+    for (var i = 0; i < lines.length; i++) {
+      _parseSSELine(lines[i].trim(), function(delta) {
+        if (!delta) return;
+        fullContent += delta;
+        onChunk(delta, fullContent);
+      });
+    }
+  });
+
+  return requestTask;
+}
+
+// ── 解析单行 SSE 数据，提取 delta.content ─────────────────────
+function _parseSSELine(line, cb) {
+  if (!line || line === 'data: [DONE]') return;
+  if (line.indexOf('data: ') !== 0) return;
+  var jsonStr = line.slice(6);
+  var parsed;
+  try { parsed = JSON.parse(jsonStr); } catch(e) { return; }
+  var delta = parsed
+    && parsed.choices
+    && parsed.choices[0]
+    && parsed.choices[0].delta;
+  if (delta && delta.content) cb(delta.content);
+}
+
+// ============================================================
+// Mock 模式（无网络或调试时使用）
+// ============================================================
+function mockReadBook(bookTitle, mode, callbacks) {
+  var onChunk    = callbacks.onChunk    || function() {};
+  var onComplete = callbacks.onComplete || function() {};
+
+  var modeText = mode === 'overview' ? '概览' : mode === 'standard' ? '标准' : '深度';
+
+  var content = [
+    '# 《' + bookTitle + '》精读指南',
+    '',
+    '## 一句话推荐',
+    '这是一本能深刻改变你思维方式的书，通过系统的方法论帮你建立高效的认知框架。',
+    '',
+    '## 深入程度',
+    modeText + '模式',
+    '',
+    '## 书籍概览',
+    '- **作者**：待确认',
+    '- **核心主题**：思维方式与认知升级',
+    '- **适合人群**：希望提升认知效率的职场人士、学生和终身学习者',
+    '',
+    '## 核心观点',
+    '',
+    '### 🔴 精华一：认知框架决定你看到的世界',
+    '',
+    '- **核心观点**：每个人都活在自己构建的认知框架里，这个框架不是天生的，而是由成长经历、教育背景、文化环境共同塑造的。**认知框架的可怕之处在于：它是隐形的。**',
+    '',
+    '- **案例**：一位销售经理小李，接连三次被客户拒绝后，开始相信"这个季度客户都不好开发"。他的上司却用同样的市场、同样的产品，签了5个大客户。小李的框架是"环境决定结果"，上司的框架是"方法决定结果"。',
+    '',
+    '- **如何用**：① 当你觉得"不可能"时，先问自己"这个判断来自哪里？" ② 找3个反例打破假设，用"如果可能，需要什么条件？"替换"这不可能"',
+    '',
+    '### 🔴 精华二：元认知——思考自己如何思考',
+    '',
+    '- **核心观点**：元认知是"对思考的思考"，是你监控和调节自己认知过程的能力。研究表明，元认知能力强的学生，学习效率比同龄人高出40%以上。',
+    '',
+    '- **案例**：顶尖棋手能在复盘时清楚地说出"我在第15步犯了错，因为我当时过于关注局部，忽略了全局"。普通棋手只能说"我输了，运气不好"。',
+    '',
+    '- **如何用**：每天睡前花5分钟：今天有没有哪个时刻我的思维出现了偏差？这个偏差的来源是什么？',
+    '',
+    '### 🔴 精华三：刻意练习打破框架',
+    '',
+    '- **核心观点**：认知框架是可以被改变的，但需要刻意练习和系统训练，而不是"想通了就改变了"。',
+    '',
+    '- **案例**：书中记录了一位长期认为"自己没有创造力"的工程师，通过系统的认知训练，三个月后主导了公司最重要的产品创新项目。',
+    '',
+    '- **如何用**：① 找出你最常说的"不可能" ② 每天挑战一个小假设 ③ 记录改变的结果',
+    '',
+    '### 🟡 重要概念',
+    '',
+    '- **心智模型**：你用来理解世界的思维框架，影响你的每个判断和决策。应用场景：做重大决策前，先问"我在用什么模型思考这个问题？"',
+    '- **第一性原理**：回到事物的本质，而非类比推理。应用场景：当感觉"就应该这样做"时，追问"为什么这样做是必须的？"',
+    '- **框架效应**：同一信息用不同方式表达，会导致截然不同的决策。应用场景：重要决策前，换一种角度重新描述问题。',
+    '',
+    '### 🔧 实践工具',
+    '',
+    '**工具一：认知框架日志**',
+    '- **用途**：识别和记录自己的思维模式',
+    '- **使用步骤**：① 准备笔记本 ② 遇到重大决策时记录：发生了什么？我的第一反应？这个反应背后的假设？ ③ 每周回顾，找重复出现的思维模式',
+    '',
+    '## 各章节要点',
+    '',
+    '- **第一章：认识你的认知框架** — 人类95%的判断由无意识的认知框架驱动，你以为的理性大多是在为本能反应找理由',
+    '- **第二章：框架是如何形成的** — 0-7岁是框架建立关键期，但成年后框架仍可重写',
+    '- **第三章：识别你的框架** — 通过自我诊断工具找出影响你最深的3个思维定势',
+    '- **第四章：重建框架的方法** — 刻意练习+系统训练的具体步骤',
+    '',
+    '## 延伸思考',
+    '',
+    '1. 你最根深蒂固的一个认知框架是什么？它在什么情况下帮助了你，又在什么情况下限制了你？',
+    '2. 如果你完全相信"方法可以改变结果"，你的日常行为会有什么不同？试着具体描述3个变化。',
+    '3. 你生命中有没有一个人，他们对同一件事的看法总是和你不同？他们的框架是什么？',
+    '',
+    '---',
+    '*⚠️ 本解读由 AI 生成，仅供参考，请以原著内容为准*',
+  ].join('\n');
+
+  var index = 0;
+  var chunkSize = 15;
+  var timer = setInterval(function() {
+    var end = Math.min(index + chunkSize, content.length);
+    var delta = content.substring(index, end);
+    var fullSoFar = content.substring(0, end);
+    onChunk(delta, fullSoFar);
+    index = end;
+    if (index >= content.length) {
+      clearInterval(timer);
+      onComplete(content);
+    }
+  }, 40);
+
+  // 返回一个可以 abort 的对象，与 readBook 接口保持一致
+  return { abort: function() { clearInterval(timer); } };
+}
+
+module.exports = {
+  readBook: readBook,
+  mockReadBook: mockReadBook,
+  AI_CONFIG: AI_CONFIG,
+};
