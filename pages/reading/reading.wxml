@@ -1,108 +1,77 @@
 <!-- pages/reading/reading.wxml -->
-<view class="page-container">
+<view class="page">
 
   <!-- 加载阶段 -->
-  <view wx:if="{{stage === 'loading'}}" class="loading-stage">
-    <view class="loading-book-cover">
-      <text class="loading-book-emoji">📖</text>
+  <view class="loading-stage" wx:if="{{stage === 'loading'}}">
+    <view class="loading-book-wrap">
+      <view class="loading-book-cover">
+        <image class="loading-book-cover-img" src="https://images.unsplash.com/photo-1571834870678-24294e1ecf72?auto=format&fit=crop&w=200&q=80" mode="aspectFill" />
+        <view class="loading-book-cover-overlay">
+          <text class="loading-book-emoji-badge">📖</text>
+        </view>
+      </view>
+      <view class="loading-book-title">《{{bookTitle}}》</view>
     </view>
-    <view class="loading-title">
-      <text class="loading-book-name">《{{bookTitle}}》</text>
-      <text class="loading-sub">深度解读中...</text>
+    <view class="loading-status">
+      <view class="loading-dots-wrap">
+        <view class="dot"></view><view class="dot"></view><view class="dot"></view>
+      </view>
+      <view class="loading-tip">{{loadingTip}}</view>
     </view>
-
-    <!-- 进度条 -->
-    <view class="progress-wrap">
-      <view class="progress-bar-bg">
-        <view class="progress-bar-fill" style="width: {{progress}}%"></view>
+    <view class="loading-progress-wrap">
+      <view class="loading-progress-bar">
+        <view class="loading-progress-fill" style="width:{{progress}}%"></view>
       </view>
-      <text class="progress-num">{{progress}}%</text>
+      <view class="loading-progress-text">{{progress}}%</view>
     </view>
-
-    <!-- 步骤提示 -->
-    <view class="step-list">
-      <view class="step-item {{step >= 1 ? 'done' : ''}}">
-        <text class="step-icon">{{step >= 1 ? '✅' : '⏳'}}</text>
-        <text class="step-text">分析书籍结构</text>
-      </view>
-      <view class="step-item {{step >= 2 ? 'done' : ''}}">
-        <text class="step-icon">{{step >= 2 ? '✅' : '⏳'}}</text>
-        <text class="step-text">提炼核心观点</text>
-      </view>
-      <view class="step-item {{step >= 3 ? 'done' : ''}}">
-        <text class="step-icon">{{step >= 3 ? '✅' : '⏳'}}</text>
-        <text class="step-text">深度展开论点</text>
-      </view>
-      <view class="step-item {{step >= 4 ? 'done' : ''}}">
-        <text class="step-icon">{{step >= 4 ? '✅' : '⏳'}}</text>
-        <text class="step-text">生成解读报告</text>
-      </view>
+    <view class="loading-steps">
+      <view class="step {{step>=1?'step-done':''}}"><text class="step-icon">{{step>=1?'✦':'○'}}</text><text class="step-text">分析书籍结构</text></view>
+      <view class="step {{step>=2?'step-done':''}}"><text class="step-icon">{{step>=2?'✦':'○'}}</text><text class="step-text">提炼核心观点</text></view>
+      <view class="step {{step>=3?'step-done':''}}"><text class="step-icon">{{step>=3?'✦':'○'}}</text><text class="step-text">深度展开论证</text></view>
+      <view class="step {{step>=4?'step-done':''}}"><text class="step-icon">{{step>=4?'✦':'○'}}</text><text class="step-text">生成案例与工具</text></view>
     </view>
-
-    <text class="loading-tip">{{loadingTip}}</text>
-    <text class="loading-hint">深度解读约需 15-60 秒，请耐心等待</text>
   </view>
 
   <!-- 流式输出阶段 -->
-  <view wx:if="{{stage === 'streaming'}}" class="streaming-stage">
-    <view class="stream-header">
-      <text class="stream-book-name">《{{bookTitle}}》解读</text>
-      <view class="stream-status flex-row">
-        <view class="loading-dots">
-          <view class="dot"></view>
-          <view class="dot"></view>
-          <view class="dot"></view>
-        </view>
-        <text class="stream-words">已生成 {{wordCount}} 字</text>
+  <view class="streaming-stage" wx:if="{{stage === 'streaming'}}">
+    <view class="streaming-header">
+      <view class="streaming-book-tag">{{bookTitle}}</view>
+      <view class="streaming-status" wx:if="{{isStreaming}}">
+        <view class="dot-pulse"></view>
+        <view class="dot-pulse dot-pulse-2"></view>
+        <view class="dot-pulse dot-pulse-3"></view>
+        <text class="streaming-status-text">AI 正在解读</text>
+      </view>
+      <view class="streaming-status" wx:else>
+        <text class="streaming-done-icon">✦</text>
+        <text class="streaming-status-text streaming-status-done">解读完成</text>
       </view>
     </view>
-    <scroll-view class="stream-scroll" scroll-y scroll-top="{{scrollTop}}" enhanced>
-      <view class="stream-content">
-        <text class="stream-text" decode="{{true}}">{{streamContent}}</text>
-        <view class="cursor-blink"></view>
-      </view>
+    <scroll-view class="streaming-content" scroll-y scroll-top="{{scrollTop}}" enhanced>
+      <rich-text class="streaming-rich" nodes="{{streamHtml}}"></rich-text>
+      <text wx:if="{{isStreaming}}" class="cursor-blink">▋</text>
     </scroll-view>
+    <view class="streaming-footer">
+      <text class="streaming-word-count">{{wordCount}} 字</text>
+    </view>
   </view>
 
   <!-- 完成阶段 -->
-  <view wx:if="{{stage === 'done'}}" class="done-stage">
-    <view class="done-header card">
-      <view class="done-info flex-row">
-        <text class="done-emoji">📗</text>
-        <view class="flex-1">
-          <text class="done-title">《{{bookTitle}}》</text>
-          <text class="done-meta">解读完成 · {{wordCount}} 字</text>
-        </view>
-      </view>
-      <view class="done-actions flex-row">
-        <button class="done-btn-primary btn-primary flex-1" bindtap="goDetail">
-          <text>查看完整解读 →</text>
-        </button>
-      </view>
-    </view>
-
-    <!-- 预览内容 -->
-    <scroll-view class="done-scroll" scroll-y>
-      <view class="done-preview">
-        <text class="done-preview-text">{{streamContent}}</text>
-      </view>
-    </scroll-view>
+  <view class="done-stage" wx:if="{{stage === 'done'}}">
+    <view class="done-icon">✦</view>
+    <view class="done-title">解读完成</view>
+    <view class="done-sub">共 {{wordCount}} 字深度解读</view>
+    <button class="done-btn" bindtap="goDetail">阅读完整解读</button>
   </view>
 
   <!-- 错误阶段 -->
-  <view wx:if="{{stage === 'error'}}" class="error-stage">
-    <view class="error-icon">😢</view>
-    <text class="error-title">解读失败</text>
-    <text class="error-msg">{{errorMsg}}</text>
-    <text class="error-hint">本次不消耗解读次数</text>
-    <view class="error-actions">
-      <button class="btn-primary error-retry-btn" bindtap="retry">
-        <text>重新尝试</text>
-      </button>
-      <button class="btn-secondary error-back-btn" bindtap="goBack">
-        <text>返回首页</text>
-      </button>
-    </view>
+  <view class="error-stage" wx:if="{{stage === 'error'}}">
+    <view class="error-icon">⚠</view>
+    <view class="error-title">解读失败</view>
+    <view class="error-msg">{{errorMsg}}</view>
+    <view class="error-tip">本次不消耗解读次数</view>
+    <button class="retry-btn" bindtap="retry">重新解读</button>
+    <button class="back-btn" bindtap="goBack">返回首页</button>
   </view>
 
 </view>

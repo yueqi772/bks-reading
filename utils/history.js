@@ -1,1 +1,81 @@
-Ly8gdXRpbHMvaGlzdG9yeS5qcyAtIOino+ivu+WOhuWPsueuoeeQhgoKY29uc3QgeyBzdG9yYWdlIH0gPSByZXF1aXJlKCcuL3N0b3JhZ2UnKTsKY29uc3QgeyBjb3VudFdvcmRzIH0gPSByZXF1aXJlKCcuL21hcmtkb3duJyk7Cgpjb25zdCBISVNUT1JZX0tFWSA9ICdyZWFkSGlzdG9yeSc7CmNvbnN0IE1BWF9GUkVFX0hJU1RPUlkgPSAxMDsKCi8qKgogKiDkv53lrZjop6Por7vorrDlvZUKICovCmZ1bmN0aW9uIHNhdmVIaXN0b3J5KGJvb2tUaXRsZSwgY29udGVudCwgbW9kZSkgewogIGNvbnN0IGhpc3RvcnkgPSBnZXRIaXN0b3J5KCk7CiAgY29uc3QgcmVjb3JkID0gewogICAgaWQ6IERhdGUubm93KCkudG9TdHJpbmcoKSwKICAgIGJvb2tUaXRsZSwKICAgIGNvbnRlbnQsCiAgICBtb2RlOiBtb2RlIHx8ICdkZWVwJywKICAgIHdvcmRDb3VudDogY291bnRXb3Jkcyhjb250ZW50KSwKICAgIGNyZWF0ZWRBdDogbmV3IERhdGUoKS50b0lTT1N0cmluZygpLAogICAgY3JlYXRlZEF0VGV4dDogZm9ybWF0RGF0ZShuZXcgRGF0ZSgpKSwKICB9OwoKICAvLyDmo4Dmn6XmmK/lkKblt7LmnInnm7jlkIzkuablkI3nmoTorrDlvZXvvIzmnInliJnmm7TmlrAKICBjb25zdCBleGlzdGluZ0luZGV4ID0gaGlzdG9yeS5maW5kSW5kZXgoaCA9PiBoLmJvb2tUaXRsZSA9PT0gYm9va1RpdGxlKTsKICBpZiAoZXhpc3RpbmdJbmRleCA+PSAwKSB7CiAgICBoaXN0b3J5W2V4aXN0aW5nSW5kZXhdID0gcmVjb3JkOwogIH0gZWxzZSB7CiAgICBoaXN0b3J5LnVuc2hpZnQocmVjb3JkKTsgLy8g5pyA5paw55qE5pS+5pyA5YmN6Z2iCiAgfQoKICBzdG9yYWdlLnNldChISVNUT1JZX0tFWSwgaGlzdG9yeSk7CiAgcmV0dXJuIHJlY29yZDsKfQoKLyoqCiAqIOiOt+WPluaJgOacieWOhuWPsuiusOW9lQogKi8KZnVuY3Rpb24gZ2V0SGlzdG9yeSgpIHsKICByZXR1cm4gc3RvcmFnZS5nZXQoSElTVE9SWV9LRVksIFtdKTsKfQoKLyoqCiAqIOiOt+WPluacgOi/kSBOIOadoeWOhuWPsuiusOW9lQogKi8KZnVuY3Rpb24gZ2V0UmVjZW50SGlzdG9yeShuID0gMykgewogIGNvbnN0IGhpc3RvcnkgPSBnZXRIaXN0b3J5KCk7CiAgcmV0dXJuIGhpc3Rvcnkuc2xpY2UoMCwgbik7Cn0KCi8qKgogKiDmoLnmja4gaWQg6I635Y+W5Y2V5p2h6K6w5b2VCiAqLwpmdW5jdGlvbiBnZXRIaXN0b3J5QnlJZChpZCkgewogIGNvbnN0IGhpc3RvcnkgPSBnZXRIaXN0b3J5KCk7CiAgcmV0dXJuIGhpc3RvcnkuZmluZChoID0+IGguaWQgPT09IGlkKSB8fCBudWxsOwp9CgovKioKICog5Yig6Zmk5Y2V5p2h5Y6G5Y+y6K6w5b2VCiAqLwpmdW5jdGlvbiBkZWxldGVIaXN0b3J5KGlkKSB7CiAgY29uc3QgaGlzdG9yeSA9IGdldEhpc3RvcnkoKTsKICBjb25zdCBuZXdIaXN0b3J5ID0gaGlzdG9yeS5maWx0ZXIoaCA9PiBoLmlkICE9PSBpZCk7CiAgc3RvcmFnZS5zZXQoSElTVE9SWV9LRVksIG5ld0hpc3RvcnkpOwp9CgovKioKICog5riF56m65omA5pyJ5Y6G5Y+y6K6w5b2VCiAqLwpmdW5jdGlvbiBjbGVhckhpc3RvcnkoKSB7CiAgc3RvcmFnZS5zZXQoSElTVE9SWV9LRVksIFtdKTsKfQoKLyoqCiAqIOagvOW8j+WMluaXpeacnwogKi8KZnVuY3Rpb24gZm9ybWF0RGF0ZShkYXRlKSB7CiAgY29uc3Qgbm93ID0gbmV3IERhdGUoKTsKICBjb25zdCBkID0gZGF0ZSBpbnN0YW5jZW9mIERhdGUgPyBkYXRlIDogbmV3IERhdGUoZGF0ZSk7CiAgCiAgY29uc3QgZGlmZk1zID0gbm93IC0gZDsKICBjb25zdCBkaWZmTWlucyA9IE1hdGguZmxvb3IoZGlmZk1zIC8gNjAwMDApOwogIGNvbnN0IGRpZmZIb3VycyA9IE1hdGguZmxvb3IoZGlmZk1zIC8gMzYwMDAwMCk7CiAgY29uc3QgZGlmZkRheXMgPSBNYXRoLmZsb29yKGRpZmZNcyAvIDg2NDAwMDAwKTsKCiAgaWYgKGRpZmZNaW5zIDwgMSkgcmV0dXJuICfliJrliJonOwogIGlmIChkaWZmTWlucyA8IDYwKSByZXR1cm4gYCR7ZGlmZk1pbnN95YiG6ZKf5YmNYDsKICBpZiAoZGlmZkhvdXJzIDwgMjQpIHJldHVybiBgJHtkaWZmSG91cnN95bCP5pe25YmNYDsKICBpZiAoZGlmZkRheXMgPT09IDEpIHJldHVybiAn5pio5aSpJzsKICBpZiAoZGlmZkRheXMgPCA3KSByZXR1cm4gYCR7ZGlmZkRheXN95aSp5YmNYDsKCiAgcmV0dXJuIGAke2QuZ2V0TW9udGgoKSArIDF95pyIJHtkLmdldERhdGUoKX3ml6VgOwp9Cgptb2R1bGUuZXhwb3J0cyA9IHsKICBzYXZlSGlzdG9yeSwKICBnZXRIaXN0b3J5LAogIGdldFJlY2VudEhpc3RvcnksCiAgZ2V0SGlzdG9yeUJ5SWQsCiAgZGVsZXRlSGlzdG9yeSwKICBjbGVhckhpc3RvcnksCiAgZm9ybWF0RGF0ZQp9Owo=
+// utils/history.js
+var storageUtil = require('./storage');
+var storage = storageUtil.storage;
+var markdownUtil = require('./markdown');
+
+var HISTORY_KEY = 'readHistory';
+
+function formatDate(date) {
+  var now = new Date();
+  var d = (date instanceof Date) ? date : new Date(date);
+  var diffMs = now - d;
+  var diffMins = Math.floor(diffMs / 60000);
+  var diffHours = Math.floor(diffMs / 3600000);
+  var diffDays = Math.floor(diffMs / 86400000);
+  if (diffMins < 1) return '刚刚';
+  if (diffMins < 60) return diffMins + '分钟前';
+  if (diffHours < 24) return diffHours + '小时前';
+  if (diffDays === 1) return '昨天';
+  if (diffDays < 7) return diffDays + '天前';
+  return (d.getMonth() + 1) + '月' + d.getDate() + '日';
+}
+
+function getHistory() {
+  return storage.get(HISTORY_KEY, []);
+}
+
+function getRecentHistory(n) {
+  return getHistory().slice(0, n || 3);
+}
+
+function getHistoryById(id) {
+  var list = getHistory();
+  for (var i = 0; i < list.length; i++) {
+    if (list[i].id === id) return list[i];
+  }
+  return null;
+}
+
+function saveHistory(bookTitle, content, mode) {
+  var history = getHistory();
+  var wc = markdownUtil.countWords ? markdownUtil.countWords(content) : content.length;
+  var record = {
+    id: Date.now().toString(),
+    bookTitle: bookTitle,
+    content: content,
+    mode: mode || 'deep',
+    wordCount: wc,
+    createdAt: new Date().toISOString(),
+    createdAtText: formatDate(new Date()),
+  };
+  var existingIndex = -1;
+  for (var i = 0; i < history.length; i++) {
+    if (history[i].bookTitle === bookTitle) { existingIndex = i; break; }
+  }
+  if (existingIndex >= 0) {
+    history[existingIndex] = record;
+  } else {
+    history.unshift(record);
+  }
+  storage.set(HISTORY_KEY, history);
+  return record;
+}
+
+function deleteHistory(id) {
+  var history = getHistory().filter(function(h) { return h.id !== id; });
+  storage.set(HISTORY_KEY, history);
+}
+
+function clearHistory() {
+  storage.set(HISTORY_KEY, []);
+}
+
+module.exports = {
+  saveHistory: saveHistory,
+  getHistory: getHistory,
+  getRecentHistory: getRecentHistory,
+  getHistoryById: getHistoryById,
+  deleteHistory: deleteHistory,
+  clearHistory: clearHistory,
+  formatDate: formatDate,
+};

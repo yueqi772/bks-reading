@@ -1,1 +1,124 @@
-Ly8gYXBwLmpzCmNvbnN0IHsgc3RvcmFnZSB9ID0gcmVxdWlyZSgnLi91dGlscy9zdG9yYWdlJyk7CgpBcHAoewogIGdsb2JhbERhdGE6IHsKICAgIHVzZXJJbmZvOiBudWxsLAogICAgb3BlbmlkOiAnJywKICAgIGlzVmlwOiBmYWxzZSwKICAgIHZpcEV4cGlyZURhdGU6ICcnLAogICAgZnJlZUNvdW50OiAyLCAgICAgICAgLy8g5Ymp5L2Z5YWN6LS55qyh5pWwCiAgICBkYWlseVJlY29tbWVuZDogbnVsbCwgLy8g5q+P5pel5o6o6I2QCiAgfSwKCiAgb25MYXVuY2goKSB7CiAgICAvLyDor7vlj5bmnKzlnLDnvJPlrZjnmoTnlKjmiLfmlbDmja4KICAgIGNvbnN0IHVzZXJJbmZvID0gc3RvcmFnZS5nZXQoJ3VzZXJJbmZvJyk7CiAgICBpZiAodXNlckluZm8pIHsKICAgICAgdGhpcy5nbG9iYWxEYXRhLnVzZXJJbmZvID0gdXNlckluZm87CiAgICB9CgogICAgLy8g6K+75Y+W5Lya5ZGY54q25oCBCiAgICBjb25zdCB2aXBJbmZvID0gc3RvcmFnZS5nZXQoJ3ZpcEluZm8nKTsKICAgIGlmICh2aXBJbmZvKSB7CiAgICAgIGNvbnN0IG5vdyA9IG5ldyBEYXRlKCkuZ2V0VGltZSgpOwogICAgICBpZiAodmlwSW5mby5leHBpcmVEYXRlICYmIG5ldyBEYXRlKHZpcEluZm8uZXhwaXJlRGF0ZSkuZ2V0VGltZSgpID4gbm93KSB7CiAgICAgICAgdGhpcy5nbG9iYWxEYXRhLmlzVmlwID0gdHJ1ZTsKICAgICAgICB0aGlzLmdsb2JhbERhdGEudmlwRXhwaXJlRGF0ZSA9IHZpcEluZm8uZXhwaXJlRGF0ZTsKICAgICAgfSBlbHNlIHsKICAgICAgICAvLyBWSVAg5bey6L+H5pyfCiAgICAgICAgdGhpcy5nbG9iYWxEYXRhLmlzVmlwID0gZmFsc2U7CiAgICAgICAgc3RvcmFnZS5yZW1vdmUoJ3ZpcEluZm8nKTsKICAgICAgfQogICAgfQoKICAgIC8vIOivu+WPluWJqeS9meWFjei0ueasoeaVsAogICAgY29uc3QgZnJlZUNvdW50ID0gc3RvcmFnZS5nZXQoJ2ZyZWVDb3VudCcpOwogICAgaWYgKGZyZWVDb3VudCAhPT0gbnVsbCAmJiBmcmVlQ291bnQgIT09IHVuZGVmaW5lZCkgewogICAgICB0aGlzLmdsb2JhbERhdGEuZnJlZUNvdW50ID0gZnJlZUNvdW50OwogICAgfSBlbHNlIHsKICAgICAgLy8g5paw55So5oi377yM5Yid5aeL5YyWIDIg5qyh5YWN6LS55qyh5pWwCiAgICAgIHN0b3JhZ2Uuc2V0KCdmcmVlQ291bnQnLCAyKTsKICAgIH0KCiAgICAvLyDliqDovb3mr4/ml6XmjqjojZAKICAgIHRoaXMuX2xvYWREYWlseVJlY29tbWVuZCgpOwoKICAgIC8vIOeZu+W9leiOt+WPliBvcGVuaWQKICAgIHRoaXMuX2xvZ2luKCk7CiAgfSwKCiAgX2xvZ2luKCkgewogICAgd3gubG9naW4oewogICAgICBzdWNjZXNzOiAocmVzKSA9PiB7CiAgICAgICAgaWYgKHJlcy5jb2RlKSB7CiAgICAgICAgICAvLyDlrp7pmYXpobnnm67kuK3pnIDopoHlsIYgY29kZSDlj5HpgIHliLDoh6rlt7HnmoTmnI3liqHnq6/mjaLlj5Ygb3BlbmlkCiAgICAgICAgICAvLyDov5nph4znlKggY29kZSDmqKHmi58gb3Blbmlk77yI5a6e6ZmF5byA5Y+R6ZyA5pu/5o2i5Li655yf5a6e5o6l5Y+j77yJCiAgICAgICAgICBjb25zdCBtb2NrT3BlbmlkID0gJ21vY2tfb3BlbmlkXycgKyByZXMuY29kZS5zdWJzdHJpbmcoMCwgOCk7CiAgICAgICAgICB0aGlzLmdsb2JhbERhdGEub3BlbmlkID0gbW9ja09wZW5pZDsKICAgICAgICAgIHN0b3JhZ2Uuc2V0KCdvcGVuaWQnLCBtb2NrT3BlbmlkKTsKICAgICAgICB9CiAgICAgIH0KICAgIH0pOwogIH0sCgogIF9sb2FkRGFpbHlSZWNvbW1lbmQoKSB7CiAgICAvLyDmo4Dmn6Xku4rml6XmjqjojZDmmK/lkKblt7LnvJPlrZgKICAgIGNvbnN0IHRvZGF5ID0gbmV3IERhdGUoKS50b0RhdGVTdHJpbmcoKTsKICAgIGNvbnN0IGNhY2hlZCA9IHN0b3JhZ2UuZ2V0KCdkYWlseVJlY29tbWVuZCcpOwogICAgaWYgKGNhY2hlZCAmJiBjYWNoZWQuZGF0ZSA9PT0gdG9kYXkpIHsKICAgICAgdGhpcy5nbG9iYWxEYXRhLmRhaWx5UmVjb21tZW5kID0gY2FjaGVkOwogICAgICByZXR1cm47CiAgICB9CgogICAgLy8g5q+P5pel5o6o6I2Q5Lmm5Y2V77yI5a6e6ZmF6aG555uu5LuO5o6l5Y+j6I635Y+W77yJCiAgICBjb25zdCByZWNvbW1lbmRzID0gWwogICAgICB7IHRpdGxlOiAn5Yi75oSP57uD5LmgJywgYXV0aG9yOiAn5a6J5b635pavwrfoib7liKnlhYvmo64nLCByZWFzb246ICfmj63npLrlpKnmiY3og4zlkI7nmoTnnJ/nm7jvvIzlkYror4nkvaDliLvmhI/nu4PkuaDmmK/miJDkuLrpobblsJbpq5jmiYvnmoTllK/kuIDot6/lvoTjgIInLCBjb3ZlcjogJycgfSwKICAgICAgeyB0aXRsZTogJ+iupOefpeiniemGkicsIGF1dGhvcjogJ+WRqOWyrScsIHJlYXNvbjogJ+eUqOenkeWtpuaWueazleino+mHiuWkp+iEkeW3peS9nOWOn+eQhu+8jOW4ruS9oOW7uueri+mrmOaViOeahOWtpuS5oOWSjOaIkOmVv+S9k+ezu+OAgicsIGNvdmVyOiAnJyB9LAogICAgICB7IHRpdGxlOiAn5oCd6ICD77yM5b+r5LiO5oWiJywgYXV0aG9yOiAn5Li55bC85bCUwrfljaHlsLzmm7wnLCByZWFzb246ICfor7rotJ3lsJTnu4/mtY7lrablpZblvpfkuLvlipvkvZzvvIzmj63npLrkurrnsbvlhrPnrZbnmoTkuKTlpZfns7vnu5/vvIzorqnkvaDmm7TnkIbmgKflnLDmgJ3ogIPjgIInLCBjb3ZlcjogJycgfSwKICAgICAgeyB0aXRsZTogJ+a3seW6puW3peS9nCcsIGF1dGhvcjogJ+WNoeWwlMK357q95rOi54m5JywgcmVhc29uOiAn5Zyo5rOo5oSP5Yqb5YiG5pWj55qE5pe25Luj77yM5rex5bqm5bel5L2c5piv5L2g5pyA6YeN6KaB55qE56ue5LqJ5LyY5Yq/44CCJywgY292ZXI6ICcnIH0sCiAgICAgIHsgdGl0bGU6ICfljp/liJknLCBhdXRob3I6ICfnkZ7Ct+i+vuWIqeaspycsIHJlYXNvbjogJ+ahpeawtOWfuumHkeWIm+Wni+S6uueahOeUn+a0u+S4juW3peS9nOWOn+WIme+8jOaJk+mAoOWxnuS6juS9oOeahOWGs+etluezu+e7n+OAgicsIGNvdmVyOiAnJyB9LAogICAgICB7IHRpdGxlOiAn57qz55Om5bCU5a6d5YW4JywgYXV0aG9yOiAn57qz55Om5bCUwrfmi4nnu7TlnY7nibknLCByZWFzb246ICfnoYXosLfkvKDlpYfmipXotYTkurrlhbPkuo7otKLlr4zkuI7lubjnpo/nmoTnu4jmnoHmmbrmhafjgIInLCBjb3ZlcjogJycgfSwKICAgICAgeyB0aXRsZTogJ+ept+afpeeQhuWuneWFuCcsIGF1dGhvcjogJ+afpeeQhsK36IqS5qC8JywgcmVhc29uOiAn5be06I+y54m55ZCI5LyZ5Lq65p+l55CGwrfoipLmoLznmoTmgJ3nu7TmqKHlnovkuI7kurrnlJ/mmbrmhafnsr7ljY7jgIInLCBjb3ZlcjogJycgfSwKICAgIF07CgogICAgLy8g5qC55o2u5pel5pyf6YCJ5oup5o6o6I2QCiAgICBjb25zdCBkYXlJbmRleCA9IG5ldyBEYXRlKCkuZ2V0RGF0ZSgpICUgcmVjb21tZW5kcy5sZW5ndGg7CiAgICBjb25zdCByZWNvbW1lbmQgPSB7IC4uLnJlY29tbWVuZHNbZGF5SW5kZXhdLCBkYXRlOiB0b2RheSB9OwogICAgdGhpcy5nbG9iYWxEYXRhLmRhaWx5UmVjb21tZW5kID0gcmVjb21tZW5kOwogICAgc3RvcmFnZS5zZXQoJ2RhaWx5UmVjb21tZW5kJywgcmVjb21tZW5kKTsKICB9LAoKICAvLyDmtojogJfkuIDmrKHlhY3otLnmrKHmlbAKICBjb25zdW1lRnJlZUNvdW50KCkgewogICAgaWYgKHRoaXMuZ2xvYmFsRGF0YS5mcmVlQ291bnQgPiAwKSB7CiAgICAgIHRoaXMuZ2xvYmFsRGF0YS5mcmVlQ291bnQtLTsKICAgICAgc3RvcmFnZS5zZXQoJ2ZyZWVDb3VudCcsIHRoaXMuZ2xvYmFsRGF0YS5mcmVlQ291bnQpOwogICAgICByZXR1cm4gdHJ1ZTsKICAgIH0KICAgIHJldHVybiBmYWxzZTsKICB9LAoKICAvLyDmo4Dmn6XmmK/lkKblj6/ku6Xop6Por7sKICBjYW5SZWFkKCkgewogICAgcmV0dXJuIHRoaXMuZ2xvYmFsRGF0YS5pc1ZpcCB8fCB0aGlzLmdsb2JhbERhdGEuZnJlZUNvdW50ID4gMDsKICB9LAp9KTsK
+// app.js
+var storageUtil = require('./utils/storage');
+var cloudUtil = require('./utils/cloud');
+var storage = storageUtil.storage;
+
+App({
+  globalData: {
+    userInfo: null,
+    openid: '',
+    isVip: false,
+    vipExpireDate: '',
+    freeCount: 2,
+    dailyRecommends: [],
+    isLoggedIn: false,
+    cloudInited: false,
+  },
+  _indexPage: null,    // 首页引用，供 _silentRefresh 回调刷新
+  _profilePage: null,  // 我的页引用，供 _silentRefresh 回调刷新
+
+  onLaunch: function() {
+    // 1. 初始化云开发
+    cloudUtil.initCloud();
+    this.globalData.cloudInited = true;
+
+    // 2. 从缓存恢复登录态
+    var cachedUser = storage.get('userInfo');
+    var isLoggedIn = storage.get('isLoggedIn');
+
+    if (cachedUser && isLoggedIn) {
+      // 已登录（填写昵称即可，phone 可选），直接恢复登录态
+      this.globalData.userInfo = cachedUser;
+      this.globalData.isLoggedIn = true;
+      this.globalData.isVip = cachedUser.isVip || false;
+      this.globalData.vipExpireDate = cachedUser.vipExpireDate || '';
+      this.globalData.freeCount = cachedUser.freeCount !== undefined ? cachedUser.freeCount : 2;
+      // 后台静默刷新最新状态
+      this._silentRefresh();
+    }
+
+    // 3. 加载每日推荐
+    this._loadDailyRecommend();
+  },
+
+  // 后台静默刷新用户状态（不阻塞 UI），完成后通知各页面更新
+  _silentRefresh: function() {
+    var self = this;
+    cloudUtil.callLogin(function(res) {
+      if (!res || res.code !== 0) return;
+      var user = res.user;
+      self.globalData.openid = user.openid;
+      self.globalData.isVip = user.isVip || false;
+      self.globalData.vipExpireDate = user.vipExpireDate || '';
+      // 以云端 freeCount 为准，覆盖本地缓存
+      self.globalData.freeCount = user.freeCount !== undefined ? user.freeCount : 2;
+      // 合并写回缓存
+      if (self.globalData.userInfo) {
+        self.globalData.userInfo.isVip = user.isVip;
+        self.globalData.userInfo.vipExpireDate = user.vipExpireDate;
+        self.globalData.userInfo.freeCount = user.freeCount;
+        if (user.phone) self.globalData.userInfo.phone = user.phone;
+      }
+      storage.set('userInfo', self.globalData.userInfo);
+
+      // 通知首页、我的页面刷新次数和 VIP 状态
+      if (self._indexPage && self._indexPage._refresh) {
+        self._indexPage._refresh();
+      }
+      if (self._profilePage && self._profilePage.onShow) {
+        self._profilePage.onShow();
+      }
+    });
+  },
+
+  _loadDailyRecommend: function() {
+    var self = this;
+    var now = new Date();
+    var today = now.toDateString();
+
+    // 命中当天缓存则直接用，不重复请求 AI
+    var cached = storage.get('dailyRecommends');
+    if (cached && cached.date === today && Array.isArray(cached.books) && cached.books.length > 0) {
+      self.globalData.dailyRecommends = cached.books;
+      return;
+    }
+
+    // 兜底数据：AI 请求失败时使用（isbn 用于 Open Library 封面）
+    var fallback = [
+      { title: '刻意练习', author: '安德斯·艾利克森', doubanScore: 9.0, tag: '认知提升', reason: '揭示天才背后的真相，刻意练习是成为顶尖高手的路径', isbn: '9787111579977', coverUrl: 'https://covers.openlibrary.org/b/isbn/9787111579977-M.jpg' },
+      { title: '思考，快与慢', author: '丹尼尔·卡尼曼', doubanScore: 8.8, tag: '心理学', reason: '诺贝尔奖力作，揭示人类决策的两套思维系统', isbn: '9787513300995', coverUrl: 'https://covers.openlibrary.org/b/isbn/9787513300995-M.jpg' },
+      { title: '深度工作', author: '卡尔·纽波特', doubanScore: 8.6, tag: '效率管理', reason: '注意力时代最重要的竞争优势', isbn: '9787111545286', coverUrl: 'https://covers.openlibrary.org/b/isbn/9787111545286-M.jpg' },
+      { title: '原则', author: '瑞·达利欧', doubanScore: 8.4, tag: '商业思维', reason: '桥水基金创始人的生活与工作决策系统', isbn: '9787508685953', coverUrl: 'https://covers.openlibrary.org/b/isbn/9787508685953-M.jpg' },
+      { title: '百年孤独', author: '加西亚·马尔克斯', doubanScore: 9.2, tag: '文学经典', reason: '魔幻现实主义巅峰，诺贝尔文学奖代表作', isbn: '9787544253994', coverUrl: 'https://covers.openlibrary.org/b/isbn/9787544253994-M.jpg' },
+    ];
+
+    // 生成日期字符串用于 AI prompt
+    var months = ['一','二','三','四','五','六','七','八','九','十','十一','十二'];
+    var dateStr = (now.getFullYear()) + '年' + months[now.getMonth()] + '月' + now.getDate() + '日';
+
+    cloudUtil.callDailyRecommend(dateStr, function(books) {
+      self.globalData.dailyRecommends = books;
+      storage.set('dailyRecommends', { date: today, books: books });
+      // 通知首页刷新
+      if (self._indexPage) { self._indexPage._refreshRecommend(books); }
+    }, function(err) {
+      console.warn('[app] dailyRecommend AI failed, use fallback:', err);
+      self.globalData.dailyRecommends = fallback;
+      storage.set('dailyRecommends', { date: today, books: fallback });
+      if (self._indexPage) { self._indexPage._refreshRecommend(fallback); }
+    });
+  },
+
+  canRead: function() {
+    return this.globalData.isVip || this.globalData.freeCount > 0;
+  },
+
+  consumeFreeCount: function() {
+    if (this.globalData.isVip) return true;
+    if (this.globalData.freeCount <= 0) return false;
+    this.globalData.freeCount--;
+    if (this.globalData.userInfo) this.globalData.userInfo.freeCount = this.globalData.freeCount;
+    storage.set('userInfo', this.globalData.userInfo);
+    return true;
+  },
+});

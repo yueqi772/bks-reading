@@ -1,1 +1,47 @@
-ewogICJwYWdlcyI6IFsKICAgICJwYWdlcy9pbmRleC9pbmRleCIsCiAgICAicGFnZXMvcmVhZGluZy9yZWFkaW5nIiwKICAgICJwYWdlcy9kZXRhaWwvZGV0YWlsIiwKICAgICJwYWdlcy9oaXN0b3J5L2hpc3RvcnkiLAogICAgInBhZ2VzL3ZpcC92aXAiLAogICAgInBhZ2VzL3Byb2ZpbGUvcHJvZmlsZSIKICBdLAogICJ0YWJCYXIiOiB7CiAgICAiY29sb3IiOiAiIzk5OTk5OSIsCiAgICAic2VsZWN0ZWRDb2xvciI6ICIjNEE2NzQxIiwKICAgICJiYWNrZ3JvdW5kQ29sb3IiOiAiI0ZGRkZGRiIsCiAgICAiYm9yZGVyU3R5bGUiOiAid2hpdGUiLAogICAgImxpc3QiOiBbCiAgICAgIHsKICAgICAgICAicGFnZVBhdGgiOiAicGFnZXMvaW5kZXgvaW5kZXgiLAogICAgICAgICJ0ZXh0IjogIummlumhtSIsCiAgICAgICAgImljb25QYXRoIjogImltYWdlcy90YWJfaG9tZS5wbmciLAogICAgICAgICJzZWxlY3RlZEljb25QYXRoIjogImltYWdlcy90YWJfaG9tZV9hY3RpdmUucG5nIgogICAgICB9LAogICAgICB7CiAgICAgICAgInBhZ2VQYXRoIjogInBhZ2VzL2hpc3RvcnkvaGlzdG9yeSIsCiAgICAgICAgInRleHQiOiAi5Y6G5Y+yIiwKICAgICAgICAiaWNvblBhdGgiOiAiaW1hZ2VzL3RhYl9oaXN0b3J5LnBuZyIsCiAgICAgICAgInNlbGVjdGVkSWNvblBhdGgiOiAiaW1hZ2VzL3RhYl9oaXN0b3J5X2FjdGl2ZS5wbmciCiAgICAgIH0sCiAgICAgIHsKICAgICAgICAicGFnZVBhdGgiOiAicGFnZXMvcHJvZmlsZS9wcm9maWxlIiwKICAgICAgICAidGV4dCI6ICLmiJHnmoQiLAogICAgICAgICJpY29uUGF0aCI6ICJpbWFnZXMvdGFiX3Byb2ZpbGUucG5nIiwKICAgICAgICAic2VsZWN0ZWRJY29uUGF0aCI6ICJpbWFnZXMvdGFiX3Byb2ZpbGVfYWN0aXZlLnBuZyIKICAgICAgfQogICAgXQogIH0sCiAgIndpbmRvdyI6IHsKICAgICJiYWNrZ3JvdW5kVGV4dFN0eWxlIjogImxpZ2h0IiwKICAgICJuYXZpZ2F0aW9uQmFyQmFja2dyb3VuZENvbG9yIjogIiM0QTY3NDEiLAogICAgIm5hdmlnYXRpb25CYXJUaXRsZVRleHQiOiAi5Lmm6KejIiwKICAgICJuYXZpZ2F0aW9uQmFyVGV4dFN0eWxlIjogIndoaXRlIiwKICAgICJiYWNrZ3JvdW5kQ29sb3IiOiAiI0Y3RjVGMCIKICB9LAogICJzdHlsZSI6ICJ2MiIsCiAgInNpdGVtYXBMb2NhdGlvbiI6ICJzaXRlbWFwLmpzb24iLAogICJsYXp5Q29kZUxvYWRpbmciOiAicmVxdWlyZWRDb21wb25lbnRzIiwKICAicGVybWlzc2lvbiI6IHsKICAgICJzY29wZS51c2VySW5mbyI6IHsKICAgICAgImRlc2MiOiAi6I635Y+W5oKo55qE5aS05YOP5ZKM5pi156ew77yM55So5LqO5Liq5oCn5YyW5bGV56S6IgogICAgfQogIH0sCiAgInJlcXVpcmVkUHJpdmF0ZUluZm9zIjogWyJjaG9vc2VBZGRyZXNzIl0KfQo=
+{
+  "pages": [
+    "pages/index/index",
+    "pages/reading/reading",
+    "pages/detail/detail",
+    "pages/history/history",
+    "pages/vip/vip",
+    "pages/profile/profile"
+  ],
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#F0EAD6",
+    "backgroundColor": "#111118",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/tab_home.png",
+        "selectedIconPath": "images/tab_home_active.png"
+      },
+      {
+        "pagePath": "pages/history/history",
+        "text": "书架",
+        "iconPath": "images/tab_history.png",
+        "selectedIconPath": "images/tab_history_active.png"
+      },
+      {
+        "pagePath": "pages/profile/profile",
+        "text": "我的",
+        "iconPath": "images/tab_profile.png",
+        "selectedIconPath": "images/tab_profile_active.png"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#111118",
+    "navigationBarTitleText": "书解",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#111118"
+  },
+  "cloud": true,
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "lazyCodeLoading": "requiredComponents"
+}

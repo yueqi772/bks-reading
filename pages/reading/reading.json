@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "解读中"
+  "navigationBarTitleText": "正在解读",
+  "navigationBarBackgroundColor": "#111118",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#111118"
 }

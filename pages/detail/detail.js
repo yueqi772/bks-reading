@@ -1,1 +1,119 @@
-Ly8gcGFnZXMvZGV0YWlsL2RldGFpbC5qcwpjb25zdCB7IGdldEhpc3RvcnlCeUlkLCBmb3JtYXREYXRlIH0gPSByZXF1aXJlKCcuLi8uLi91dGlscy9oaXN0b3J5Jyk7CmNvbnN0IHsgcGFyc2VNYXJrZG93biwgY291bnRXb3JkcyB9ID0gcmVxdWlyZSgnLi4vLi4vdXRpbHMvbWFya2Rvd24nKTsKY29uc3QgeyBzdG9yYWdlIH0gPSByZXF1aXJlKCcuLi8uLi91dGlscy9zdG9yYWdlJyk7Cgpjb25zdCBNT0RFX1RFWFQgPSB7IG92ZXJ2aWV3OiAn5qaC6KeI5qih5byPJywgc3RhbmRhcmQ6ICfmoIflh4bmqKHlvI8nLCBkZWVwOiAn5rex5bqm5qih5byPJyB9OwoKUGFnZSh7CiAgZGF0YTogewogICAgYm9va1RpdGxlOiAnJywKICAgIGNvbnRlbnQ6ICcnLAogICAgbm9kZXM6IFtdLAogICAgd29yZENvdW50OiAwLAogICAgZGF0ZVRleHQ6ICcnLAogICAgbW9kZVRleHQ6ICfmt7HluqbmqKHlvI8nLAogICAgZm9udFNpemU6ICdtZWRpdW0nLCAvLyBzbWFsbCB8IG1lZGl1bSB8IGxhcmdlCiAgICBpc0Zhdm9yaXRlOiBmYWxzZSwKICAgIHJlY29yZElkOiAnJywKICB9LAoKICBvbkxvYWQob3B0aW9ucykgewogICAgY29uc3QgeyBpZCB9ID0gb3B0aW9uczsKICAgIGlmIChpZCkgewogICAgICB0aGlzLl9sb2FkRnJvbUhpc3RvcnkoaWQpOwogICAgfQogIH0sCgogIF9sb2FkRnJvbUhpc3RvcnkoaWQpIHsKICAgIGNvbnN0IHJlY29yZCA9IGdldEhpc3RvcnlCeUlkKGlkKTsKICAgIGlmICghcmVjb3JkKSB7CiAgICAgIHd4LnNob3dUb2FzdCh7IHRpdGxlOiAn6K6w5b2V5LiN5a2Y5ZyoJywgaWNvbjogJ25vbmUnIH0pOwogICAgICByZXR1cm47CiAgICB9CgogICAgY29uc3Qgbm9kZXMgPSBwYXJzZU1hcmtkb3duKHJlY29yZC5jb250ZW50KTsKICAgIGNvbnN0IHdjID0gcmVjb3JkLndvcmRDb3VudCB8fCBjb3VudFdvcmRzKHJlY29yZC5jb250ZW50KTsKICAgIGNvbnN0IGRhdGVUZXh0ID0gZm9ybWF0RGF0ZShyZWNvcmQuY3JlYXRlZEF0KTsKICAgIGNvbnN0IG1vZGVUZXh0ID0gTU9ERV9URVhUW3JlY29yZC5tb2RlXSB8fCAn5rex5bqm5qih5byPJzsKCiAgICAvLyDmo4Dmn6XmmK/lkKbmlLbol48KICAgIGNvbnN0IGZhdm9yaXRlcyA9IHN0b3JhZ2UuZ2V0KCdmYXZvcml0ZXMnLCBbXSk7CiAgICBjb25zdCBpc0Zhdm9yaXRlID0gZmF2b3JpdGVzLnNvbWUoZiA9PiBmLmlkID09PSBpZCk7CgogICAgLy8g6K+75Y+W5a2X5L2T5aSn5bCP6K6+572uCiAgICBjb25zdCBmb250U2l6ZSA9IHN0b3JhZ2UuZ2V0KCdmb250U2l6ZScsICdtZWRpdW0nKTsKCiAgICB0aGlzLnNldERhdGEoewogICAgICBib29rVGl0bGU6IHJlY29yZC5ib29rVGl0bGUsCiAgICAgIGNvbnRlbnQ6IHJlY29yZC5jb250ZW50LAogICAgICBub2RlcywKICAgICAgd29yZENvdW50OiB3YywKICAgICAgZGF0ZVRleHQsCiAgICAgIG1vZGVUZXh0LAogICAgICBpc0Zhdm9yaXRlLAogICAgICByZWNvcmRJZDogaWQsCiAgICAgIGZvbnRTaXplLAogICAgfSk7CgogICAgd3guc2V0TmF2aWdhdGlvbkJhclRpdGxlKHsgdGl0bGU6IGDjgIoke3JlY29yZC5ib29rVGl0bGV944CL6Kej6K+7YCB9KTsKICB9LAoKICBzZXRGb250U2l6ZShlKSB7CiAgICBjb25zdCBzaXplID0gZS5jdXJyZW50VGFyZ2V0LmRhdGFzZXQuc2l6ZTsKICAgIHRoaXMuc2V0RGF0YSh7IGZvbnRTaXplOiBzaXplIH0pOwogICAgc3RvcmFnZS5zZXQoJ2ZvbnRTaXplJywgc2l6ZSk7CiAgfSwKCiAgdG9nZ2xlRmF2b3JpdGUoKSB7CiAgICBjb25zdCB7IGlzRmF2b3JpdGUsIHJlY29yZElkLCBib29rVGl0bGUsIGNvbnRlbnQgfSA9IHRoaXMuZGF0YTsKICAgIGxldCBmYXZvcml0ZXMgPSBzdG9yYWdlLmdldCgnZmF2b3JpdGVzJywgW10pOwoKICAgIGlmIChpc0Zhdm9yaXRlKSB7CiAgICAgIGZhdm9yaXRlcyA9IGZhdm9yaXRlcy5maWx0ZXIoZiA9PiBmLmlkICE9PSByZWNvcmRJZCk7CiAgICAgIHRoaXMuc2V0RGF0YSh7IGlzRmF2b3JpdGU6IGZhbHNlIH0pOwogICAgICB3eC5zaG93VG9hc3QoeyB0aXRsZTogJ+W3suWPlua2iOaUtuiXjycsIGljb246ICdub25lJywgZHVyYXRpb246IDE1MDAgfSk7CiAgICB9IGVsc2UgewogICAgICBmYXZvcml0ZXMudW5zaGlmdCh7IGlkOiByZWNvcmRJZCwgYm9va1RpdGxlLCBjcmVhdGVkQXQ6IG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKSB9KTsKICAgICAgdGhpcy5zZXREYXRhKHsgaXNGYXZvcml0ZTogdHJ1ZSB9KTsKICAgICAgd3guc2hvd1RvYXN0KHsgdGl0bGU6ICflt7LmlLbol48nLCBpY29uOiAnc3VjY2VzcycsIGR1cmF0aW9uOiAxNTAwIH0pOwogICAgfQoKICAgIHN0b3JhZ2Uuc2V0KCdmYXZvcml0ZXMnLCBmYXZvcml0ZXMpOwogIH0sCgogIG9uU2hhcmUoKSB7CiAgICAvLyDlvq7kv6Hljp/nlJ/liIbkuqsKICAgIHd4LnNob3dTaGFyZU1lbnUoewogICAgICB3aXRoU2hhcmVUaWNrZXQ6IHRydWUsCiAgICAgIG1lbnVzOiBbJ3NoYXJlQXBwTWVzc2FnZScsICdzaGFyZVRpbWVsaW5lJ10KICAgIH0pOwogIH0sCgogIG9uU2hhcmVBcHBNZXNzYWdlKCkgewogICAgcmV0dXJuIHsKICAgICAgdGl0bGU6IGDwn5OW44CKJHt0aGlzLmRhdGEuYm9va1RpdGxlfeOAi+a3seW6puino+ivuyB8IOS5puino2AsCiAgICAgIHBhdGg6IGAvcGFnZXMvaW5kZXgvaW5kZXhgLAogICAgICBpbWFnZVVybDogJycsCiAgICB9OwogIH0sCgogIGNvcHlDb250ZW50KCkgewogICAgd3guc2V0Q2xpcGJvYXJkRGF0YSh7CiAgICAgIGRhdGE6IHRoaXMuZGF0YS5jb250ZW50LAogICAgICBzdWNjZXNzOiAoKSA9PiB7CiAgICAgICAgd3guc2hvd1RvYXN0KHsgdGl0bGU6ICflt7LlpI3liLblhajmlocnLCBpY29uOiAnc3VjY2VzcycsIGR1cmF0aW9uOiAyMDAwIH0pOwogICAgICB9CiAgICB9KTsKICB9LAoKICByZVJlYWQoKSB7CiAgICBjb25zdCBhcHAgPSBnZXRBcHAoKTsKICAgIGlmICghYXBwLmNhblJlYWQoKSkgewogICAgICB3eC5uYXZpZ2F0ZVRvKHsgdXJsOiAnL3BhZ2VzL3ZpcC92aXAnIH0pOwogICAgICByZXR1cm47CiAgICB9CiAgICB3eC5uYXZpZ2F0ZVRvKHsKICAgICAgdXJsOiBgL3BhZ2VzL3JlYWRpbmcvcmVhZGluZz90aXRsZT0ke2VuY29kZVVSSUNvbXBvbmVudCh0aGlzLmRhdGEuYm9va1RpdGxlKX0mbW9kZT1kZWVwYAogICAgfSk7CiAgfSwKfSk7Cg==
+// pages/detail/detail.js
+var historyUtil = require('../../utils/history');
+var markdownUtil = require('../../utils/markdown');
+var cloudUtil = require('../../utils/cloud');
+
+var MODE_LABELS = { overview: '概览模式', standard: '标准模式', deep: '深度模式' };
+
+Page({
+  data: { bookTitle: '', wordCount: 0, createdAtText: '', modeLabel: '深度模式', contentHtml: '', loading: true },
+
+  onLoad: function(options) {
+    var id = options.id;
+    if (!id) { wx.showToast({ title: '参数错误', icon: 'none' }); wx.navigateBack(); return; }
+    this._loadRecord(id);
+  },
+
+  _loadRecord: function(id) {
+    var self = this;
+
+    // 先尝试本地
+    var local = historyUtil.getHistoryById(id);
+    if (local) {
+      self._renderRecord(local, id);
+    }
+
+    // 再从云端拉（云端 id 与本地 id 格式不同，云端是 MongoDB ObjectId）
+    var app = getApp();
+    if (app.globalData.isLoggedIn) {
+      cloudUtil.getReadHistoryDetail(id, function(res, err) {
+        if (err || !res || res.code !== 0 || !res.record) return;
+        var r = res.record;
+        var record = {
+          id: r._id,
+          bookTitle: r.bookTitle,
+          content: r.content,
+          mode: r.mode,
+          wordCount: r.wordCount,
+          createdAt: r.createdAt,
+          createdAtText: self._formatDate(r.updatedAt || r.createdAt),
+        };
+        self._renderRecord(record, id);
+      });
+    }
+  },
+
+  _renderRecord: function(record, id) {
+    var contentHtml = markdownUtil.toHtml(record.content);
+    wx.setNavigationBarTitle({ title: '《' + record.bookTitle.substring(0, 10) + '》' });
+    this.setData({
+      loading: false,
+      bookTitle: record.bookTitle,
+      wordCount: record.wordCount || markdownUtil.countWords(record.content),
+      createdAtText: record.createdAtText || historyUtil.formatDate(record.createdAt),
+      modeLabel: MODE_LABELS[record.mode] || '深度模式',
+      contentHtml: contentHtml,
+      _rawContent: record.content,
+      _id: id,
+    });
+  },
+
+  _formatDate: function(dateVal) {
+    if (!dateVal) return '';
+    var d = new Date(typeof dateVal === 'object' ? dateVal.$date || dateVal : dateVal);
+    if (isNaN(d.getTime())) return '';
+    return (d.getMonth() + 1) + '月' + d.getDate() + '日';
+  },
+
+  onCopy: function() {
+    var self = this;
+    wx.setClipboardData({
+      data: '《' + self.data.bookTitle + '》深度解读\n\n' + self.data._rawContent,
+      success: function() { wx.showToast({ title: '已复制到剪贴板', icon: 'success' }); }
+    });
+  },
+
+  onShare: function() {
+    wx.showShareMenu({ withShareTicket: false });
+    wx.showToast({ title: '长按小程序分享', icon: 'none', duration: 2000 });
+  },
+
+  onDelete: function() {
+    var self = this;
+    wx.showModal({
+      title: '删除解读',
+      content: '确认删除《' + self.data.bookTitle + '》的解读记录？',
+      confirmText: '删除', confirmColor: '#E74C3C',
+      success: function(res) {
+        if (!res.confirm) return;
+        historyUtil.deleteHistory(self.data._id);
+        var app = getApp();
+        if (app.globalData.isLoggedIn) {
+          cloudUtil.deleteReadHistory(self.data._id, null);
+        }
+        wx.showToast({ title: '已删除', icon: 'success' });
+        setTimeout(function() { wx.navigateBack(); }, 1000);
+      }
+    });
+  },
+
+  // ── 分享给朋友 ─────────────────────────────────────────────────
+  onShareAppMessage: function() {
+    var title = this.data.bookTitle;
+    return {
+      title: '📚 我用 AI 深度解读了《' + title + '》，3000字精华一次看懂',
+      path: '/pages/index/index',
+      imageUrl: '',
+    };
+  },
+
+  // ── 分享到朋友圈（正式版生效）─────────────────────────────────
+  onShareTimeline: function() {
+    var title = this.data.bookTitle;
+    return {
+      title: '📚 AI 深度解读《' + title + '》，3000字精华一次看懂',
+      query: '',
+      imageUrl: '',
+    };
+  },
+});

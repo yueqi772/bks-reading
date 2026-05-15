@@ -1,164 +1,147 @@
 <!-- pages/index/index.wxml -->
-<view class="page-container">
+<view class="page">
 
-  <!-- 顶部 Banner -->
+  <!-- 顶部 Header -->
   <view class="header">
-    <view class="header-top flex-between">
-      <view class="header-title">
-        <text class="title-main">书解</text>
-        <text class="title-sub">BookInsight</text>
-      </view>
-      <view wx:if="{{!isVip}}" class="free-badge" bindtap="goVip">
-        <text class="free-count">{{freeCount}}</text>
-        <text class="free-label">次可用</text>
-      </view>
-      <view wx:else class="vip-badge">
-        <text class="tag-vip">VIP 无限</text>
-      </view>
-    </view>
-    <view class="header-slogan">
-      <text>让AI帮你深度解读每一本好书</text>
-    </view>
-    <view class="header-date">
-      <text>📅 {{todayText}}</text>
+    <view class="header-logo">BOOKSIGHT</view>
+    <view class="header-right">
+      <view class="header-vip-badge" wx:if="{{isVip}}">VIP</view>
+      <view class="header-free" wx:else bindtap="goVip">{{freeCount}} 次</view>
     </view>
   </view>
 
-  <!-- 非会员免费次数提示 -->
-  <view wx:if="{{!isVip && freeCount > 0}}" class="free-tip-bar" bindtap="goVip">
-    <text class="free-tip-text">🎁 新用户专享 · 剩余免费解读 {{freeCount}} 次</text>
-    <text class="free-tip-arrow">›</text>
+  <!-- Hero 区域 -->
+  <view class="hero">
+    <view class="hero-tag">AI 深度解读</view>
+    <view class="hero-title">像拥有一位<text class="hero-title-em">博学导师</text></view>
+    <view class="hero-title">随时为你解读好书</view>
+    <view class="hero-sub">输入书名，获得万字深度精读</view>
   </view>
-  <view wx:if="{{!isVip && freeCount <= 0}}" class="out-tip-bar" bindtap="goVip">
-    <text class="out-tip-text">⚡️ 免费次数已用完，开通会员畅读无限好书 →</text>
+
+  <!-- 搜索框 -->
+  <view class="search-wrap">
+    <view class="search-box">
+      <text class="search-icon-text">🔍</text>
+      <input
+        class="search-input"
+        placeholder="输入书名，如「刻意练习」..."
+        placeholder-class="search-ph"
+        value="{{bookInput}}"
+        bindinput="onBookInput"
+        bindconfirm="onStartRead"
+        confirm-type="search"
+        maxlength="80"
+      />
+      <view class="search-clear" wx:if="{{bookInput}}" bindtap="clearInput">✕</view>
+    </view>
+
+    <!-- 深度档位 -->
+    <view class="mode-row">
+      <view class="mode-btn {{readMode==='overview'?'mode-on':''}}" bindtap="setMode" data-mode="overview">⚡ 概览</view>
+      <view class="mode-btn {{readMode==='standard'?'mode-on':''}}" bindtap="setMode" data-mode="standard">📝 标准</view>
+      <view class="mode-btn {{readMode==='deep'?'mode-on':''}}" bindtap="setMode" data-mode="deep">🔬 深度</view>
+    </view>
+
+    <button class="start-btn {{bookInput?'':'start-btn-dim'}}" bindtap="onStartRead">
+      开始解读
+    </button>
   </view>
 
   <!-- 每日推荐 -->
-  <view wx:if="{{dailyRecommend}}" class="section">
-    <view class="section-header flex-between">
-      <text class="section-title">📚 今日推荐</text>
+  <view class="section">
+    <view class="section-hd">
+      <view class="section-title-wrap">
+        <text class="section-title">今日推荐</text>
+        <view class="section-ai-badge">✦ 精选</view>
+      </view>
       <text class="section-date">{{todayText}}</text>
     </view>
-    <view class="recommend-card card" bindtap="onRecommendTap">
-      <view class="recommend-top flex-row">
-        <view class="recommend-cover">
-          <text class="recommend-emoji">📖</text>
+
+    <!-- 加载骨架 -->
+    <view wx:if="{{recommendLoading}}" class="recommend-scroll-wrap">
+      <scroll-view class="recommend-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+        <view class="recommend-list">
+          <view class="recommend-card-v2 skeleton-card" wx:for="{{[1,2,3]}}" wx:key="index">
+            <view class="skeleton-cover"></view>
+            <view class="skeleton-line skeleton-line-s"></view>
+            <view class="skeleton-line"></view>
+            <view class="skeleton-line skeleton-line-xs"></view>
+          </view>
         </view>
-        <view class="recommend-info flex-1">
-          <text class="recommend-title">《{{dailyRecommend.title}}》</text>
-          <text class="recommend-author">{{dailyRecommend.author}}</text>
-          <text class="recommend-reason text-ellipsis-2">{{dailyRecommend.reason}}</text>
+      </scroll-view>
+    </view>
+
+    <!-- 5本书横滑列表 -->
+    <view wx:else class="recommend-scroll-wrap">
+      <scroll-view class="recommend-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+        <view class="recommend-list">
+          <view
+            class="recommend-card-v2"
+            wx:for="{{dailyRecommends}}"
+            wx:key="index"
+            bindtap="onRecommendTap"
+            data-title="{{item.title}}"
+          >
+            <view class="recommend-v2-cover recommend-v2-cover-{{index % 5}}">
+              <view class="recommend-v2-cover-inner">
+                <view class="recommend-v2-cover-title">{{item.title}}</view>
+                <view class="recommend-v2-cover-author">{{item.author}}</view>
+              </view>
+              <view class="recommend-v2-score-badge">⭐ {{item.doubanScore}}</view>
+            </view>
+            <view class="recommend-v2-tag">{{item.tag}}</view>
+            <view class="recommend-v2-title">{{item.title}}</view>
+            <view class="recommend-v2-author">{{item.author}}</view>
+            <view class="recommend-v2-reason">{{item.reason}}</view>
+            <view class="recommend-v2-cta">解读 →</view>
+          </view>
         </view>
+      </scroll-view>
+    </view>
+  </view>
+
+  <!-- 最近解读 -->
+  <view class="section" wx:if="{{recentHistory.length > 0}}">
+    <view class="section-hd">
+      <text class="section-title">最近解读</text>
+      <text class="section-more" bindtap="goHistory">查看全部 →</text>
+    </view>
+    <view class="recent-item" wx:for="{{recentHistory}}" wx:key="id" bindtap="onHistoryTap" data-id="{{item.id}}">
+      <view class="recent-cover">
+        <image class="recent-cover-img" src="https://images.unsplash.com/photo-1596522681657-8e9057309a7e?auto=format&fit=crop&w=100&q=80" mode="aspectFill" />
       </view>
-      <view class="recommend-btn flex-row">
-        <text class="recommend-btn-text">✨ 立即解读</text>
+      <view class="recent-info">
+        <view class="recent-title">{{item.bookTitle}}</view>
+        <view class="recent-meta">{{item.wordCount}} 字 · {{item.createdAtText}}</view>
+        <view class="recent-progress">继续阅读 →</view>
       </view>
     </view>
   </view>
 
-  <!-- 书名输入区 -->
+  <!-- 热门书目 -->
   <view class="section">
-    <view class="section-title-row flex-between">
-      <text class="section-title">🔍 输入书名</text>
+    <view class="section-hd">
+      <text class="section-title">选择书籍</text>
     </view>
-    <view class="input-card card">
-      <view class="input-wrap flex-row">
-        <input
-          class="book-input flex-1"
-          value="{{bookInput}}"
-          placeholder="输入书名，开始深度解读..."
-          placeholder-class="input-placeholder"
-          bindinput="onBookInput"
-          maxlength="100"
-          confirm-type="search"
-          bindconfirm="onStartRead"
-        />
-        <view wx:if="{{bookInput}}" class="input-clear" bindtap="clearInput">
-          <text>✕</text>
-        </view>
-      </view>
-
-      <!-- 解读模式选择 -->
-      <view class="mode-row flex-row">
-        <text class="mode-label">解读深度：</text>
-        <view class="mode-tabs flex-row">
-          <view
-            class="mode-tab {{readMode === 'overview' ? 'active' : ''}}"
-            data-mode="overview"
-            bindtap="setMode"
-          >概览</view>
-          <view
-            class="mode-tab {{readMode === 'standard' ? 'active' : ''}}"
-            data-mode="standard"
-            bindtap="setMode"
-          >标准</view>
-          <view
-            class="mode-tab {{readMode === 'deep' ? 'active' : ''}}"
-            data-mode="deep"
-            bindtap="setMode"
-          >深度</view>
-        </view>
-      </view>
-
-      <!-- 开始解读按钮 -->
-      <button class="start-btn btn-primary" bindtap="onStartRead">
-        <text>开始深度解读 →</text>
-      </button>
-    </view>
-  </view>
-
-  <!-- 热门书单 -->
-  <view class="section">
-    <text class="section-title">🔥 热门书单</text>
-    <scroll-view class="hot-books-scroll" scroll-x enable-flex>
-      <view class="hot-books-list flex-row">
-        <view
-          wx:for="{{hotBooks}}"
-          wx:key="title"
-          class="hot-book-item card"
-          data-title="{{item.title}}"
-          bindtap="onHotBookTap"
-        >
-          <text class="hot-book-emoji">{{item.emoji}}</text>
-          <text class="hot-book-title text-ellipsis">{{item.title}}</text>
-          <text class="hot-book-author text-ellipsis">{{item.author}}</text>
+    <scroll-view class="hot-scroll" scroll-x enhanced show-scrollbar="{{false}}">
+      <view class="hot-list">
+        <view class="hot-item" wx:for="{{hotBooks}}" wx:key="index" bindtap="onHotBookTap" data-title="{{item.title}}">
+          <view class="hot-cover">
+            <image class="hot-cover-img" src="{{item.cover}}" mode="aspectFill" />
+            <view class="hot-cover-mask"></view>
+          </view>
+          <view class="hot-title">{{item.title}}</view>
+          <view class="hot-author">{{item.author}}</view>
         </view>
       </view>
     </scroll-view>
   </view>
 
-  <!-- 最近解读历史 -->
-  <view wx:if="{{recentHistory.length > 0}}" class="section">
-    <view class="section-header flex-between">
-      <text class="section-title">🕐 最近解读</text>
-      <text class="section-more" bindtap="goHistory">全部 ›</text>
-    </view>
-    <view
-      wx:for="{{recentHistory}}"
-      wx:key="id"
-      class="history-item card"
-      data-id="{{item.id}}"
-      bindtap="onHistoryTap"
-    >
-      <view class="history-item-inner flex-between">
-        <view class="history-info flex-1">
-          <text class="history-title text-ellipsis">《{{item.bookTitle}}》</text>
-          <text class="history-meta">{{item.modeText || '深度'}} · {{item.wordCount || 0}}字</text>
-        </view>
-        <text class="history-arrow">›</text>
-      </view>
-    </view>
-  </view>
+  <view style="height: 60rpx;"></view>
 
-  <!-- 底部间距 -->
-  <view class="footer-space"></view>
+  <!-- Paywall -->
+  <paywall show="{{showPaywall}}" freeCount="{{freeCount}}" bind:close="onPaywallClose" bind:goVip="onPaywallGoVip" />
 
+  <!-- 授权弹窗（首次启动弹出） -->
+  <auth-modal show="{{showAuthModal}}" bind:done="onAuthDone" />
 </view>
-
-<!-- 付费弹窗 -->
-<paywall
-  show="{{showPaywall}}"
-  freeCount="{{freeCount}}"
-  bind:close="onPaywallClose"
-  bind:goVip="onPaywallGoVip"
-/>

@@ -1,80 +1,30 @@
 <!-- pages/detail/detail.wxml -->
-<view class="page-container">
+<view class="page">
 
-  <!-- 顶部信息栏 -->
-  <view class="detail-header card">
-    <view class="detail-book-row flex-row">
-      <view class="detail-book-icon">
-        <text class="detail-book-emoji">📗</text>
-      </view>
-      <view class="detail-book-info flex-1">
-        <text class="detail-book-title">《{{bookTitle}}》</text>
-        <view class="detail-meta-row flex-row">
-          <text class="detail-tag">{{modeText}}</text>
-          <text class="detail-meta-text">{{wordCount}} 字 · {{dateText}}</text>
-        </view>
-      </view>
+  <!-- 顶部书籍信息 -->
+  <view class="detail-header">
+    <view class="detail-cover">
+      <image class="detail-cover-img" src="https://images.unsplash.com/photo-1571834870678-24294e1ecf72?auto=format&fit=crop&w=200&q=80" mode="aspectFill" />
+      <view class="detail-cover-mask"></view>
     </view>
-
-    <!-- 字体调节 -->
-    <view class="font-size-row flex-row">
-      <text class="font-size-label">字体大小：</text>
-      <view class="font-tabs flex-row">
-        <view
-          class="font-tab {{fontSize === 'small' ? 'active' : ''}}"
-          data-size="small"
-          bindtap="setFontSize"
-        >小</view>
-        <view
-          class="font-tab {{fontSize === 'medium' ? 'active' : ''}}"
-          data-size="medium"
-          bindtap="setFontSize"
-        >中</view>
-        <view
-          class="font-tab {{fontSize === 'large' ? 'active' : ''}}"
-          data-size="large"
-          bindtap="setFontSize"
-        >大</view>
-      </view>
+    <view class="detail-meta">
+      <view class="detail-mode-tag">{{modeLabel}}</view>
+      <view class="detail-book-title">《{{bookTitle}}》</view>
+      <view class="detail-stats">{{wordCount}} 字 · {{createdAtText}}</view>
     </view>
   </view>
 
   <!-- 操作栏 -->
-  <view class="action-bar card">
-    <view class="action-item" bindtap="toggleFavorite">
-      <text class="action-icon">{{isFavorite ? '❤️' : '🤍'}}</text>
-      <text class="action-text">{{isFavorite ? '已收藏' : '收藏'}}</text>
-    </view>
-    <view class="action-divider"></view>
-    <view class="action-item" bindtap="onShare">
-      <text class="action-icon">📤</text>
-      <text class="action-text">分享</text>
-    </view>
-    <view class="action-divider"></view>
-    <view class="action-item" bindtap="copyContent">
-      <text class="action-icon">📋</text>
-      <text class="action-text">复制</text>
-    </view>
-    <view class="action-divider"></view>
-    <view class="action-item" bindtap="reRead">
-      <text class="action-icon">🔄</text>
-      <text class="action-text">重新解读</text>
-    </view>
+  <view class="action-bar">
+    <view class="action-btn" bindtap="onCopy"><text class="action-icon">⎘</text><text class="action-text">复制</text></view>
+    <view class="action-btn" bindtap="onShare"><text class="action-icon">↗</text><text class="action-text">分享</text></view>
+    <view class="action-btn action-del" bindtap="onDelete"><text class="action-icon">⌫</text><text class="action-text">删除</text></view>
   </view>
 
-  <!-- 正文内容 -->
-  <scroll-view class="content-scroll" scroll-y>
-    <view class="content-body {{fontSize === 'small' ? 'font-small' : fontSize === 'large' ? 'font-large' : 'font-medium'}}">
-      <text class="content-text" decode="{{true}}">{{content}}</text>
-    </view>
+  <!-- 正文内容（rich-text 渲染 Markdown） -->
+  <view class="md-content">
+    <rich-text nodes="{{contentHtml}}" class="md-rich"></rich-text>
+  </view>
 
-    <!-- 免责声明 -->
-    <view class="disclaimer">
-      <text class="disclaimer-text">⚠️ 本解读由 AI 生成，仅供参考，请以原著内容为准</text>
-    </view>
-
-    <!-- 底部间距 -->
-    <view style="height: 60rpx;"></view>
-  </scroll-view>
-
+  <view style="height: 80rpx;"></view>
 </view>

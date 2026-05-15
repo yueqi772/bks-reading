@@ -1,0 +1,66 @@
+<!-- components/auth-modal/auth-modal.wxml -->
+<view class="mask" wx:if="{{show}}" catchtouchmove="noop">
+  <view class="sheet">
+    <view class="handle"></view>
+
+    <!-- 填写昵称头像阶段 -->
+    <block wx:if="{{!done}}">
+      <view class="logo">✦</view>
+      <view class="title">开始你的自我成长之旅</view>
+      <view class="desc">设置你的昵称和头像</view>
+
+      <!-- 头像选择：open-type="chooseAvatar" -->
+      <view class="avatar-wrap">
+        <button class="avatar-btn" open-type="chooseAvatar" bindchooseavatar="onChooseAvatar">
+          <image
+            wx:if="{{avatarUrl}}"
+            class="avatar-img"
+            src="{{avatarUrl}}"
+            mode="aspectFill"
+          />
+          <view wx:else class="avatar-placeholder">
+            <text class="avatar-placeholder-icon">📷</text>
+            <text class="avatar-placeholder-text">点击选择头像</text>
+          </view>
+        </button>
+      </view>
+
+      <!-- 昵称输入：type="nickname" 会触发微信昵称键盘 -->
+      <view class="nickname-wrap">
+        <input
+          class="nickname-input"
+          type="nickname"
+          placeholder="点击填写昵称"
+          placeholder-class="nickname-ph"
+          value="{{nickName}}"
+          bindinput="onNicknameInput"
+          maxlength="20"
+          confirm-type="done"
+        />
+      </view>
+
+      <!-- 错误提示 -->
+      <view class="error-tip" wx:if="{{errorTip}}">{{errorTip}}</view>
+
+      <!-- 确认按钮 -->
+      <button
+        class="confirm-btn {{loading ? 'btn-loading' : ''}}"
+        bindtap="onConfirm"
+        disabled="{{loading}}"
+        loading="{{loading}}"
+      >{{loading ? '保存中...' : '完成，开始体验'}}</button>
+
+    </block>
+
+    <!-- 完成动画 -->
+    <block wx:else>
+      <view class="done-wrap">
+        <image wx:if="{{avatarUrl}}" class="done-avatar" src="{{avatarUrl}}" mode="aspectFill"/>
+        <view wx:else class="done-avatar-placeholder">✦</view>
+        <view class="done-title">{{nickName ? ('欢迎你，' + nickName) : '账号已就绪'}}</view>
+        <view class="done-sub">开启你的 AI 读书之旅吧</view>
+      </view>
+    </block>
+
+  </view>
+</view>

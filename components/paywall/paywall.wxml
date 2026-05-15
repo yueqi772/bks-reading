@@ -1,44 +1,40 @@
 <!-- components/paywall/paywall.wxml -->
-<view wx:if="{{show}}" class="paywall-mask" bindtap="onClose">
-  <view class="paywall-box" catchtap="">
-    <!-- 关闭按钮 -->
-    <view class="paywall-close" bindtap="onClose">✕</view>
+<view class="paywall-mask" wx:if="{{show}}" bindtap="onMaskTap">
+  <view class="paywall-sheet" catchtap>
 
-    <!-- 图标 -->
-    <view class="paywall-icon">📚</view>
+    <!-- 顶部拖拽条 -->
+    <view class="sheet-handle"></view>
 
     <!-- 标题 -->
-    <text class="paywall-title">免费次数已用完</text>
-    <text class="paywall-sub">开通包月会员，畅读无限好书</text>
-
-    <!-- 价格 -->
-    <view class="paywall-price-row">
-      <text class="paywall-price">¥30</text>
-      <text class="paywall-price-unit">/月</text>
+    <view class="sheet-header">
+      <view class="sheet-title">✦ 解读次数已用完</view>
+      <view class="sheet-close" bindtap="onClose">✕</view>
     </view>
 
-    <!-- 权益列表 -->
-    <view class="paywall-benefits">
-      <view class="paywall-benefit-item">
-        <text class="paywall-benefit-check">✅</text>
-        <text class="paywall-benefit-text">无限次深度解读任意书籍</text>
+    <!-- 限制提示 -->
+    <view class="limit-notice">
+      <view class="limit-notice-text">免费体验已用完 {{freeCount}}/2 次</view>
+      <view class="limit-notice-bar">
+        <view class="limit-bar-fill" style="width:{{freeCount>=2?'100%':'50%'}}"></view>
       </view>
-      <view class="paywall-benefit-item">
-        <text class="paywall-benefit-check">✅</text>
-        <text class="paywall-benefit-text">所有书籍无限制访问</text>
-      </view>
-      <view class="paywall-benefit-item">
-        <text class="paywall-benefit-check">✅</text>
-        <text class="paywall-benefit-text">历史记录永久保存</text>
-      </view>
+    </view>
+
+    <!-- 权益预览 -->
+    <view class="benefit-preview">
+      <view class="benefit-p-item"><text class="benefit-p-icon">♾</text><text class="benefit-p-text">无限次深度解读</text></view>
+      <view class="benefit-p-item"><text class="benefit-p-icon">📚</text><text class="benefit-p-text">全书目畅读</text></view>
+      <view class="benefit-p-item"><text class="benefit-p-icon">🔬</text><text class="benefit-p-text">解锁深度模式</text></view>
+    </view>
+
+    <!-- 价格 -->
+    <view class="paywall-price">
+      <text class="price-big">¥30</text>
+      <text class="price-period"> / 月</text>
     </view>
 
     <!-- 按钮 -->
-    <button class="paywall-btn-vip btn-gold" bindtap="onGoVip">
-      <text>立即开通会员</text>
-    </button>
-    <button class="paywall-btn-cancel" bindtap="onClose">
-      <text>暂不开通</text>
-    </button>
+    <button class="paywall-cta" bindtap="onGoVip">立即开通会员</button>
+    <view class="paywall-later" bindtap="onClose">稍后再说</view>
+
   </view>
 </view>

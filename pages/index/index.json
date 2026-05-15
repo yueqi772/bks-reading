@@ -1,6 +1,10 @@
 {
+  "navigationBarTitleText": "书解",
+  "navigationBarBackgroundColor": "#111118",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#111118",
   "usingComponents": {
-    "paywall": "../../components/paywall/paywall"
-  },
-  "navigationBarTitleText": "书解"
+    "paywall": "../../components/paywall/paywall",
+    "auth-modal": "../../components/auth-modal/auth-modal"
+  }
 }

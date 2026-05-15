@@ -1,0 +1,9 @@
+{
+  "name": "vipOrder",
+  "version": "1.0.0",
+  "description": "VIP订单管理：创建订单、激活码验证、管理员激活",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~2.6.3"
+  }
+}

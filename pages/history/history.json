@@ -1,5 +1,9 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "解读历史",
-  "enablePullDownRefresh": true
+  "navigationBarTitleText": "我的书架",
+  "navigationBarBackgroundColor": "#111118",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#111118",
+  "usingComponents": {
+    "auth-modal": "/components/auth-modal/auth-modal"
+  }
 }

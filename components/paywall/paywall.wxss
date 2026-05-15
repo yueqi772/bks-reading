@@ -1,130 +1,48 @@
-/* components/paywall/paywall.wxss */
-
+/* components/paywall/paywall.wxss — 深夜书房主题 */
 .paywall-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
-  z-index: 200;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+  display: flex; align-items: flex-end; z-index: 999;
+  backdrop-filter: blur(4px);
 }
+.paywall-sheet {
+  width: 100%; background: #1A1A1A; border-radius: 28rpx 28rpx 0 0;
+  padding: 12rpx 40rpx 60rpx;
+  border-top: 1rpx solid rgba(255,255,255,0.07);
+}
+.sheet-handle {
+  width: 60rpx; height: 6rpx; background: rgba(255,255,255,0.12);
+  border-radius: 3rpx; margin: 0 auto 24rpx;
+}
+.sheet-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30rpx; }
+.sheet-title { font-size: 30rpx; font-weight: 700; color: #F0EAD6; }
+.sheet-close { font-size: 28rpx; color: rgba(240,234,214,0.3); padding: 6rpx; }
 
-.paywall-box {
-  background: #FFFFFF;
-  border-radius: 32rpx 32rpx 0 0;
-  padding: 50rpx 40rpx 60rpx;
-  width: 100%;
-  position: relative;
+/* 限制条 */
+.limit-notice { margin-bottom: 30rpx; }
+.limit-notice-text { font-size: 22rpx; color: rgba(240,234,214,0.4); margin-bottom: 10rpx; }
+.limit-bar-fill {
+  height: 6rpx; background: rgba(200,169,110,0.7);
+  border-radius: 3rpx; transition: width 0.5s;
 }
+.limit-notice-bar { height: 6rpx; background: rgba(255,255,255,0.08); border-radius: 3rpx; overflow: hidden; }
 
-.paywall-close {
-  position: absolute;
-  top: 24rpx;
-  right: 30rpx;
-  font-size: 34rpx;
-  color: #AAAAAA;
-  padding: 10rpx;
-}
+/* 权益 */
+.benefit-preview { display: flex; flex-direction: column; gap: 16rpx; margin-bottom: 34rpx; }
+.benefit-p-item { display: flex; align-items: center; gap: 18rpx; }
+.benefit-p-icon { font-size: 30rpx; width: 44rpx; text-align: center; }
+.benefit-p-text { font-size: 25rpx; color: rgba(240,234,214,0.65); }
 
-.paywall-icon {
-  font-size: 80rpx;
-  text-align: center;
-  display: block;
-  margin-bottom: 20rpx;
-}
+/* 价格 */
+.paywall-price { text-align: center; margin-bottom: 28rpx; }
+.price-big { font-size: 64rpx; font-weight: 900; color: #C8A96E; }
+.price-period { font-size: 26rpx; color: rgba(240,234,214,0.4); }
 
-.paywall-title {
-  display: block;
-  font-size: 36rpx;
-  font-weight: 700;
-  color: #333333;
-  text-align: center;
-  margin-bottom: 10rpx;
+/* 按钮 */
+.paywall-cta {
+  width: 100%; height: 96rpx; background: #F0EAD6; color: #0F0F0F;
+  font-size: 30rpx; font-weight: 800; border-radius: 16rpx; border: none;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8rpx 24rpx rgba(240,234,214,0.12); letter-spacing: 2rpx;
 }
-
-.paywall-sub {
-  display: block;
-  font-size: 24rpx;
-  color: #888888;
-  text-align: center;
-  margin-bottom: 30rpx;
-}
-
-.paywall-price-row {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end;
-  justify-content: center;
-  margin-bottom: 30rpx;
-}
-
-.paywall-price {
-  font-size: 72rpx;
-  font-weight: 700;
-  color: #C9A85C;
-  line-height: 1;
-}
-
-.paywall-price-unit {
-  font-size: 26rpx;
-  color: #C9A85C;
-  margin-bottom: 12rpx;
-  margin-left: 6rpx;
-}
-
-.paywall-benefits {
-  background: #FFF8EC;
-  border-radius: 16rpx;
-  padding: 24rpx 28rpx;
-  margin-bottom: 36rpx;
-}
-
-.paywall-benefit-item {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  margin-bottom: 16rpx;
-}
-
-.paywall-benefit-item:last-child {
-  margin-bottom: 0;
-}
-
-.paywall-benefit-check {
-  font-size: 28rpx;
-  margin-right: 14rpx;
-  flex-shrink: 0;
-}
-
-.paywall-benefit-text {
-  font-size: 26rpx;
-  color: #555555;
-}
-
-.paywall-btn-vip {
-  width: 100%;
-  height: 96rpx;
-  font-size: 32rpx;
-  margin-bottom: 20rpx;
-  letter-spacing: 2rpx;
-}
-
-.paywall-btn-cancel {
-  width: 100%;
-  height: 80rpx;
-  font-size: 26rpx;
-  color: #AAAAAA;
-  background: transparent;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.paywall-btn-cancel::after {
-  border: none;
-}
+.paywall-cta::after { border: none; }
+.paywall-later { text-align: center; font-size: 24rpx; color: rgba(240,234,214,0.25); padding: 24rpx 0 0; }

@@ -1,4 +1,6 @@
 {
-  "usingComponents": {},
-  "navigationBarTitleText": "开通会员"
+  "navigationBarTitleText": "开通会员",
+  "navigationBarBackgroundColor": "#111118",
+  "navigationBarTextStyle": "white",
+  "backgroundColor": "#111118"
 }

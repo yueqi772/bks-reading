@@ -1,135 +1,108 @@
 <!-- pages/vip/vip.wxml -->
-<view class="page-container">
+<view class="page">
 
-  <!-- 顶部标题区 -->
-  <view class="vip-header">
-    <text class="vip-title">👑 书解会员</text>
-    <text class="vip-sub">开通会员，畅读无限好书</text>
+  <!-- 已是会员 -->
+  <view class="vip-active" wx:if="{{isVip}}">
+    <view class="vip-active-badge">VIP</view>
+    <view class="vip-active-title">您已是尊享会员</view>
+    <view class="vip-active-expire">到期时间：{{vipExpireDate}}</view>
+    <view class="vip-active-tip">会员期间享有无限次深度解读特权</view>
+    <button class="renew-btn" bindtap="onRenew">续费会员</button>
   </view>
 
-  <!-- 已是会员状态 -->
-  <view wx:if="{{isVip}}" class="vip-active-section card">
-    <text class="vip-active-icon">✅</text>
-    <text class="vip-active-title">您已是会员</text>
-    <text class="vip-active-desc">正在享受无限次深度解读权益</text>
-    <button class="back-btn btn-primary" bindtap="goBack">继续解读好书</button>
-  </view>
-
-  <!-- 非会员：开通引导 -->
+  <!-- 未开通 -->
   <view wx:else>
 
-    <!-- 权益列表 -->
-    <view class="benefits-card card">
-      <text class="benefits-title">会员专属权益</text>
-      <view class="benefit-item flex-row">
-        <text class="benefit-icon">📖</text>
-        <view class="benefit-info">
-          <text class="benefit-name">无限次深度解读</text>
-          <text class="benefit-desc">任意书籍，随时解读，不再受次数限制</text>
+    <!-- 顶部背景 -->
+    <view class="vip-hero">
+      <view class="vip-hero-badge">VIP MEMBER</view>
+      <view class="vip-hero-title">畅享无限解读</view>
+      <view class="vip-hero-sub">让每一本好书都成为你的竞争力</view>
+    </view>
+
+    <!-- 权益 -->
+    <view class="benefits-wrap">
+      <view class="benefit-row">
+        <view class="benefit-item">
+          <text class="benefit-icon">♾</text>
+          <view class="benefit-label">无限次解读</view>
         </view>
-      </view>
-      <view class="benefit-item flex-row">
-        <text class="benefit-icon">💾</text>
-        <view class="benefit-info">
-          <text class="benefit-name">历史记录永久保存</text>
-          <text class="benefit-desc">所有解读记录永久留存，随时回顾</text>
+        <view class="benefit-item">
+          <text class="benefit-icon">🔬</text>
+          <view class="benefit-label">深度模式</view>
         </view>
-      </view>
-      <view class="benefit-item flex-row">
-        <text class="benefit-icon">🔄</text>
-        <view class="benefit-info">
-          <text class="benefit-name">任意重新解读</text>
-          <text class="benefit-desc">同一本书可多次解读，换个角度理解</text>
+        <view class="benefit-item">
+          <text class="benefit-icon">📚</text>
+          <view class="benefit-label">全书目畅读</view>
+        </view>
+        <view class="benefit-item">
+          <text class="benefit-icon">🗂</text>
+          <view class="benefit-label">永久存储</view>
         </view>
       </view>
     </view>
 
-    <!-- 价格说明 -->
-    <view class="price-card card">
-      <view class="price-main flex-row">
-        <view class="price-left">
-          <text class="price-num">¥30</text>
-          <text class="price-unit">/月</text>
-        </view>
-        <view class="price-desc">
-          <text class="price-title">包月会员</text>
-          <text class="price-detail">自开通日起 30 天有效</text>
-        </view>
+    <!-- 价格 -->
+    <view class="price-wrap">
+      <view class="price-main">
+        <text class="price-symbol">¥</text>
+        <text class="price-num">9.9</text>
+        <text class="price-cycle"> / 月</text>
       </view>
+      <view class="price-sub">随时可取消</view>
     </view>
 
     <!-- 开通步骤 -->
-    <view class="steps-card card">
-      <text class="steps-title">开通方式</text>
-      <view class="step-row flex-row">
+    <view class="steps-wrap">
+      <view class="steps-title">开通步骤</view>
+      <view class="step-row">
         <view class="step-num">1</view>
-        <text class="step-desc">扫描下方收款码，支付 ¥30</text>
+        <view class="step-text">截图保存下方收款码</view>
       </view>
-      <view class="step-row flex-row">
+      <view class="step-row">
         <view class="step-num">2</view>
-        <text class="step-desc">保存支付截图</text>
+        <view class="step-text">微信扫码，支付 9.9 元</view>
       </view>
-      <view class="step-row flex-row">
+      <view class="step-row">
         <view class="step-num">3</view>
-        <text class="step-desc">添加客服微信，发送「开通会员」+ 截图</text>
+        <view class="step-text">备注「书解会员 + 微信号」，添加微信 selavie_01</view>
       </view>
-      <view class="step-row flex-row">
+      <view class="step-row">
         <view class="step-num">4</view>
-        <text class="step-desc">客服审核后 24 小时内开通，重启小程序生效</text>
+        <view class="step-text">客服确认后为你开通权限</view>
       </view>
     </view>
 
-    <!-- 收款码 -->
-    <view class="qr-section card">
-      <text class="qr-title">💰 扫码支付 ¥30</text>
-      <view class="qr-box">
-        <text class="qr-placeholder-text">收款二维码</text>
-        <text class="qr-placeholder-hint">（运营配置后替换）</text>
-      </view>
-      <button class="pay-done-btn btn-gold" bindtap="onPaySuccess">我已完成支付 →</button>
+    <!-- 二维码 -->
+    <view class="qr-wrap">
+      <view class="qr-title">微信收款码</view>
+      <image class="qr-img" src="/images/qr_pay.png" mode="aspectFit" bindtap="previewQr" />
+      <view class="qr-tip">👆 点击图片可放大预览 / 长按保存</view>
+      <view class="qr-amount">转账金额 <text class="qr-amount-num">¥ 9.90</text></view>
     </view>
 
-    <!-- 客服联系 -->
-    <view class="contact-section card">
-      <text class="contact-title">📱 添加客服微信</text>
-      <view class="contact-qr-box">
-        <text class="qr-placeholder-text">客服微信二维码</text>
-        <text class="qr-placeholder-hint">（运营配置后替换）</text>
+    <!-- 客服 -->
+    <view class="contact-wrap" bindtap="copyContact">
+      <text class="contact-icon">💬</text>
+      <view class="contact-info">
+        <view class="contact-title">付款后添加微信，联系开通权限</view>
+        <view class="contact-sub">客服微信：selavie_01</view>
       </view>
-      <text class="contact-id">客服微信：bks_service</text>
-      <button class="copy-btn btn-secondary" bindtap="copyContactWx">复制客服微信号</button>
+      <text class="contact-copy">复制</text>
     </view>
 
-    <!-- FAQ -->
-    <view class="faq-section card">
-      <text class="faq-title">❓ 常见问题</text>
-      <view class="faq-item">
-        <text class="faq-q">Q：开通后多久生效？</text>
-        <text class="faq-a">A：客服收到申请后，24小时内为您手动开通，重启小程序后生效。</text>
+    <!-- 激活码 -->
+    <view class="activate-wrap">
+      <view class="activate-header" bindtap="toggleActivate">
+        <text class="activate-title">已有激活码？</text>
+        <text class="activate-arrow">{{showActivate?'∧':'∨'}}</text>
       </view>
-      <view class="faq-item">
-        <text class="faq-q">Q：支持自动续费吗？</text>
-        <text class="faq-a">A：暂不支持自动续费，到期前3天会提醒您续费。</text>
-      </view>
-      <view class="faq-item">
-        <text class="faq-q">Q：能退款吗？</text>
-        <text class="faq-a">A：虚拟服务，开通后不支持退款，请谨慎购买。</text>
+      <view class="activate-body" wx:if="{{showActivate}}">
+        <input class="activate-input" placeholder="输入激活码" value="{{activateCode}}" bindinput="onActivateInput" placeholder-class="activate-ph" />
+        <button class="activate-btn" bindtap="onActivate">激活</button>
       </view>
     </view>
 
-  </view>
-
-  <!-- 底部间距 -->
-  <view style="height: 60rpx;"></view>
-
-</view>
-
-<!-- 支付成功引导弹窗 -->
-<view wx:if="{{showPaySuccess}}" class="modal-mask" bindtap="closePaySuccess">
-  <view class="pay-success-modal card" catchtap="">
-    <text class="pay-success-icon">🎉</text>
-    <text class="pay-success-title">支付完成！</text>
-    <text class="pay-success-desc">请按以下步骤完成开通：\n\n1. 截图保存支付记录\n2. 长按上方客服二维码添加客服\n3. 发送「开通会员」+ 截图\n4. 等待客服确认，24小时内开通</text>
-    <button class="pay-success-close btn-primary" bindtap="closePaySuccess">我知道了</button>
+    <view style="height: 60rpx;"></view>
   </view>
 </view>

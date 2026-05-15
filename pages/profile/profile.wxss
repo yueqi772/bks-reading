@@ -1,323 +1,74 @@
-/* pages/profile/profile.wxss */
+/* pages/profile/profile.wxss — 深夜书房主题 */
+.page { background: #111118; min-height: 100vh; padding: 0 0 40rpx; }
 
-.page-container {
-  min-height: 100vh;
-  background-color: #F7F5F0;
-}
-
-/* ===== 用户信息区 ===== */
+/* 用户区 */
 .user-section {
-  background: linear-gradient(160deg, #3a5231 0%, #4A6741 60%, #6B8F61 100%);
-  padding: 50rpx 40rpx 60rpx;
+  display: flex; align-items: center; gap: 24rpx;
+  padding: 60rpx 40rpx 40rpx;
+  background: linear-gradient(180deg, #1e1e2a 0%, #111118 100%);
+  border-bottom: 1rpx solid rgba(255,255,255,0.04);
 }
-
-.user-info-card,
-.user-login-card {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
 .user-avatar {
-  width: 110rpx;
-  height: 110rpx;
-  border-radius: 55rpx;
-  border: 4rpx solid rgba(255,255,255,0.5);
-  margin-right: 24rpx;
-  flex-shrink: 0;
+  width: 96rpx; height: 96rpx; border-radius: 50%; flex-shrink: 0;
+  background: #252535; border: 2rpx solid rgba(200,169,110,0.25);
+  display: flex; align-items: center; justify-content: center;
+}
+.user-avatar-text { font-size: 44rpx; }
+.user-info { flex: 1; }
+.user-name { font-size: 30rpx; font-weight: 700; color: #F0EAD6; margin-bottom: 6rpx; }
+.user-vip-tag { font-size: 21rpx; color: #C8A96E; }
+.user-free-tag { font-size: 21rpx; color: rgba(240,234,214,0.35); }
+.user-vip-entry {
+  font-size: 21rpx; font-weight: 700; color: #111118;
+  background: #C8A96E; padding: 8rpx 20rpx; border-radius: 30rpx; flex-shrink: 0;
 }
 
-.user-avatar-placeholder {
-  width: 110rpx;
-  height: 110rpx;
-  border-radius: 55rpx;
-  background: rgba(255,255,255,0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-right: 24rpx;
-  flex-shrink: 0;
-}
-
-.avatar-icon {
-  font-size: 56rpx;
-}
-
-.user-name {
-  display: block;
-  font-size: 34rpx;
-  font-weight: 600;
-  color: #FFFFFF;
-  margin-bottom: 10rpx;
-}
-
-.user-sub {
-  font-size: 24rpx;
-  color: rgba(255,255,255,0.7);
-}
-
-.user-vip-row {
-  gap: 12rpx;
-}
-
-.vip-expire {
-  font-size: 22rpx;
-  color: rgba(255,255,255,0.8);
-}
-
-.user-free-text {
-  font-size: 22rpx;
-  color: rgba(255,255,255,0.8);
-}
-
-/* ===== 会员卡片 ===== */
-.vip-card {
-  margin: -20rpx 24rpx 0;
-  background: linear-gradient(135deg, #C9A85C 0%, #E8C97A 100%);
-  border-radius: 20rpx;
-  padding: 30rpx;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  box-shadow: 0 8rpx 24rpx rgba(201, 168, 92, 0.35);
-  position: relative;
-  z-index: 1;
-}
-
-.vip-card-title {
-  display: block;
-  font-size: 30rpx;
-  font-weight: 600;
-  color: #FFFFFF;
-  margin-bottom: 8rpx;
-}
-
-.vip-card-desc {
-  font-size: 22rpx;
-  color: rgba(255,255,255,0.85);
-}
-
-.vip-price {
-  font-size: 48rpx;
-  font-weight: 700;
-  color: #FFFFFF;
-}
-
-.vip-price-sub {
-  font-size: 22rpx;
-  color: rgba(255,255,255,0.8);
-}
-
-.vip-active-card {
-  margin: -20rpx 24rpx 0;
-  background: linear-gradient(135deg, #4A6741 0%, #6B8F61 100%);
-  border-radius: 20rpx;
-  padding: 30rpx;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  box-shadow: 0 8rpx 24rpx rgba(74,103,65,0.25);
-  position: relative;
-  z-index: 1;
-}
-
-.vip-active-icon {
-  font-size: 52rpx;
-  margin-right: 20rpx;
-}
-
-.vip-active-title {
-  display: block;
-  font-size: 28rpx;
-  font-weight: 600;
-  color: #FFFFFF;
-  margin-bottom: 6rpx;
-}
-
-.vip-active-desc {
-  font-size: 22rpx;
-  color: rgba(255,255,255,0.8);
-}
-
-/* ===== 数据统计 ===== */
-.stats-card {
-  margin: 24rpx 24rpx 16rpx;
-  padding: 30rpx 20rpx;
-}
-
+/* 数据 */
 .stats-row {
-  justify-content: space-around;
+  display: flex; padding: 32rpx 40rpx;
+  border-bottom: 1rpx solid rgba(255,255,255,0.04);
 }
+.stat-item { flex: 1; text-align: center; }
+.stat-num { font-size: 38rpx; font-weight: 800; color: #F0EAD6; margin-bottom: 6rpx; }
+.stat-label { font-size: 20rpx; color: rgba(240,234,214,0.3); letter-spacing: 1rpx; }
+.stat-divider { width: 1rpx; background: rgba(255,255,255,0.05); margin: 10rpx 0; }
 
-.stats-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stats-num {
-  font-size: 40rpx;
-  font-weight: 700;
-  color: #4A6741;
-  margin-bottom: 6rpx;
-}
-
-.stats-label {
-  font-size: 22rpx;
-  color: #999999;
-}
-
-.stats-divider {
-  width: 1rpx;
-  height: 50rpx;
-  background: #EBEBEB;
-}
-
-/* ===== 功能菜单 ===== */
-.menu-section {
-  margin: 0 24rpx;
-  padding: 0 20rpx;
-}
-
+/* 菜单组 */
+.menu-group { padding: 30rpx 40rpx 0; }
+.menu-group-title { font-size: 20rpx; color: rgba(240,234,214,0.25); letter-spacing: 2rpx; margin-bottom: 14rpx; }
+.menu-list { background: #1e1e2a; border-radius: 16rpx; overflow: hidden; border: 1rpx solid rgba(255,255,255,0.04); }
 .menu-item {
-  padding: 32rpx 10rpx;
+  display: flex; align-items: center; padding: 26rpx 24rpx; gap: 18rpx;
+  border-bottom: 1rpx solid rgba(255,255,255,0.04);
+}
+.menu-item:last-child { border-bottom: none; }
+.menu-icon { font-size: 34rpx; width: 44rpx; text-align: center; flex-shrink: 0; }
+.menu-label { flex: 1; font-size: 27rpx; color: rgba(240,234,214,0.75); font-weight: 500; }
+.menu-badge { font-size: 22rpx; color: rgba(240,234,214,0.3); }
+.menu-tag {
+  font-size: 20rpx; color: #C8A96E; background: rgba(200,169,110,0.1);
+  padding: 3rpx 12rpx; border-radius: 10rpx;
+  border: 1rpx solid rgba(200,169,110,0.2);
+}
+.menu-arrow { font-size: 30rpx; color: rgba(240,234,214,0.2); }
+.user-avatar-img { width: 96rpx; height: 96rpx; border-radius: 50%; display: block; }
+.user-phone-tag { font-size: 21rpx; color: rgba(240,234,214,0.45); }
+.menu-item-btn {
+  display: flex; align-items: center; padding: 26rpx 24rpx; gap: 18rpx;
+  border-bottom: 1rpx solid rgba(255,255,255,0.04);
+  background: transparent; border-radius: 0; margin: 0; line-height: normal;
+  text-align: left; width: 100%; box-sizing: border-box;
+}
+.menu-item-btn::after { border: none; }
+.menu-tag-orange {
+  font-size: 20rpx; color: #E8A855; background: rgba(232,168,85,0.1);
+  padding: 3rpx 12rpx; border-radius: 10rpx;
+  border: 1rpx solid rgba(232,168,85,0.2);
 }
 
-.menu-left {
-  gap: 16rpx;
-}
+/* 退出登录 */
+.logout-wrap { padding: 40rpx 40rpx 0; }
+.logout-btn { text-align: center; padding: 28rpx 0; border-radius: 16rpx; font-size: 26rpx; color: rgba(220,80,80,0.7); background: rgba(220,80,80,0.06); border: 1rpx solid rgba(220,80,80,0.15); }
 
-.menu-icon {
-  font-size: 34rpx;
-}
-
-.menu-text {
-  font-size: 28rpx;
-  color: #333333;
-}
-
-.menu-value {
-  font-size: 24rpx;
-  color: #999999;
-  margin-right: 8rpx;
-}
-
-.menu-arrow {
-  font-size: 32rpx;
-  color: #CCCCCC;
-}
-
-.menu-divider {
-  height: 1rpx;
-  background: #F5F5F5;
-}
-
-/* ===== 弹窗 ===== */
-.modal-mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.5);
-  z-index: 100;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal-box {
-  width: 560rpx;
-  padding: 40rpx;
-  text-align: center;
-}
-
-.font-modal {
-  width: 560rpx;
-  padding: 40rpx;
-}
-
-.modal-title {
-  display: block;
-  font-size: 32rpx;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 16rpx;
-  text-align: center;
-}
-
-.modal-desc {
-  display: block;
-  font-size: 26rpx;
-  color: #666666;
-  line-height: 1.8;
-  margin-bottom: 30rpx;
-  text-align: center;
-}
-
-.qr-placeholder {
-  width: 220rpx;
-  height: 220rpx;
-  background: #F5F5F5;
-  border-radius: 16rpx;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 30rpx;
-  gap: 12rpx;
-}
-
-.qr-icon {
-  font-size: 60rpx;
-}
-
-.qr-tip {
-  font-size: 22rpx;
-  color: #999999;
-}
-
-.modal-close {
-  width: 100%;
-  height: 80rpx;
-  font-size: 28rpx;
-}
-
-/* 字体选项 */
-.font-options {
-  margin-bottom: 30rpx;
-}
-
-.font-option {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
-  padding: 24rpx 0;
-  border-bottom: 1rpx solid #F5F5F5;
-}
-
-.font-option.active .font-option-size {
-  color: #4A6741;
-  font-weight: 600;
-}
-
-.font-small-demo {
-  font-size: 24rpx;
-  color: #333333;
-}
-
-.font-medium-demo {
-  font-size: 28rpx;
-  color: #333333;
-}
-
-.font-large-demo {
-  font-size: 34rpx;
-  color: #333333;
-}
-
-.font-option-check {
-  font-size: 28rpx;
-}
+/* 底部 */
+.footer { text-align: center; font-size: 20rpx; color: rgba(240,234,214,0.15); letter-spacing: 2rpx; padding: 50rpx 0 0; }

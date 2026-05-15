@@ -1,0 +1,9 @@
+{
+  "name": "aiRead",
+  "version": "1.0.0",
+  "description": "AI 书籍深度解读，使用微信官方 deepseek-r1",
+  "main": "index.js",
+  "dependencies": {
+    "wx-server-sdk": "~3.0.4"
+  }
+}

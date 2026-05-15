@@ -1,165 +1,114 @@
 <!-- pages/profile/profile.wxml -->
-<view class="page-container">
+<view class="page">
 
-  <!-- 用户信息区 -->
-  <view class="user-section">
-    <view wx:if="{{userInfo}}" class="user-info-card">
-      <image class="user-avatar" src="{{userInfo.avatarUrl}}" mode="aspectFill" />
-      <view class="user-details">
-        <text class="user-name">{{userInfo.nickName}}</text>
-        <view wx:if="{{isVip}}" class="user-vip-row flex-row">
-          <text class="tag-vip">VIP 会员</text>
-          <text class="vip-expire">{{vipExpireText}}</text>
-        </view>
-        <view wx:else class="user-free-row">
-          <text class="user-free-text">剩余免费次数：{{freeCount}} 次</text>
-        </view>
-      </view>
+  <!-- 未登录状态 -->
+  <view class="user-section" wx:if="{{!isLoggedIn}}" bindtap="showAuthModal">
+    <view class="user-avatar">
+      <text class="user-avatar-text">📖</text>
     </view>
-    <view wx:else class="user-login-card" bindtap="getUserInfo">
-      <view class="user-avatar-placeholder">
-        <text class="avatar-icon">👤</text>
-      </view>
-      <view class="user-details">
-        <text class="user-name">点击授权</text>
-        <text class="user-sub">登录后解锁更多功能</text>
-      </view>
+    <view class="user-info">
+      <view class="user-name" style="color:rgba(240,234,214,0.4);">点击登录</view>
+      <view class="user-free-tag">登录后可同步数据、绑定会员</view>
     </view>
+    <text class="menu-arrow" style="font-size:36rpx;">›</text>
   </view>
 
-  <!-- 会员卡片 -->
-  <view wx:if="{{!isVip}}" class="vip-card" bindtap="goVip">
-    <view class="vip-card-left">
-      <text class="vip-card-title">✨ 开通包月会员</text>
-      <text class="vip-card-desc">无限次解读 · 历史永久保存</text>
+  <!-- 已登录状态 -->
+  <view class="user-section" wx:else>
+    <view class="user-avatar">
+      <image wx:if="{{avatarUrl}}" class="user-avatar-img" src="{{avatarUrl}}" mode="aspectFill"/>
+      <text wx:else class="user-avatar-text">{{isVip ? '👑' : '📖'}}</text>
     </view>
-    <view class="vip-card-right">
-      <text class="vip-price">¥30</text>
-      <text class="vip-price-sub">/月</text>
+    <view class="user-info">
+      <view class="user-name">{{nickName || '读书达人'}}</view>
+      <view class="user-vip-tag" wx:if="{{isVip}}">VIP · {{vipExpireDate}} 到期</view>
+      <view class="user-phone-tag" wx:elif="{{phone}}">{{phone}}</view>
+      <view class="user-free-tag" wx:else>剩余 {{freeCount}} 次免费解读</view>
     </view>
-  </view>
-  <view wx:else class="vip-active-card">
-    <text class="vip-active-icon">👑</text>
-    <view class="vip-active-info">
-      <text class="vip-active-title">VIP 会员有效中</text>
-      <text class="vip-active-desc">{{vipExpireText}} · 无限次深度解读</text>
-    </view>
+    <view class="user-vip-entry" wx:if="{{!isVip}}" bindtap="goVip">开通 VIP</view>
   </view>
 
   <!-- 数据统计 -->
-  <view class="stats-card card">
-    <view class="stats-row flex-row">
-      <view class="stats-item" bindtap="goHistory">
-        <text class="stats-num">{{totalRead}}</text>
-        <text class="stats-label">解读本数</text>
-      </view>
-      <view class="stats-divider"></view>
-      <view class="stats-item">
-        <text class="stats-num">{{totalWords}}</text>
-        <text class="stats-label">累计字数</text>
-      </view>
-      <view class="stats-divider"></view>
-      <view class="stats-item" bindtap="goFavorites">
-        <text class="stats-num">{{favoriteCount}}</text>
-        <text class="stats-label">我的收藏</text>
-      </view>
+  <view class="stats-row">
+    <view class="stat-item">
+      <view class="stat-num">{{totalBooks}}</view>
+      <view class="stat-label">解读书目</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-num">{{totalWords}}</view>
+      <view class="stat-label">字数积累</view>
+    </view>
+    <view class="stat-divider"></view>
+    <view class="stat-item">
+      <view class="stat-num">{{isVip ? '∞' : freeCount}}</view>
+      <view class="stat-label">{{isVip ? '无限次数' : '剩余次数'}}</view>
     </view>
   </view>
 
-  <!-- 功能菜单 -->
-  <view class="menu-section card">
-    <view class="menu-item flex-between" bindtap="goHistory">
-      <view class="menu-left flex-row">
-        <text class="menu-icon">📚</text>
-        <text class="menu-text">解读历史</text>
+  <!-- 我的内容 -->
+  <view class="menu-group">
+    <view class="menu-group-title">我的内容</view>
+    <view class="menu-list">
+      <view class="menu-item" bindtap="goHistory">
+        <text class="menu-icon">🗂</text>
+        <text class="menu-label">解读历史</text>
+        <text class="menu-badge">{{totalBooks}}</text>
+        <text class="menu-arrow">›</text>
       </view>
-      <text class="menu-arrow">›</text>
+      <view class="menu-item" bindtap="goVip">
+        <text class="menu-icon">👑</text>
+        <text class="menu-label">{{isVip ? '我的会员' : '开通会员'}}</text>
+        <text class="menu-tag" wx:if="{{!isVip}}">¥30/月</text>
+        <text class="menu-arrow">›</text>
+      </view>
+      <!-- 绑定手机号（仅已登录且未绑定时显示） -->
+      <block wx:if="{{isLoggedIn && !phone}}">
+        <button
+          class="menu-item menu-item-btn"
+          open-type="getPhoneNumber"
+          bindgetphonenumber="onBindPhone"
+          loading="{{phoneLoading}}"
+        >
+          <text class="menu-icon">📱</text>
+          <text class="menu-label">绑定手机号</text>
+          <text class="menu-tag-orange">推荐</text>
+          <text class="menu-arrow">›</text>
+        </button>
+      </block>
     </view>
-    <view class="menu-divider"></view>
-    <view class="menu-item flex-between" bindtap="goFavorites">
-      <view class="menu-left flex-row">
-        <text class="menu-icon">❤️</text>
-        <text class="menu-text">我的收藏</text>
+  </view>
+
+  <!-- 设置 -->
+  <view class="menu-group">
+    <view class="menu-group-title">设置</view>
+    <view class="menu-list">
+      <view class="menu-item" bindtap="onAbout">
+        <text class="menu-icon">💡</text>
+        <text class="menu-label">关于书解</text>
+        <text class="menu-arrow">›</text>
       </view>
-      <text class="menu-arrow">›</text>
-    </view>
-    <view class="menu-divider"></view>
-    <view class="menu-item flex-between" bindtap="setFontSize">
-      <view class="menu-left flex-row">
-        <text class="menu-icon">🔤</text>
-        <text class="menu-text">字体设置</text>
+      <view class="menu-item" bindtap="onFeedback">
+        <text class="menu-icon">📬</text>
+        <text class="menu-label">意见反馈</text>
+        <text class="menu-arrow">›</text>
       </view>
-      <view class="flex-row">
-        <text class="menu-value">{{fontSizeText}}</text>
+      <view class="menu-item" bindtap="onClearCache">
+        <text class="menu-icon">🧹</text>
+        <text class="menu-label">清理缓存</text>
         <text class="menu-arrow">›</text>
       </view>
     </view>
-    <view class="menu-divider"></view>
-    <view class="menu-item flex-between" bindtap="contactService">
-      <view class="menu-left flex-row">
-        <text class="menu-icon">💬</text>
-        <text class="menu-text">联系客服</text>
-      </view>
-      <text class="menu-arrow">›</text>
-    </view>
-    <view class="menu-divider"></view>
-    <view class="menu-item flex-between" bindtap="goAbout">
-      <view class="menu-left flex-row">
-        <text class="menu-icon">ℹ️</text>
-        <text class="menu-text">关于书解</text>
-      </view>
-      <text class="menu-arrow">›</text>
-    </view>
   </view>
 
-  <!-- 底部间距 -->
-  <view style="height: 60rpx;"></view>
-
-</view>
-
-<!-- 联系客服弹窗 -->
-<view wx:if="{{showContactQr}}" class="modal-mask mask" bindtap="closeContactQr">
-  <view class="modal-box card" catchtap="">
-    <text class="modal-title">联系客服</text>
-    <text class="modal-desc">微信扫描下方二维码\n添加客服，发送「开通会员」</text>
-    <view class="qr-placeholder">
-      <text class="qr-icon">📱</text>
-      <text class="qr-tip">客服二维码</text>
-    </view>
-    <button class="modal-close btn-secondary" bindtap="closeContactQr">关闭</button>
+  <!-- 退出登录（仅已登录时显示） -->
+  <view class="logout-wrap" wx:if="{{isLoggedIn}}">
+    <view class="logout-btn" bindtap="onLogout">退出登录</view>
   </view>
-</view>
 
-<!-- 字体大小弹窗 -->
-<view wx:if="{{showFontModal}}" class="modal-mask mask" bindtap="closeFontModal">
-  <view class="font-modal card" catchtap="">
-    <text class="modal-title">字体大小</text>
-    <view class="font-options">
-      <view
-        class="font-option {{fontSize === 'small' ? 'active' : ''}}"
-        data-size="small"
-        bindtap="selectFont"
-      >
-        <text class="font-option-size font-small-demo">小号字体</text>
-        <text class="font-option-check">{{fontSize === 'small' ? '✅' : ''}}</text>
-      </view>
-      <view
-        class="font-option {{fontSize === 'medium' ? 'active' : ''}}"
-        data-size="medium"
-        bindtap="selectFont"
-      >
-        <text class="font-option-size font-medium-demo">中号字体</text>
-        <text class="font-option-check">{{fontSize === 'medium' ? '✅' : ''}}</text>
-      </view>
-      <view
-        class="font-option {{fontSize === 'large' ? 'active' : ''}}"
-        data-size="large"
-        bindtap="selectFont"
-      >
-        <text class="font-option-size font-large-demo">大号字体</text>
-        <text class="font-option-check">{{fontSize === 'large' ? '✅' : ''}}</text>
-      </view>
-    </view>
-    <button class="modal-close btn-secondary" bindtap="closeFontModal">确定</button>
-  </view>
+  <view class="footer">BOOKSIGHT · 让好书照亮你的认知</view>
+  <view style="height: 40rpx;"></view>
+
+  <!-- 授权弹窗 -->
+  <auth-modal show="{{showAuthModal}}" bind:done="onAuthDone" />
 </view>

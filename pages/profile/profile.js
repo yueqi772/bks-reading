@@ -1,1 +1,197 @@
-Ly8gcGFnZXMvcHJvZmlsZS9wcm9maWxlLmpzCmNvbnN0IGFwcCA9IGdldEFwcCgpOwpjb25zdCB7IGdldEhpc3RvcnkgfSA9IHJlcXVpcmUoJy4uLy4uL3V0aWxzL2hpc3RvcnknKTsKY29uc3QgeyBzdG9yYWdlIH0gPSByZXF1aXJlKCcuLi8uLi91dGlscy9zdG9yYWdlJyk7Cgpjb25zdCBGT05UX1NJWkVfVEVYVCA9IHsgc21hbGw6ICflsI/lj7cnLCBtZWRpdW06ICfkuK3lj7cnLCBsYXJnZTogJ+Wkp+WPtycgfTsKClBhZ2UoewogIGRhdGE6IHsKICAgIHVzZXJJbmZvOiBudWxsLAogICAgaXNWaXA6IGZhbHNlLAogICAgdmlwRXhwaXJlVGV4dDogJycsCiAgICBmcmVlQ291bnQ6IDIsCiAgICB0b3RhbFJlYWQ6IDAsCiAgICB0b3RhbFdvcmRzOiAnJywKICAgIGZhdm9yaXRlQ291bnQ6IDAsCiAgICBmb250U2l6ZTogJ21lZGl1bScsCiAgICBmb250U2l6ZVRleHQ6ICfkuK3lj7cnLAogICAgc2hvd0NvbnRhY3RRcjogZmFsc2UsCiAgICBzaG93Rm9udE1vZGFsOiBmYWxzZSwKICB9LAoKICBvblNob3coKSB7CiAgICB0aGlzLl9yZWZyZXNoRGF0YSgpOwogIH0sCgogIF9yZWZyZXNoRGF0YSgpIHsKICAgIGNvbnN0IGdsb2JhbERhdGEgPSBhcHAuZ2xvYmFsRGF0YTsKICAgIGNvbnN0IGhpc3RvcnkgPSBnZXRIaXN0b3J5KCk7CiAgICBjb25zdCBmYXZvcml0ZXMgPSBzdG9yYWdlLmdldCgnZmF2b3JpdGVzJywgW10pOwogICAgY29uc3QgZm9udFNpemUgPSBzdG9yYWdlLmdldCgnZm9udFNpemUnLCAnbWVkaXVtJyk7CgogICAgY29uc3QgdG90YWxXb3JkcyA9IGhpc3RvcnkucmVkdWNlKChzdW0sIGgpID0+IHN1bSArIChoLndvcmRDb3VudCB8fCAwKSwgMCk7CiAgICBjb25zdCB0b3RhbFdvcmRzVGV4dCA9IHRvdGFsV29yZHMgPiAxMDAwMAogICAgICA/IGAkeyh0b3RhbFdvcmRzIC8gMTAwMDApLnRvRml4ZWQoMSl95LiHYAogICAgICA6IGAke3RvdGFsV29yZHN9YDsKCiAgICB0aGlzLnNldERhdGEoewogICAgICB1c2VySW5mbzogZ2xvYmFsRGF0YS51c2VySW5mbywKICAgICAgaXNWaXA6IGdsb2JhbERhdGEuaXNWaXAsCiAgICAgIHZpcEV4cGlyZVRleHQ6IGdsb2JhbERhdGEudmlwRXhwaXJlRGF0ZQogICAgICAgID8gdGhpcy5fZm9ybWF0RXhwaXJlRGF0ZShnbG9iYWxEYXRhLnZpcEV4cGlyZURhdGUpCiAgICAgICAgOiAnJywKICAgICAgZnJlZUNvdW50OiBnbG9iYWxEYXRhLmZyZWVDb3VudCwKICAgICAgdG90YWxSZWFkOiBoaXN0b3J5Lmxlbmd0aCwKICAgICAgdG90YWxXb3JkczogdG90YWxXb3Jkc1RleHQsCiAgICAgIGZhdm9yaXRlQ291bnQ6IGZhdm9yaXRlcy5sZW5ndGgsCiAgICAgIGZvbnRTaXplLAogICAgICBmb250U2l6ZVRleHQ6IEZPTlRfU0laRV9URVhUW2ZvbnRTaXplXSB8fCAn5Lit5Y+3JywKICAgIH0pOwogIH0sCgogIGdldFVzZXJJbmZvKCkgewogICAgd3guZ2V0VXNlclByb2ZpbGUoewogICAgICBkZXNjOiAn55So5LqO5pi+56S65oKo55qE5pi156ew5ZKM5aS05YOPJywKICAgICAgc3VjY2VzczogKHJlcykgPT4gewogICAgICAgIGFwcC5nbG9iYWxEYXRhLnVzZXJJbmZvID0gcmVzLnVzZXJJbmZvOwogICAgICAgIHN0b3JhZ2Uuc2V0KCd1c2VySW5mbycsIHJlcy51c2VySW5mbyk7CiAgICAgICAgdGhpcy5zZXREYXRhKHsgdXNlckluZm86IHJlcy51c2VySW5mbyB9KTsKICAgICAgfSwKICAgICAgZmFpbDogKCkgPT4gewogICAgICAgIHd4LnNob3dUb2FzdCh7IHRpdGxlOiAn5o6I5p2D5aSx6LSlJywgaWNvbjogJ25vbmUnIH0pOwogICAgICB9CiAgICB9KTsKICB9LAoKICBnb0hpc3RvcnkoKSB7CiAgICB3eC5zd2l0Y2hUYWIoeyB1cmw6ICcvcGFnZXMvaGlzdG9yeS9oaXN0b3J5JyB9KTsKICB9LAoKICBnb0Zhdm9yaXRlcygpIHsKICAgIC8vIOaUtuiXj+WKn+iDve+8muWxleekuuaUtuiXj+eahOino+ivu+WIl+ihqAogICAgY29uc3QgZmF2b3JpdGVzID0gc3RvcmFnZS5nZXQoJ2Zhdm9yaXRlcycsIFtdKTsKICAgIGlmIChmYXZvcml0ZXMubGVuZ3RoID09PSAwKSB7CiAgICAgIHd4LnNob3dUb2FzdCh7IHRpdGxlOiAn5pqC5peg5pS26JeP6K6w5b2VJywgaWNvbjogJ25vbmUnIH0pOwogICAgICByZXR1cm47CiAgICB9CiAgICAvLyDot7Povazljoblj7LpobXvvIjljoblj7LpobXlhbzlrrnlsZXnpLrmlLbol4/vvIkKICAgIHd4Lm5hdmlnYXRlVG8oeyB1cmw6ICcvcGFnZXMvaGlzdG9yeS9oaXN0b3J5JyB9KTsKICB9LAoKICBnb1ZpcCgpIHsKICAgIHd4Lm5hdmlnYXRlVG8oeyB1cmw6ICcvcGFnZXMvdmlwL3ZpcCcgfSk7CiAgfSwKCiAgY29udGFjdFNlcnZpY2UoKSB7CiAgICB0aGlzLnNldERhdGEoeyBzaG93Q29udGFjdFFyOiB0cnVlIH0pOwogIH0sCgogIGNsb3NlQ29udGFjdFFyKCkgewogICAgdGhpcy5zZXREYXRhKHsgc2hvd0NvbnRhY3RRcjogZmFsc2UgfSk7CiAgfSwKCiAgc2V0Rm9udFNpemUoKSB7CiAgICB0aGlzLnNldERhdGEoeyBzaG93Rm9udE1vZGFsOiB0cnVlIH0pOwogIH0sCgogIGNsb3NlRm9udE1vZGFsKCkgewogICAgdGhpcy5zZXREYXRhKHsgc2hvd0ZvbnRNb2RhbDogZmFsc2UgfSk7CiAgfSwKCiAgc2VsZWN0Rm9udChlKSB7CiAgICBjb25zdCB7IHNpemUgfSA9IGUuY3VycmVudFRhcmdldC5kYXRhc2V0OwogICAgc3RvcmFnZS5zZXQoJ2ZvbnRTaXplJywgc2l6ZSk7CiAgICB0aGlzLnNldERhdGEoewogICAgICBmb250U2l6ZTogc2l6ZSwKICAgICAgZm9udFNpemVUZXh0OiBGT05UX1NJWkVfVEVYVFtzaXplXSB8fCAn5Lit5Y+3JywKICAgIH0pOwogIH0sCgogIGdvQWJvdXQoKSB7CiAgICB3eC5zaG93TW9kYWwoewogICAgICB0aXRsZTogJ+WFs+S6juS5puinoycsCiAgICAgIGNvbnRlbnQ6ICfkuabop6MgdjEuMC4wXG5cbuiuqSBBSSDluK7kvaDmt7Hluqbop6Por7vmr4/kuIDmnKzlpb3kuabvvIzlg4/llp3msLTkuIDmoLfoh6rnhLblnLDmiJDplb/jgIJcblxuQXBwSUQ6IHd4MWEwMDMyZmQ4YmI1NzZiZCcsCiAgICAgIHNob3dDYW5jZWw6IGZhbHNlLAogICAgICBjb25maXJtVGV4dDogJ+efpemBk+S6hicsCiAgICB9KTsKICB9LAoKICBfZm9ybWF0RXhwaXJlRGF0ZShkYXRlU3RyKSB7CiAgICBjb25zdCBkID0gbmV3IERhdGUoZGF0ZVN0cik7CiAgICByZXR1cm4gYCR7ZC5nZXRNb250aCgpICsgMX3mnIgke2QuZ2V0RGF0ZSgpfeaXpeWIsOacn2A7CiAgfSwKfSk7Cg==
+// pages/profile/profile.js
+var historyUtil = require('../../utils/history');
+var cloudUtil = require('../../utils/cloud');
+
+Page({
+  data: {
+    isVip: false,
+    vipExpireDate: '',
+    freeCount: 2,
+    totalBooks: 0,
+    totalWords: '0',
+    nickName: '',
+    avatarUrl: '',
+    phone: '',
+    isLoggedIn: false,
+    showBindPhone: false,
+    phoneLoading: false,
+    showAuthModal: false,
+  },
+
+  onLoad: function() {
+    // 注册到 app，供 _silentRefresh 回调时刷新
+    getApp()._profilePage = this;
+  },
+
+  onUnload: function() {
+    var app = getApp();
+    if (app._profilePage === this) app._profilePage = null;
+  },
+
+  onShow: function() {
+    var app = getApp();
+    // 确保 app 持有最新引用（tabBar 页面不触发 onLoad 再次进入）
+    app._profilePage = this;
+    var isLoggedIn = app.globalData.isLoggedIn || false;
+    var userInfo = app.globalData.userInfo || {};
+
+    // 先用本地/全局数据渲染
+    var history = historyUtil.getHistory();
+    var totalWords = 0;
+    for (var i = 0; i < history.length; i++) { totalWords += history[i].wordCount || 0; }
+    var wordsText = totalWords >= 10000 ? (totalWords / 10000).toFixed(1) + 'w' : totalWords.toString();
+
+    this.setData({
+      isLoggedIn: isLoggedIn,
+      isVip: app.globalData.isVip,
+      vipExpireDate: app.globalData.vipExpireDate || '',
+      freeCount: app.globalData.freeCount,
+      totalBooks: history.length,
+      totalWords: wordsText,
+      nickName: userInfo.nickName || '',
+      avatarUrl: userInfo.avatarUrl || '',
+      phone: userInfo.phone || '',
+    });
+
+    // 已登录时拉云端最新状态
+    if (isLoggedIn) {
+      this._refreshFromCloud();
+    }
+  },
+
+  _refreshFromCloud: function() {
+    var self = this;
+    // 刷新 VIP 状态
+    cloudUtil.getVipStatus(function(res) {
+      if (!res || res.code !== 0) return;
+      var app = getApp();
+      app.globalData.isVip = res.isVip;
+      app.globalData.vipExpireDate = res.vipExpireDate || '';
+      app.globalData.freeCount = res.freeCount;
+      self.setData({
+        isVip: res.isVip,
+        vipExpireDate: res.vipExpireDate || '',
+        freeCount: res.freeCount,
+      });
+    });
+    // 刷新解读数量（云端）
+    cloudUtil.getReadHistoryList(1, 1, function(res) {
+      if (!res || res.code !== 0) return;
+      self.setData({ totalBooks: res.total || 0 });
+    });
+  },
+
+  // ── 展示授权弹窗（点击"未登录"区域触发）──────────────────────
+  showAuthModal: function() {
+    this.setData({ showAuthModal: true });
+  },
+
+  // ── 授权弹窗完成回调 ─────────────────────────────────────────
+  onAuthDone: function(e) {
+    var user = (e.detail && e.detail.user) || {};
+    var app = getApp();
+    this.setData({
+      showAuthModal: false,
+      isLoggedIn: true,
+      isVip: user.isVip || false,
+      freeCount: user.freeCount !== undefined ? user.freeCount : 2,
+      phone: user.phone || '',
+    });
+    this._refreshFromCloud();
+  },
+
+  // ── 绑定手机号 ────────────────────────────────────────────────
+  onBindPhone: function(e) {
+    if (e.detail.errMsg && e.detail.errMsg.indexOf('fail') !== -1) {
+      wx.showToast({ title: '授权失败', icon: 'none' }); return;
+    }
+    var code = e.detail.code;
+    if (!code) { wx.showToast({ title: '获取code失败', icon: 'none' }); return; }
+
+    this.setData({ phoneLoading: true });
+    var self = this;
+    var app = getApp();
+    var userInfo = app.globalData.userInfo || {};
+
+    cloudUtil.callGetPhone(code, userInfo.nickName, userInfo.avatarUrl, function(res) {
+      self.setData({ phoneLoading: false });
+      if (res && res.code === 0) {
+        self.setData({ phone: res.phone });
+        if (app.globalData.userInfo) {
+          app.globalData.userInfo.phone = res.phone;
+          wx.setStorageSync('userInfo', app.globalData.userInfo);
+        }
+        wx.showToast({ title: '绑定成功', icon: 'success' });
+      } else {
+        wx.showToast({ title: (res && res.msg) || '绑定失败', icon: 'none' });
+      }
+    });
+  },
+
+  goHistory: function() { wx.switchTab({ url: '/pages/history/history' }); },
+  goVip: function() { wx.navigateTo({ url: '/pages/vip/vip' }); },
+
+  onAbout: function() {
+    wx.showModal({
+      title: '关于书解',
+      content: '书解 v1.0.0\n\nAI 驱动的深度读书助手，让你用最少时间获得最深刻的阅读体验。\n\n由「书旅向导」AI 提供解读服务。',
+      showCancel: false
+    });
+  },
+
+  onFeedback: function() {
+    wx.showModal({
+      title: '意见反馈',
+      content: '请将建议发送至：feedback@bookinsight.app\n\n感谢您的支持！',
+      showCancel: false
+    });
+  },
+
+  onClearCache: function() {
+    var self = this;
+    wx.showModal({
+      title: '清理缓存',
+      content: '清理缓存不会删除您的解读历史。',
+      confirmText: '清理',
+      success: function(res) {
+        if (res.confirm) {
+          wx.clearStorage({ success: function() { wx.showToast({ title: '缓存已清理', icon: 'success' }); } });
+        }
+      }
+    });
+  },
+
+  onLogout: function() {
+    var self = this;
+    wx.showModal({
+      title: '退出登录',
+      content: '退出后需要重新授权才能使用完整功能',
+      confirmText: '退出',
+      cancelText: '取消',
+      success: function(res) {
+        if (!res.confirm) return;
+        // 清除本地缓存
+        wx.removeStorageSync('userInfo');
+        wx.removeStorageSync('isLoggedIn');
+        // 重置全局状态
+        var app = getApp();
+        app.globalData.userInfo = null;
+        app.globalData.isLoggedIn = false;
+        app.globalData.isVip = false;
+        app.globalData.vipExpireDate = '';
+        app.globalData.freeCount = 2;
+        app.globalData.openid = '';
+        // 刷新页面显示
+        self.setData({
+          isLoggedIn: false,
+          isVip: false,
+          freeCount: 2,
+          nickName: '',
+          avatarUrl: '',
+          phone: '',
+        });
+        wx.showToast({ title: '已退出登录', icon: 'success' });
+      }
+    });
+  },
+});

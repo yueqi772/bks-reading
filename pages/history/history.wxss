@@ -1,229 +1,51 @@
-/* pages/history/history.wxss */
+/* pages/history/history.wxss — 深夜书房主题 */
+.page { background: #111118; min-height: 100vh; padding: 30rpx 40rpx; }
 
-.page-container {
-  min-height: 100vh;
-  background-color: #F7F5F0;
+.loading-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 160rpx 0; gap: 20rpx; }
+.loading-spinner {
+  width: 48rpx; height: 48rpx; border-radius: 50%;
+  border: 4rpx solid rgba(240,234,214,0.1);
+  border-top-color: #C8A96E;
+  animation: spin 0.8s linear infinite;
 }
+@keyframes spin { to { transform: rotate(360deg); } }
+.loading-text { font-size: 24rpx; color: rgba(240,234,214,0.3); }
 
-/* ===== 统计栏 ===== */
-.stats-bar {
-  background: linear-gradient(135deg, #4A6741 0%, #6B8F61 100%);
-  padding: 30rpx 40rpx;
-  justify-content: space-around;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.stat-num {
-  font-size: 38rpx;
-  font-weight: 700;
-  color: #FFFFFF;
-  margin-bottom: 6rpx;
-}
-
-.stat-label {
-  font-size: 22rpx;
-  color: rgba(255,255,255,0.8);
-}
-
-.stat-divider {
-  width: 1rpx;
-  height: 60rpx;
-  background: rgba(255,255,255,0.3);
-}
-
-/* ===== 搜索框 ===== */
-.search-wrap {
-  margin: 20rpx 24rpx;
-  background: #FFFFFF;
-  border-radius: 16rpx;
-  padding: 0 24rpx;
-  height: 80rpx;
-  box-shadow: 0 2rpx 10rpx rgba(0,0,0,0.05);
-}
-
-.search-icon {
-  font-size: 28rpx;
-  margin-right: 12rpx;
-  color: #999999;
-}
-
-.search-input {
-  font-size: 26rpx;
-  color: #333333;
-  height: 80rpx;
-}
-
-.search-placeholder {
-  color: #BBBBBB;
-}
-
-.search-clear {
-  color: #BBBBBB;
-  font-size: 26rpx;
-  padding: 0 8rpx;
-}
-
-/* ===== 历史列表 ===== */
-.history-list {
-  padding: 0 24rpx;
-}
-
-.history-card {
-  margin-bottom: 16rpx;
-  padding: 24rpx;
-}
-
-.history-card-top {
-  margin-bottom: 16rpx;
-}
-
-.history-book-icon {
-  width: 70rpx;
-  height: 70rpx;
-  background: #EEF4ED;
-  border-radius: 12rpx;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 34rpx;
-  margin-right: 16rpx;
-  flex-shrink: 0;
-}
-
-.history-main {
-  overflow: hidden;
-  margin-right: 12rpx;
-}
-
-.history-book-title {
-  display: block;
-  font-size: 28rpx;
-  font-weight: 600;
-  color: #333333;
-  margin-bottom: 8rpx;
-}
-
-.history-preview {
-  font-size: 22rpx;
-  color: #999999;
-  line-height: 1.5;
-}
-
-.history-arrow {
-  font-size: 32rpx;
-  color: #CCCCCC;
-  flex-shrink: 0;
-}
-
-.history-card-bottom {
-  padding-top: 16rpx;
-  border-top: 1rpx solid #F5F5F5;
-}
-
-.history-mode-tag {
-  background: #EEF4ED;
-  color: #4A6741;
-  font-size: 20rpx;
-  padding: 4rpx 14rpx;
-  border-radius: 20rpx;
-}
-
-.history-words {
-  font-size: 22rpx;
-  color: #999999;
-}
-
-.history-date {
-  font-size: 22rpx;
-  color: #BBBBBB;
-}
-
-/* ===== 底部提示 ===== */
-.bottom-tip {
+.empty-wrap { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 160rpx 0; gap: 16rpx; }
+.empty-icon { font-size: 80rpx; opacity: 0.4; }
+.empty-title { font-size: 30rpx; font-weight: 600; color: rgba(240,234,214,0.6); }
+.empty-sub { font-size: 24rpx; color: rgba(240,234,214,0.3); }
+.empty-btn {
+  margin-top: 20rpx;
+  width: 240rpx; height: 80rpx; line-height: 80rpx;
+  background: #C8A96E; color: #111118;
+  font-size: 28rpx; font-weight: 700;
+  border-radius: 40rpx; border: none;
+  padding: 0; box-sizing: border-box;
   text-align: center;
-  padding: 20rpx;
 }
+.empty-btn::after { border: none; }
 
-.bottom-tip-text {
-  font-size: 22rpx;
-  color: #BBBBBB;
-}
+.list-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 30rpx; }
+.list-header-left { display: flex; align-items: baseline; gap: 12rpx; }
+.list-title { font-size: 32rpx; font-weight: 800; color: #F0EAD6; letter-spacing: 1rpx; }
+.list-count { font-size: 22rpx; color: rgba(240,234,214,0.35); }
+.clear-btn { font-size: 22rpx; color: rgba(240,234,214,0.3); padding: 8rpx 0; }
 
-/* ===== 空状态 ===== */
-.empty-state {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 120rpx 60rpx;
+.book-list { display: flex; flex-direction: column; gap: 2rpx; }
+.book-item {
+  display: flex; align-items: center; gap: 24rpx;
+  padding: 24rpx 0; border-bottom: 1rpx solid rgba(255,255,255,0.05);
 }
-
-.empty-icon {
-  font-size: 100rpx;
-  margin-bottom: 24rpx;
-}
-
-.empty-text {
-  font-size: 28rpx;
-  color: #999999;
-  margin-bottom: 40rpx;
-}
-
-.go-home-btn {
-  width: 360rpx;
-  height: 80rpx;
-  font-size: 28rpx;
-}
-
-/* ===== 操作弹窗 ===== */
-.mask {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 100;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.action-sheet {
-  background: #FFFFFF;
-  border-radius: 24rpx 24rpx 0 0;
-  overflow: hidden;
-}
-
-.action-sheet-title {
-  padding: 30rpx;
-  text-align: center;
-  font-size: 26rpx;
-  color: #999999;
-  border-bottom: 1rpx solid #F0F0F0;
-}
-
-.action-sheet-item {
-  padding: 36rpx 30rpx;
-  font-size: 30rpx;
-  color: #333333;
-  text-align: center;
-  border-bottom: 1rpx solid #F5F5F5;
-}
-
-.action-delete {
-  color: #EF4444;
-}
-
-.action-sheet-cancel {
-  padding: 36rpx 30rpx;
-  font-size: 30rpx;
-  color: #999999;
-  text-align: center;
-  margin-top: 16rpx;
-  background: #FFFFFF;
-}
+.book-item:last-child { border-bottom: none; }
+.book-cover { width: 72rpx; flex-shrink: 0; }
+.book-cover-img { width: 72rpx; height: 100rpx; border-radius: 8rpx; display: block; }
+.book-info { flex: 1; min-width: 0; }
+.book-title { font-size: 28rpx; font-weight: 700; color: #F0EAD6; margin-bottom: 8rpx; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.book-meta-row { display: flex; align-items: center; gap: 8rpx; margin-bottom: 4rpx; }
+.book-mode { font-size: 19rpx; color: #C8A96E; background: rgba(200,169,110,0.1); padding: 2rpx 10rpx; border-radius: 10rpx; }
+.book-sep { font-size: 18rpx; color: rgba(240,234,214,0.2); }
+.book-words { font-size: 21rpx; color: rgba(240,234,214,0.4); }
+.book-time { font-size: 20rpx; color: rgba(240,234,214,0.25); margin-bottom: 8rpx; }
+.book-cta { font-size: 21rpx; color: rgba(200,169,110,0.65); }
+.book-del { font-size: 30rpx; color: rgba(240,234,214,0.15); padding: 10rpx; }
